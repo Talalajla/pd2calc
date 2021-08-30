@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-rows: auto 1fr;
         background-color: rgba(0,0,0,0.3);
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
     }
 

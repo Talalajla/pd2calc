@@ -1,19 +1,41 @@
-import { Component } from "react";
-import { Content, Main, Main2, Main3, Players, PhotoBox, DiffBox, ReqBox, Rest, BonusBox, Result, Desk, PC, PC_SCREEN, PC_LEG, PC_STAND, PC_DISPLAY,
+import React, { Component } from "react";
+import { Content, Main, Main2, Main3, Players, PhotoBox, DiffBox, ReqBox, Rest, BonusBox, Result, Desk, SendBox, Frame, InnerFrame, Send, TextBox, PC, PC_SCREEN, PC_LEG, PC_STAND, PC_DISPLAY,
     PC_POWER, PC_CLOSE, PC_BAR, PC_FILE, PC_FILE_TOP, PC_FILE_CONTENT, PC_FILE_TITLE, PC_FILE_EXP, PC_MORE_DETAILS, PC_FILE_DETAILS, PC_FILE_DETAILS_TITLE,
-    PC_FILE_DETAILS_DATA, PC_FILE_SPEC} from "../styles/heist-main";
+    PC_BACK_BTN, PC_FILE_DETAILS_DATA, PC_FILE_SPEC, PC_SPEC_COMPONENT, PC_ERROR, PC_ERROR_TITLE, PC_ERROR_TEXT, PC_BLUESCREEN, PC_BS_LEFT, PC_BS_RIGHT, PC_BS_FACE, PC_BS_TEXT, PC_BS_QR, PC_BS_LOGO
+} from "../styles/heist-main";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDollarSign, faFileWord, faFileCode, faFileUpload, faFileAlt, faDesktop, faKey, faInfoCircle, faCalculator } from '@fortawesome/free-solid-svg-icons'
+import { faDollarSign, faFileWord, faFileCode, faFileUpload, faFileAlt, faDesktop, faKey, faInfoCircle, faCalculator, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import { Requirements, Paper, Custody, Gage, ClipBoard, Polaroid, Bonus, Tablet, Infinite } from "./objects";
+import cpu from "../images/cpu.svg";
+import gpu from "../images/gpu.svg";
+import mb from "../images/mb.svg";
+import psu from "../images/psu.svg";
+import ram from "../images/ram.svg";
+import hdd from "../images/hdd.svg";
+import dollar from "../images/dollar.svg";
+import qr from "../images/qrcode.svg";
+
 
 class HomeHeist extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            difficulty: null,
-            showRed: false,
+            nickname: '',
+            inf: '',
+            lvl: '',
 
+            difficulty: null,
+
+            //Specific heist things:
+            ovkPlus: false,
+            showRed: false,
+            ovkHells: false,
+            fLootBonus: false,
+            pigs: false,
+            ovkGoats: false,
+
+            //EXP Things
             gage: 10,
             infamyBonus: null,
             def: null,
@@ -26,6 +48,7 @@ class HomeHeist extends Component {
             gages: null,
             stealth: null,
             heat: null,
+            jailedEXP: null,
             EXP: null,
             pcScreen: false,
 
@@ -37,15 +60,37 @@ class HomeHeist extends Component {
             showInfo: true,
             showDetails: false,
             showSpec: false,
+
+            errorShow: false,
+            errorNum: null,
+            whatAboutBluescreen: false,
         };
+    }
+
+    checkValues = (e) => {
+        const form = e.currentTarget;
+
+        this.props.fLootBonus && form.req2.value === "8" ? this.setState({fLootBonus: true}) : this.setState({fLootBonus: false});
     }
 
     countGage = (item) => {
         this.setState({ difficulty: item }, () => {
             const strongRisk = ['Overkill', 'Mayhem', 'Death Wish', 'Death Sentence'];
             const dif = this.state.difficulty;
-            if ((dif === strongRisk[0] || dif === strongRisk[1] || dif === strongRisk[2] || dif === strongRisk[3]) && this.props.redDiamond) { this.setState({ showRed: true })} 
-            else { this.setState({ showRed: false })}
+            strongRisk.includes(dif) ? this.setState({ovkPlus: true}) : this.setState({ovkPlus: false});
+
+            //RED DIAMOND
+            if (strongRisk.includes(dif) && this.props.redDiamond) { this.setState({ showRed: true }) } else { this.setState({ showRed: false })}
+            //HELLS BONUS
+            if (strongRisk.includes(dif) && this.props.ovkHells) { this.setState({ ovkHells: true }) } else { this.setState({ ovkHells: false })}
+            //GOATS BONUS
+            if (strongRisk.includes(dif) && this.props.ovkGoats) { this.setState({ ovkGoats: true }) } else { this.setState({ ovkGoats: false })}
+
+            //SLAUGHTERHOUSE OVK+
+            if (strongRisk.includes(dif) && this.props.pigs) this.setState({ pigs: 2 })
+            else if (!strongRisk.includes(dif) && this.props.pigs)  this.setState({ pigs: 1 })
+            else this.setState({ pigs: 0 })
+
         })
 
         switch(item) {
@@ -109,7 +154,11 @@ class HomeHeist extends Component {
     countEXP = (e) => {
         e.preventDefault();
 
+        const randomNum = Math.round(Math.random()*10);
+        if (randomNum === 1) this.setState({whatAboutBluescreen: true});
+
         const form = e.currentTarget;
+        
         // Players
         const playersArr = Array.from(form.crew);
         let players; // 1-4
@@ -131,15 +180,27 @@ class HomeHeist extends Component {
         if (this.props.scaling) { scale = this.props.scaling };
         if (this.props.infinite) { addBags = form.additional.value };
         // Default
-        let r0, r1, r2, r3, r4;
-        r0 = r1 = r2 = r3 = r4 = 0;
+        let r0, r1, r2, r3, r4, r5, r6, r7, r8;
+        r0 = r1 = r2 = r3 = r4 = r5 = r6 = r7 = r8 = 0;
         const val = this.props.values;
         if (form.req1!==undefined) r0 = this.swapOn(form.req1) * parseInt(val[0]);
         if (form.req2!==undefined) r1 = this.swapOn(form.req2) * parseInt(val[1]);
         if (form.req3!==undefined) r2 = this.swapOn(form.req3) * parseInt(val[2]);
         if (form.req4!==undefined) r3 = this.swapOn(form.req4) * parseInt(val[3]);
         if (form.req5!==undefined) r4 = this.swapOn(form.req5) * parseInt(val[4]);
-        const classic = parseInt(addBags) * parseInt(scale) + r0 + r1 + r2 + r3 + r4;
+        if (form.req6!==undefined) r5 = this.swapOn(form.req6) * parseInt(val[5]);
+        if (form.req7!==undefined) r6 = this.swapOn(form.req7) * parseInt(val[6]);
+        if (form.req8!==undefined) r7 = this.swapOn(form.req8) * parseInt(val[7]);
+        if (form.req9!==undefined) r8 = this.swapOn(form.req9) * parseInt(val[8]);
+        
+        if(this.props.imgName.includes("Slaughterhouse") && this.state.ovkPlus)
+            r1 *= 0.8;
+
+        let classic = parseInt(addBags) * parseInt(scale) + r0 + r1 + r2 + r3 + r4 + r5 + r6 + r7 + r8;
+
+        // BASE addition
+        if(this.props.imgName.includes("Henry's Rock") && r4!==0) 
+            classic+=2000
         // Difficulty
         const diffArr = Array.from(form.diff);
         let risk; // 0-14
@@ -174,10 +235,7 @@ class HomeHeist extends Component {
         const ExpPenalty = classic * penalty / 100;
         const ExpRisk = (classic - ExpPenalty) * risk;
         const ExpCustody = (classic - ExpPenalty + ExpRisk) * custody;
-        const basic = classic - ExpPenalty + ExpRisk - ExpCustody;
-        if (ExpCustody > 0) {
-            // for jailed player
-        }
+        const basic = classic - ExpPenalty + ExpRisk;
         const ExpCrew = Math.round(basic * crew);
         const ExpBonus = Math.round(basic * bonus / 100);
         const ExpInfamy = Math.round(basic * infamy / 100);
@@ -186,8 +244,114 @@ class HomeHeist extends Component {
         let ExpHeat;
         if (heatBool) { ExpHeat = Math.round((basic + ExpCrew + ExpBonus + ExpInfamy + ExpGage + ExpStealth) * (heat / 100)) }
         else { ExpHeat = Math.round(-((basic + ExpCrew + ExpBonus + ExpInfamy + ExpGage + ExpStealth) * (-heat / 100))) }
+        if (ExpCustody > 0) {
+            const jailedBasic = classic - ExpPenalty + ExpRisk - ExpCustody;
+            const jailedXP = Math.round(jailedBasic + ExpCrew + ExpBonus + ExpInfamy + ExpGage + ExpStealth);
+            let jailedExpHeat;
+            if (heatBool) { jailedExpHeat = Math.round(jailedXP * (heat / 100)) }
+            else { jailedExpHeat = Math.round(-(jailedXP * (-heat / 100))) }
+            const jailedResult = Math.round(jailedXP + jailedExpHeat);
+            this.setState({ jailedEXP: this.numberWithCommas(jailedResult) });
+        }
 
         const result = Math.round(basic + ExpCrew + ExpBonus + ExpInfamy + ExpGage + ExpStealth + ExpHeat);
+
+        // ERRORS
+        if (crew < 0) {  
+            this.setState({errorShow: true, errorNum: 1});
+            setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+            return;
+        };
+
+        if (this.props.imgName.includes("Henry's Rock")) {
+            let amount = 0;
+            if (r1!==0) amount++;
+            if (r2!==0) amount++;
+            if (r3!==0) amount++;
+            if (r4!==0) amount++;
+            if (amount !== 2) {
+                this.setState({errorShow: true, errorNum: 3});
+                setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+                return;
+            }
+        }
+
+        if (this.props.imgName.includes('Stealing Xmas') || this.props.imgName.includes("The Biker Heist (day 1)")) {
+            let amount = 0;
+            if (r1!==0 && this.props.imgName.includes('Stealing Xmas')) amount++;
+            if (r2!==0) amount++;
+            if (r3!==0) amount++;
+            if (r4!==0) amount++;
+            if (r5!==0) amount++;
+            if (r6!==0) amount++;
+            if (r7!==0) amount++;
+            if (amount !== 3) {
+                if(this.props.imgName.includes('Stealing Xmas'))
+                    this.setState({errorShow: true, errorNum: 4});
+                if(this.props.imgName.includes('The Biker Heist (day 1)'))
+                    this.setState({errorShow: true, errorNum: 6});
+    
+                setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+                return;
+            }
+
+            if (((r4!==0 && r5!==0) || (r6!==0 && r7!==0)) && this.props.imgName.includes('Stealing Xmas')) {
+                this.setState({errorShow: true, errorNum: 5});
+                setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+                return;
+            }
+        }
+
+        if (this.props.imgName.includes("The Ukrainian Prisoner") && this.props.tr12 === "35500") {
+            let amount = 0;
+            if (r1 !== 0) amount++;
+            if (r2 !== 0) amount++;
+            if (amount === 2) {
+                this.setState({errorShow: true, errorNum: 7});
+                setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+                return;
+            }
+        }
+
+        if (this.props.imgName.includes("Carshop") && (players - jailed) < r1/1000) {
+            this.setState({errorShow: true, errorNum: 8});
+            setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+            return;
+        }
+
+        if (this.props.imgName.includes("Golden Grin Casino") && this.props.tr12 === "59250") {
+            let amount = 0;
+            if(r1 !== 0) amount++;
+            if(r2 !== 0) amount++;
+            if(r3 !== 0) amount++;
+            if (amount >= 2) {
+                this.setState({errorShow: true, errorNum: 9});
+                setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+                return;
+            }
+        }
+
+        if (this.props.imgName.includes("Lab Rats")) {
+            let amount = 0;
+            if (r2 !== 0) amount++;
+            if (r3 !== 0) amount++;
+            if (r4 !== 0) amount++;
+            if (amount > 1) {
+                this.setState({errorShow: true, errorNum: 10});
+                setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+                return;
+            }
+        }
+
+        if (this.props.imgName.includes("Rats (day 1)")) {
+            if (r1 !== 0 && r2 !== 0) {
+                this.setState({errorShow: true, errorNum: 11});
+                setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
+                return;
+            }
+        }
+
+        // ↓ SHOW RESULT ↓
 
         this.setState({
             def: this.numberWithCommas(classic),
@@ -213,19 +377,35 @@ class HomeHeist extends Component {
         const actualIndex = this.state.zindexVal;
         this.setState({ showInfo: !this.state.showInfo, zindexInfo: actualIndex + 1, zindexVal: this.state.zindexVal + 1 });
     }
+
     showDetails = () => {
         const actualIndex = this.state.zindexVal;
         this.setState({ showDetails: !this.state.showDetails, zindexDetails: actualIndex + 1, zindexVal: this.state.zindexVal + 1 });
     }
+
+    goBack = () => this.setState({EXP: null});
+
     toggleWindowSpec = () => {
         const actualIndex = this.state.zindexVal;
         this.setState({ showSpec: !this.state.showSpec, zindexSpec: actualIndex + 1, zindexVal: this.state.zindexVal + 1 });
     }
 
+    checkDiff = () => {
+        if (this.state.difficulty === null) {
+            this.setState({errorShow: true, errorNum: 2});
+            setTimeout(function() { this.setState({ errorShow: false, errorNum: null })}.bind(this),5000);
+        }
+    }
+
+    componentDidMount = () => this.setState({
+        nickname: localStorage.getItem("Nickname"),
+        inf: localStorage.getItem("Infamy"),
+    });
 
     render() {
+
         return(
-            <Content onSubmit={this.countEXP}>
+            <Content onSubmit={this.countEXP} onChange={this.checkValues}>
                 <Main>
 
                     <PhotoBox>
@@ -251,20 +431,30 @@ class HomeHeist extends Component {
                             tr31={this.props.tr31} tr32={this.props.tr32}
                             tr41={this.props.tr41} tr42={this.props.tr42}
                             tr51={this.props.tr51} tr52={this.props.tr52}
+                            tr61={this.props.tr61} tr62={this.props.tr62}
+                            tr71={this.props.tr71} tr72={this.props.tr72}
+                            tr81={this.props.tr81} tr82={this.props.tr82}
+                            tr91={this.props.tr91} tr92={this.props.tr92}
                             status={this.props.status}
                             limitStart={this.props.limitStart}
                             limitEnd={this.props.limitEnd}
                             redDiamond={this.state.showRed ? true : false}
+                            ovkHells={this.state.ovkHells ? true : false}
+                            ovkGoats={this.state.ovkGoats ? true : false}
+                            fLootBonus={this.state.fLootBonus ? true : false}
+                            pigs={this.state.pigs}
                         />
                         {this.props.infinite && <Infinite limit={this.props.limit}/>}
                     </ReqBox>
                 </Main>
+                
                 <Main2>
                     <BonusBox>
                         <Bonus />
                     </BonusBox>
-                    <Tablet infamy={this.infamyBoost} />
+                    <Tablet infamy={this.infamyBoost} nickname={this.state.nickname} localVal={this.state.inf} />
                 </Main2>
+                
                 <Main3>
                     <Result>
                     </Result>
@@ -286,14 +476,29 @@ class HomeHeist extends Component {
                                             <div onClick={this.showInfo}>×</div>
                                         </PC_FILE_TOP>
                                         <PC_FILE_CONTENT>
-                                            <PC_FILE_TITLE>{this.state.EXP===null?"Waiting for data...":"Data set ... check results"}</PC_FILE_TITLE>
+                                            <PC_FILE_TITLE>{this.state.EXP===null?"Waiting for data...":"Data set ... check results:"}</PC_FILE_TITLE>
+                                            { this.state.EXP === null && 
+                                              <SendBox>
+                                                <Frame>
+                                                  <InnerFrame>
+                                                    <Send onClick={this.checkDiff}/>
+                                                  </InnerFrame>
+                                                </Frame>
+                                                <TextBox>
+                                                    <span>PUSH</span>
+                                                </TextBox>
+                                              </SendBox>
+                                            }
                                             {
                                                 this.state.EXP &&                                         
                                                 <PC_FILE_EXP>
-                                                    <p>This mission provides</p>
+                                                    <p>This mission provides:</p>
                                                     <p>{this.state.EXP} EXP</p>
+                                                    {this.state.jailedEXP &&
+                                                    <p>{this.state.jailedEXP} EXP (Custody)</p>}
 
                                                     <PC_MORE_DETAILS onClick={this.showDetails}>Details</PC_MORE_DETAILS>
+                                                    <PC_BACK_BTN onClick={this.goBack}>Back</PC_BACK_BTN>
                                                 </PC_FILE_EXP>
                                             }
                                         </PC_FILE_CONTENT>
@@ -318,7 +523,12 @@ class HomeHeist extends Component {
                                                         <td>Whole EXP:</td>
                                                         <td>{this.state.EXP}</td>
                                                     </tr>
-                                                    <tr>
+                                                    {this.state.jailedEXP &&
+                                                        <tr>
+                                                            <td>Exp if you're in custody</td>
+                                                            <td>{this.state.jailedEXP}</td>
+                                                        </tr>}
+                                                    <tr style={{"paddingTop": "15px"}}>
                                                         <td>Default EXP:</td>
                                                         <td>{this.state.def}</td>
                                                     </tr>
@@ -373,6 +583,14 @@ class HomeHeist extends Component {
                                             <div></div>
                                             <div onClick={this.toggleWindowSpec}>×</div>
                                         </PC_FILE_TOP>
+                                        <PC_FILE_CONTENT style={{display: "flex", flexDirection: "column", alignItems:"center",justifyContent: "center"}}>
+                                            <PC_SPEC_COMPONENT> <img src={cpu} width="30" alt="CPU" />CPU: SRAMD X5000 </PC_SPEC_COMPONENT>
+                                            <PC_SPEC_COMPONENT> <img src={gpu} width="30" alt="GPU" />GPU: Nmedia 6500 Ti </PC_SPEC_COMPONENT>
+                                            <PC_SPEC_COMPONENT> <img src={mb} width="30" alt="MotherBoard" />MB: Megabyte z930 </PC_SPEC_COMPONENT>
+                                            <PC_SPEC_COMPONENT> <img src={ram} width="30" alt="RAM Memory" />RAM: 16GB MegaRam </PC_SPEC_COMPONENT>
+                                            <PC_SPEC_COMPONENT> <img src={hdd} width="30" alt="HDD" />Memory: 1024GB </PC_SPEC_COMPONENT>
+                                            <PC_SPEC_COMPONENT> <img src={psu} width="30" alt="PSU" />PSU: ForceOfPower 800W </PC_SPEC_COMPONENT>
+                                        </PC_FILE_CONTENT>
                                     </PC_FILE_SPEC>
                                 }
                                 <PC_BAR>
@@ -384,6 +602,42 @@ class HomeHeist extends Component {
                                     <div style={{position: "absolute", right:"5px", fontFamily:"sans-serif", fontSize: "15px"}} >21:37</div>
                                 </PC_BAR>
                                 {this.state.pcScreen && <PC_CLOSE />}
+                                {
+                                    this.state.errorShow && 
+                                    <PC_ERROR>
+                                        <FontAwesomeIcon icon={faExclamationTriangle} />
+                                        <PC_ERROR_TITLE>ERROR!</PC_ERROR_TITLE>
+                                        <PC_ERROR_TEXT>There was a dangerous try to calculate EXP with invalid data.</PC_ERROR_TEXT>
+                                        {this.state.errorNum === 1 && <PC_ERROR_TEXT>You can not have more or an equal amount of players in custody as in the match when escaping. </PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 2 && <PC_ERROR_TEXT>You have to choose difficulty level before submitting data. </PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 3 && <PC_ERROR_TEXT>You are not allowed to complete more or less than 2 rooms on "Henry's Rock" map. </PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 4 && <PC_ERROR_TEXT>You have to choose 3 collected objects, no more, no less.</PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 5 && <PC_ERROR_TEXT>You can not collect two the same items.</PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 6 && <PC_ERROR_TEXT>You have to choose 3 mission objectives, no more, no less. Notice that collecting soda for Mike is an additional task and it is not included to the 3 random objectives.</PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 7 && <PC_ERROR_TEXT>You can not have more than 1 objective scenario.</PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 8 && <PC_ERROR_TEXT>You can not secure more cars than live players escaped</PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 9 && <PC_ERROR_TEXT>You can not have more than 1 entrance scenario.</PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 10 && <PC_ERROR_TEXT>Only 1 safe can appear.</PC_ERROR_TEXT>}
+                                        {this.state.errorNum === 11 && <PC_ERROR_TEXT>You can not choose 2 different escape scenarios.</PC_ERROR_TEXT>}
+                                    </PC_ERROR>
+                                }
+                                {
+                                    this.state.whatAboutBluescreen &&
+                                    <PC_BLUESCREEN>
+                                        <PC_BS_LEFT>
+                                            <PC_BS_FACE>&#58;&#40;</PC_BS_FACE>
+                                            <PC_BS_TEXT>Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.</PC_BS_TEXT>
+                                            <PC_BS_QR>
+                                                <img src={qr} width="50" alt="QR Code" />
+                                                <span>You found any problems while using the app? You'll find me there.</span>
+                                            </PC_BS_QR>
+                                        </PC_BS_LEFT>
+                                        <PC_BS_RIGHT>
+                                            <PC_BS_LOGO><img src={dollar} width="80" alt="Dollar Sign" /></PC_BS_LOGO>
+                                        </PC_BS_RIGHT>
+                                    </PC_BLUESCREEN>
+                                }
+
                             </PC_DISPLAY>
                             
                             <PC_POWER onClick={this.toggleScreen} />
@@ -395,6 +649,7 @@ class HomeHeist extends Component {
                         <div></div>
                     </Desk>
                 </Main3>
+            
             </Content>
         );
     };

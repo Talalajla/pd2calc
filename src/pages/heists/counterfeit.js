@@ -1,6 +1,6 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Counter from "../../images/maps/stealth/counter.jpg";
+import Counter from "../../images/maps/stealth/counterfeit.jpg";
 
 class Heist extends Component {
 
@@ -20,7 +20,7 @@ class Heist extends Component {
                 />
             </>
         );
-    }
+    } 
 }
 
 export default Heist;

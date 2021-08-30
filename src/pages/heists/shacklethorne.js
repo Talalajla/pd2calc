@@ -9,7 +9,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Auction} imgName="Shacklethorne Auctionn" jc="30"
+                    src={Auction} imgName="Shacklethorne Auction" jc="30"
                     tr11="Default (completion)" tr12="15000"
                     status={['rCB']}
                     limitStart={['']}

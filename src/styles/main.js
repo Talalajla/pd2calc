@@ -4,7 +4,7 @@ export const Main = styled.main`
     width: 100%;
     /* background-color: rgba(0,0,0,0.3); */
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto auto 1fr;
 `;
 
 export const MainTitle = styled.div`
@@ -23,7 +23,7 @@ export const HeistGallery = styled.div`
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 20px;
     padding: 30px 0;
@@ -72,7 +72,8 @@ export const HeistName = styled.div`
     transform: translateY(-50%);
     opacity: 1;
     color: #fff;
-    font-size: 27.5px;
+    font-size: 30px;
+    font-weight: bold;
     transition: transform .3s, opacity .3s;
 	text-shadow: -1px 1px 0 #000,
 				  1px 1px 0 #000,
@@ -80,9 +81,11 @@ export const HeistName = styled.div`
 				-1px -1px 0 #000;
     p {
         margin: 0;
+        font-size: 17.5px;
+        padding: 2px 0;
 
-        :last-of-type {
-            font-size: 17.5px;
+        :first-of-type {
+            font-size: 1em;
         }
     }
 
@@ -90,4 +93,66 @@ export const HeistName = styled.div`
         transform: translateY(300%);
         opacity: 0;
     }
+`;
+
+export const SearchStealth = styled.input.attrs({type: "search"})`
+    border: 0;
+    background: #eee;
+    border-radius: 3px;
+    min-width: 300px;
+    height: 50px;
+    padding: 10px 15px;
+    place-self: center;
+    border: 2px solid black;
+    outline: 0;
+    font-size: 20px;
+`;
+
+export const ChooseType = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 30px;
+    font-size: 20px;
+`;
+
+export const RadioLabel = styled.label`
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    div {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            opacity: none;
+            background: black;
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            transition: all .2s;
+        }
+    }
+    
+    input {
+        display: none;
+        opacity: 0;
+
+        :checked ~ div span{
+            opacity: 1;
+            width: 9px;
+            height: 9px;
+        }        
+    }
+`;
+
+export const RadioBtn = styled.input.attrs({type: "radio", name: "type"})`
 `;

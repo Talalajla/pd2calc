@@ -14,15 +14,15 @@ class Home extends Component {
 
         return(
             <SideContainer>
-                <Side as={Link} to={"/stealth"} stealth>
-                    <img src={stealthIMG} />
+                <Side as={Link} to={"/stealth"} paint="blue">
+                    <img src={stealthIMG} alt="stealth" />
                     <SideTextBox>
                         <SideText>Stealth</SideText>
                         <FontAwesomeIcon icon={faArrowLeft} />
                     </SideTextBox>
                 </Side>
-                <Side as={Link} to={"/loud"}>
-                    <img src={loudIMG} />
+                <Side as={Link} to={"/loud"} paint="orange">
+                    <img src={loudIMG} alt="loud" />
                     <SideTextBox>
                         <SideText>Loud</SideText>
                         <FontAwesomeIcon icon={faArrowRight} />

@@ -13,7 +13,7 @@ class Heist extends Component {
                     tr11="Default (completion)" tr12="10000"
                     tr21="Each bag secured" tr22="+1000"
                     tr31="Blackmailer appears" tr32="-1000"
-                    tr41="Valult already opened" tr42="-6000"
+                    tr41="Vault already opened" tr42="-6000"
                     status={['rCB', 'rS', 'rCB', 'rCB']}
                     limitStart={['', '1', '', '']}
                     limitEnd={['', '12', '', '']}

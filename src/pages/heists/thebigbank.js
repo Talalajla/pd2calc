@@ -9,7 +9,6 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={BigBank} imgName="The Big Bank" jc="60"
-                    default="44000"
                     tr11="Default (completion)" tr12="40000"
                     // tr21="Server hacked" tr22="+8000"
                     // tr31="Timelock finished" tr32="+4000"

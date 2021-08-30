@@ -3,10 +3,10 @@ import { RequireNotes, Tape, StickyPaper, StickyTitle, CrewCheckboxes, CrewLabel
     CrewBox, CrewAmount, GageNote, GageLabel, ClipTitle, ClipPaper, Clip, ClipMetal,
     Skulls, Skull, Skull2, Skull3, Skull4, Difficulty, Normal, DiffLabel, DiffRadio, CirclePick, DiffName,
     DiffUnderScore, GageSelect, PolaroidFrame, PolaroidPhoto, PolaroidTitle, JC, Tape2, JailNote, JailTitle,
-    JailLabel, JailBox, JailRadio, JailAmount, BonusNote, BoostLabels, BoostLabel, BoostTitle, BoostInput, BoostCheckbox,
+    JailLabel, JailBox, JailRadio, JailAmount, BonusNote, BoostLabels, BoostLabel, BoostTitle, BoostSelect, BoostCheckbox,
     BoostCheckboxStyle, HeatTitle, StealthTitle, HeatLabel, HeatInput, StealthSelect, StealthOption, LVLBox,  Holder, Device,
     Display, Camera, DisplayTitle, DisplayPhoto, DisplayInfo, DisplayLVL, DisplayBGTop, DisplayDot, DisplayClose, Nickname,
-    Infamy, Lvl, Send, InfiniteBox, InfiniteInput, DisplayMenu, HolderBottom} from "../styles/heist-main";
+    Infamy, Lvl, InfiniteBox, InfiniteInput, DisplayMenu, HolderBottom} from "../styles/heist-main";
 import { RCB, RIN, RS, setArray } from "./reqCheckbox";
 
 import Underscore from "../images/underscore.svg";
@@ -57,10 +57,45 @@ export class Requirements extends Component {
                                 {   this.props.status[4]==='rIN' && <RIN /> }
                                 {   this.props.status[4]==='rS' && <RS start={this.props.limitStart[4]} limit={this.props.limitEnd[4]} rNum="5" /> }
                             </td></tr> : null}
+                            {this.props.tr61!=null ? <tr><td>{this.props.tr61}</td><td>{this.props.tr62}</td><td>
+                                {   this.props.status[5]==='rCB' && <RCB rNum="6" /> }
+                                {   this.props.status[5]==='rIN' && <RIN /> }
+                                {   this.props.status[5]==='rS' && <RS start={this.props.limitStart[5]} limit={this.props.limitEnd[5]} rNum="6" /> }
+                            </td></tr> : null}
+                            {this.props.tr71!=null ? <tr><td>{this.props.tr71}</td><td>{this.props.tr72}</td><td>
+                                {   this.props.status[6]==='rCB' && <RCB rNum="7" /> }
+                                {   this.props.status[6]==='rIN' && <RIN /> }
+                                {   this.props.status[6]==='rS' && <RS start={this.props.limitStart[6]} limit={this.props.limitEnd[6]} rNum="7" /> }
+                            </td></tr> : null}
+                            {this.props.tr81!=null ? <tr><td>{this.props.tr81}</td><td>{this.props.tr82}</td><td>
+                                {   this.props.status[7]==='rCB' && <RCB rNum="8" /> }
+                                {   this.props.status[7]==='rIN' && <RIN /> }
+                                {   this.props.status[7]==='rS' && <RS start={this.props.limitStart[7]} limit={this.props.limitEnd[7]} rNum="8" /> }
+                            </td></tr> : null}
+                            {this.props.tr91!=null ? <tr><td>{this.props.tr91}</td><td>{this.props.tr92}</td><td>
+                                {   this.props.status[8]==='rCB' && <RCB rNum="9" /> }
+                                {   this.props.status[8]==='rIN' && <RIN /> }
+                                {   this.props.status[8]==='rS' && <RS start={this.props.limitStart[8]} limit={this.props.limitEnd[8]} rNum="9" /> }
+                            </td></tr> : null}
                             {   this.props.redDiamond ? 
-                            <tr><td>Red diamond secured</td><td>+2000</td><td><RCB rNum="3" /></td></tr> : null
+                                <tr><td>Red diamond secured</td><td>+2000</td><td><RCB rNum="3" /></td></tr> : null
                             }
-                            <tr><td></td><td></td></tr>
+                            {   this.props.ovkHells ?
+                                <tr><td>Overkill+ bonus</td><td>+1000</td><td><RCB rNum="2" default /></td></tr> : null
+                            }
+                            {   this.props.fLootBonus ?
+                                <tr><td>Full loot bonus</td><td>+2000</td><td><RCB rNum="3" default /></td></tr> : null
+                            }
+                            {   this.props.pigs === 1 ?
+                                <tr><td>Each bag of gold secured</td><td>+1000</td><td><RS rNum="2" start={2} limit={8}/></td></tr> : null
+                            }
+                            {   this.props.pigs === 2 ?
+                                <tr><td>Each bag of gold secured</td><td>+800</td><td><RS rNum="2" start={6} limit={10}/></td></tr> : null
+                            }
+                            {   this.props.ovkGoats ?
+                                <tr><td>Securing all goats in separate cages</td><td>+50000</td><td><RCB rNum="5" /></td></tr> : null
+                            }
+                            <tr><td></td><td></td><td></td></tr>
                         </tbody>
                     </table>
                 </Tape>
@@ -77,7 +112,7 @@ export const Paper = () => {
                 <StickyTitle>Players</StickyTitle>
                 <CrewCheckboxes>
                     <CrewLabel>
-                        <CrewRadio value="1" required />
+                        <CrewRadio value="1" defaultChecked required />
                         <CrewBox />
                     </CrewLabel>
                     <CrewLabel>
@@ -109,7 +144,7 @@ export const Custody = () => {
             <JailTitle><span>Players in jail</span><span>while escaping</span></JailTitle>
             <CrewCheckboxes>
                 <JailLabel>
-                    <JailRadio value="0" required />
+                    <JailRadio value="0" defaultChecked required />
                     <JailBox />
                 </JailLabel>
                 <JailLabel>
@@ -245,10 +280,11 @@ export class Bonus extends Component {
         
         return(
             <BonusNote>
-                <BoostTitle><span>Teamboosts</span><span>&amp; Perkdeck</span></BoostTitle>
+                <p>Bonuses</p>
+                <BoostTitle><span>TB(s) &amp;</span><span>Perkdeck</span></BoostTitle>
                 <BoostLabels>
                     <BoostLabel>
-                        TeamBoosts: <BoostInput min="0" max="8" defaultValue="0" size="1" />
+                        TeamBoosts: <BoostSelect> {setArray(0, 8).map((item) => <option key={item}>{item}</option>)}</BoostSelect>
                     </BoostLabel>
                     <BoostLabel>
                         PD bonus:
@@ -256,7 +292,7 @@ export class Bonus extends Component {
                         <BoostCheckboxStyle />
                     </BoostLabel>
                 </BoostLabels>
-                <HeatTitle><span>Heat</span> <span>bonus/penalty</span></HeatTitle>
+                <HeatTitle><span>Heat</span></HeatTitle>
                 <HeatLabel>
                     <HeatInput min="-30" max="15" defaultValue="0" />
                 </HeatLabel>
@@ -271,18 +307,21 @@ export class Bonus extends Component {
 
 export class Tablet extends Component {
 
-    getInfamy = (e) => {
-        console.log(e.currentTarget.value)
-        this.props.infamy(e.currentTarget.value);
+    getInfamy = (e) => this.props.infamy(e.currentTarget.value);
+
+    storageValues = (e) => {
+        if (e.currentTarget.name === "nickname") { localStorage.setItem("Nickname", e.currentTarget.value) }
+        if (e.currentTarget.name === "infamy") { localStorage.setItem("Infamy", e.currentTarget.value) }
+        if (e.currentTarget.name === "lvl") { localStorage.setItem("Level", e.currentTarget.value) }
     }
+
+    componentDidMount = () => this.props.infamy(localStorage.getItem("Infamy"));
 
     render() {
 
         const lvls = ['-', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
                     'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX',
                     'XXI', 'XXII', 'XXIII', 'XXIV', 'XXV+'];
-
-
 
         return(
             <LVLBox>
@@ -300,10 +339,9 @@ export class Tablet extends Component {
                         <DisplayInfo>
                             <DisplayPhoto />
                             <DisplayLVL>
-                                <div><span>Name:</span> <Nickname /></div>
-                                <div>Infamy: <Infamy onChange={this.getInfamy}>{lvls.map(lvl => <option key={lvl}>{lvl}</option>)}</Infamy></div>
-                                <div>Level: <Lvl min="0" max="100" required /></div>
-                                <div><Send /></div>
+                                <div><span>Name:</span> <Nickname name="nickname" onInput={this.storageValues} defaultValue={localStorage.getItem("Nickname")} /></div>
+                                <div>Infamy: <Infamy name="infamy" onChange={this.getInfamy} value={localStorage.getItem("Infamy")} onInput={this.storageValues} >{lvls.map(lvl => <option key={lvl} >{lvl}</option>)}</Infamy></div>
+                                <div>Level: <Lvl name="lvl" onInput={this.storageValues} min="0" max="100" defaultValue={localStorage.getItem("Level")} required /></div>
                             </DisplayLVL>
                         </DisplayInfo>
                         <DisplayMenu>

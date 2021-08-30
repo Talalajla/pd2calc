@@ -91,6 +91,10 @@ export const RequireNotes = styled.div`
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
     display: flex;
 
+    ${({theme}) => theme.resolutions.shrinkObj} {
+        width: 35vmin;
+        min-height: 45vmin;
+    }
 
     ${({theme}) => theme.resolutions.tablet} {
         min-height: 400px;
@@ -123,8 +127,12 @@ export const RequireNotes = styled.div`
         padding: 15px;
         width: 100%;
         border-collapse: collapse;
-        transform: rotate(2deg);
+        /* transform: rotate(2deg); */
         font-family: 'Calligraffitti', cursive;
+
+        th {
+            transform: rotate(1deg);
+        }
         
         th, td {
             padding: 5px;
@@ -433,6 +441,9 @@ export const GageLabel = styled.label`
     display: flex;
     font-size: 3.5vmin;
     color: ${({theme}) => theme.colors.crew };
+    position: relative;
+    left: -5px;
+
 
     ${({theme}) => theme.resolutions.photoBr} {
         font-size: 15px;
@@ -479,7 +490,13 @@ export const Clip = styled.div`
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 0 3px black;
-    
+    z-index: 1;
+
+    ${({theme}) => theme.resolutions.shrinkObj} {
+        height: 45vmin;
+        width: 35vmin;
+    }
+
     ${({theme}) => theme.resolutions.tablet} {
         width: 300px;
         height: 400px;
@@ -504,6 +521,9 @@ export const ClipTitle = styled.div`
     color: ${({theme}) => theme.colors.crew};
     font-size: 4vmin;
 
+    ${({theme}) => theme.resolutions.shrinkObj} {
+        font-size: 3.5vmin;
+    }
 
     ${({theme}) => theme.resolutions.tablet} {
         font-size: 40px !important;
@@ -528,6 +548,7 @@ export const Difficulty = styled.div`
     height: 50px;
     grid-template-columns: 1fr 9fr;
     gap: 15px;
+
 `;
 
 export const Skulls = styled.div`
@@ -598,6 +619,10 @@ export const DiffName = styled.div`
     position: relative;
     top: -20px;
     transform: rotate(20deg);
+
+    ${({theme}) => theme.resolutions.shrinkObj} {
+        font-size: 3.5vmin;
+    }
 
     ${({theme}) => theme.resolutions.photoBr} {
         font-size: ${({font}) => font ? "25px": "30px"};
@@ -804,8 +829,8 @@ export const BonusBox = styled.div`
 
 export const BonusNote = styled.div`
     background: url(${note4}) center/contain no-repeat;
-    height: 300px;
-    width: 500px;
+    height: 350px;
+    width: 550px;
     position: relative;
     /* left: 50%; */
     top: -50px;
@@ -813,9 +838,29 @@ export const BonusNote = styled.div`
     transform: rotate(-20deg);
     filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));
 
+    p {
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+        font-size: 35px;
+    }
+
     ${({theme}) => theme.resolutions.tablet} {
+        width: 400px;
+        max-height: 250px;
+        top: -20%;
+
+        p {
+            font-size: 20px;
+            top: 10px;
+        }
+    }
+
+    ${({theme}) => theme.resolutions.photoBr} {
         width: 300px;
         max-height: 200px;
+        font-size: 15px;
         top: auto;
     }
 `;
@@ -839,6 +884,8 @@ export const BoostLabel = styled.label`
     justify-content: center;
     align-items: center;
     gap: 5px;
+    font-weight: bold;
+    letter-spacing: .5px;
 
     ${({theme}) => theme.resolutions.tablet} {
         font-size: 12.5px;
@@ -848,24 +895,24 @@ export const BoostTitle = styled.div`
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    text-shadow: 0 0 1px black;
     color: ${({theme}) => theme.colors.boost};
     position: absolute;
-    left: 10%;
-    top: 20%;
-    transform: rotate(-20deg);
+    left: 12.5%;
+    top: 30%;
+    /* transform: rotate(-20deg); */
+    font-weight: bold;
 
     ${({theme}) => theme.resolutions.tablet} {
         font-size: 15px;
     }
 `;
-export const BoostInput = styled.input.attrs({type: 'number', name: 'boost'})`
+export const BoostSelect = styled.select.attrs({ name: 'boost'})`
     border: none;
-    appearance: textfield;
+    appearance: none;
     background: none;
     font-size: 30px;
     width: 25px;
-    font-family: "Permanent marker";
+    font-family: "Permanent marker", sans-serif;
     color: ${({theme}) => theme.colors.boost};
     cursor: pointer;
 
@@ -897,29 +944,31 @@ export const BoostCheckboxStyle = styled.div`
 `;
 
 export const HeatTitle = styled.div`
-    display: flex;
-    flex-direction: column;
     align-items: center;
     position: absolute;
-    left: 40%;
+    left: 47.5%;
     bottom: 35%;
     font-size: 20px;
     color: ${({theme}) => theme.colors.heat};
-    text-shadow: 0 0 1px red;
     letter-spacing: 1px;
+    font-weight: bold;
 
 
     ${({theme}) => theme.resolutions.tablet} {
-        font-size: 15px;
-        left: 42.5%;
+        font-size: 17.5px;
+        left: 47.5%;
         bottom: 35%;
+    }
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        font-size: 15px;
     }
 `;
 
 export const HeatLabel = styled.label`
     position: absolute;
-    left: 52.5%;
-    top: 20%;
+    left: 50%;
+    top: 40%;
     display: flex;
     gap: 5px;
     align-items: center;
@@ -942,16 +991,16 @@ export const HeatInput = styled.input.attrs({type: 'number', name: 'heat'})`
 
 export const StealthTitle = styled.div`
     position: absolute;
-    right: 10%;
-    top: 30%;
-    transform: rotate(15deg);
+    right: 11.5%;
+    top: 35%;
+    /* transform: rotate(15deg); */
     font-size: 25px;
     color: ${({theme}) => theme.colors.stealth};
-    text-shadow: 0 0 1px black;
+    font-weight: bold;
 
     ${({theme}) => theme.resolutions.tablet} {
-        font-size: 15px;
-        right: 7.5%;
+        font-size: 17.5px;
+        right: 10%;
         top: 35%;
     }
 `;
@@ -970,7 +1019,7 @@ export const StealthSelect = styled.select`
 
     ${({theme}) => theme.resolutions.tablet} {
         font-size: 20px;
-        right: 10%;
+        right: 12.5%;
     }
 `;
 export const StealthOption = styled.option`
@@ -1087,9 +1136,11 @@ export const DisplayInfo = styled.div`
     gap: 10px;
 `;
 export const DisplayLVL = styled.div`
+    position: relative;
+    top: -10px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     width: 200px;
 
     &>div {
@@ -1103,7 +1154,6 @@ export const DisplayLVL = styled.div`
         }
 
         :last-of-type {
-            margin-top: 10px;
             display: flex;
             justify-content: center;
         }
@@ -1219,15 +1269,77 @@ export const Lvl = styled.input.attrs({type: 'number', name: 'lvl'})`
     width: 100%;
 `;
 
-export const Send = styled.input.attrs({type: 'submit' ,value: 'Send'})`
-    width: 50px;
-    border: 2px solid #eee;
-    border-radius: 5px;
-    background: none;
-    color: #eee;
+export const SendBox = styled.div`
+    height: calc(100% - 45px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const TextBox = styled.div`
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #BDBDBD;
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    cursor: default;
+`;
+
+export const Frame = styled.div`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(27,27,27);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:  rgba(0,0,0,0.15) 0 -5px 5px 3px,
+  rgba(0,0,0,0.15) 0 5px 5px 3px,
+  rgba(30,50,90,0.3) 0 5px 6px 4px,
+  inset 0 0.25rem 0.15rem rgba(138,138,138,0.2);
+`;
+
+export const InnerFrame = styled.div`
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: inset 0 20px 10px rgba(199,199,199,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Send = styled.input.attrs({type: 'submit', value: ''})`
+    width: 80px;
+    height: 80px;
+    background-image:
+    -webkit-radial-gradient(50% 0%, 8% 50%, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 100%),
+    -webkit-radial-gradient(50% 100%, 12% 50%, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%),
+    -webkit-radial-gradient(0% 50%, 50% 7%, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%),
+    -webkit-radial-gradient(100% 50%, 50% 5%, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%),
+    -webkit-repeating-radial-gradient(50% 50%, 100% 100%, rgba(44,0,0,0) 0%, rgba(44,0,0,0) 3%,rgba(44,0,0,0) 3.5%),
+    -webkit-repeating-radial-gradient(50% 50%, 100% 100%, rgba(255,30,30,0) 0%, rgba(255,30,30,0) 6%,rgba(255,30,30,0.1) 7.5%),
+    -webkit-repeating-radial-gradient(50% 50%, 100% 100%, rgba(210,25,25,0) 0%, rgba(210,25,25,0) 1.2%,rgba(210,25,25,0.2) 2.2%),
+    -webkit-radial-gradient(50% 50%, 200% 50%, rgb(130,10,10) 5%,rgb(120,10,10) 30%, rgb(170,17,17) 100%);
+    box-shadow: inset 0 0.25rem 0.3rem rgb(153,76,76);
+    border-radius: 50%;
+    position: relative;
+    top: -1px;
+
     font-family: "Source Code Pro", sans-serif;
     cursor: pointer;
     place-self: center;
+    border: none;
+
+    :active {
+        filter: brightness(97%);
+        height: 75px;
+        width: 75px;
+        transform: rotate(1deg);
+        box-shadow: inset rgba(61, 0, 0, 0.7) 0 2px 2px 2px,
+                    inset rgba(61, 0, 0, 0.15) 0 2px 2px 5px;
+    }
 `;
 
 export const Result = styled.div`
@@ -1346,7 +1458,7 @@ export const PC = styled.div`
     z-index: 10;
     transform: rotateY(10deg);
     font-family: "Source Code Pro", sans-serif;
-
+    user-select: none;
 
 
     ${({theme}) => theme.resolutions.tablet} {
@@ -1449,6 +1561,90 @@ export const PC_CLOSE = styled.div`
     z-index: 100;
 `;
 
+export const PC_ERROR = styled(PC_CLOSE)`
+    background: #CC0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    padding: 30px;
+    gap: 10px;
+    z-index: 99;
+`;
+
+export const PC_ERROR_TITLE = styled.div`
+    font-size: 30px;
+    text-align: center;
+`;
+
+export const PC_ERROR_TEXT = styled.p`
+    text-align: justify;
+    font-size: 15px;
+`;
+
+/*
+?   BLUESCREEN
+*/
+
+export const PC_BLUESCREEN = styled(PC_CLOSE)`
+    background: #0078D7;
+    color: #fff;
+    padding: 0 10%;
+    display: flex;
+`;
+
+export const PC_BS_LEFT = styled.div`
+    font-family: "Open Sans";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        flex: 2;
+    }
+`;
+export const PC_BS_RIGHT = styled.div`
+    padding: 0 0 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        padding: 0;
+        flex: 1;
+    }
+`;
+export const PC_BS_FACE = styled.div`
+    font-size: 75px;
+    font-weight: 300;
+`;
+export const PC_BS_TEXT = styled.div`
+    font-size: 15px;
+    width: 100%;
+    font-weight: 300;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        font-size: 12.5px;
+    }
+`;
+export const PC_BS_QR = styled.div`
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+
+    img {
+        border: 3px solid white;
+    }
+`;
+export const PC_BS_LOGO = styled.div`
+    color: #fff;
+    filter: invert(100%);
+`;
+
 export const PC_BAR = styled.div`
     position: absolute;
     bottom: 0;
@@ -1515,6 +1711,12 @@ export const PC_FILE_TOP = styled.div`
 
 export const PC_FILE_CONTENT = styled.div`
     background: #ddd;
+    overflow: auto;
+    scrollbar-color: #212121 #fff;
+    scrollbar-width: thin;
+
+    ::-webkit-scrollbar { width: 7.5px }
+    ::-webkit-scrollbar-thumb { background: #212121;}
 `;
 
 export const PC_FILE_TITLE = styled.div`
@@ -1522,6 +1724,10 @@ export const PC_FILE_TITLE = styled.div`
     justify-content: center;
     font-size: 20px;
     padding: 10px;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        font-size: 12.5px;
+    }
 `;
 
 export const PC_FILE_EXP = styled.div`
@@ -1530,6 +1736,20 @@ export const PC_FILE_EXP = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 20px;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        font-size: 12.5px;
+    }
+
+    p:not(:first-of-type) {
+        margin: 3px;
+    }
+`;
+
+export const PC_BACK_BTN = styled.div`
+    border-bottom: 2px solid #121212;
+    font-size: 15px; 
+    cursor: pointer;
 `;
 
 export const PC_MORE_DETAILS = styled.div`
@@ -1544,12 +1764,20 @@ export const PC_FILE_DETAILS = styled(PC_FILE)`
     width: 50%;
     height: 70%;
     background: #eee;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        width: 75%;
+    }
 `;
 
 export const PC_FILE_DETAILS_TITLE = styled.div`
     text-align: center;
     padding: 5px;
     font-size: 20px;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        font-size: 12.5px;
+    }
 `;
 
 export const PC_FILE_DETAILS_DATA = styled.div`
@@ -1588,6 +1816,14 @@ export const PC_FILE_SPEC = styled(PC_FILE) `
     height: 75%;
     z-index: 5;
     background: #ddd;
+`;
+
+export const PC_SPEC_COMPONENT = styled.div`
+    padding: 3px 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 `;
 
 /*
@@ -1642,3 +1878,4 @@ export const ReqSelect = styled.select`
     width: 100%;
     cursor: pointer;
 `;
+

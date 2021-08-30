@@ -1,0 +1,740 @@
+[   
+    {
+        "id": 1,
+        "name": "Aftershock",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/aftershock.5151bdc0.jpg",
+        "link": "aftershock",
+        "category": "loud"
+    },
+    {
+        "id": 2,
+        "name": "Alaskan Deal",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/alaskan.f25115d7.jpg",
+        "link": "alaskandeal",
+        "category": "loud"
+    },
+    {
+        "id": 3,
+        "name": "Art Gallery",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/artgallery.673f4a34.jpg",
+        "link": "artgallery_loud",
+        "category": "both"
+    },
+    {
+        "id": 4,
+        "name": "Bank Heist",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/bank.902c0fdd.jpg",
+        "link": "bank",
+        "category": "both"
+    },
+    {
+        "id": 5,
+        "name": "Beneath the Mountain",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/beneathmountain.b1db383c.jpg",
+        "link": "btm",
+        "category": "loud"
+    },
+    {
+        "id": 6,
+        "name": "Big Oil",
+        "subname": "(day 1: Club House)",
+        "isLoud": "",
+        "img": "/static/media/bigoil.f4c12d10.jpg",
+        "link": "bigoil_day1",
+        "category": "loud"
+    },
+    {
+        "id": 7,
+        "name": "Big Oil",
+        "subname": "(day 2: Engine Problems)",
+        "isLoud": "",
+        "img": "/static/media/bigoil.f4c12d10.jpg",
+        "link": "bigoil_day2",
+        "category": "loud"
+    },
+    {
+        "id": 8,
+        "name": "Birth of Sky",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/birthsky.b66c1894.jpg",
+        "link": "birthofsky",
+        "category": "loud"
+    },
+    {
+        "id": 9,
+        "name": "Boiling Point",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/boiling.658eec97.jpg",
+        "link": "boilingpoint",
+        "category": "loud"
+    },
+    {
+        "id": 10,
+        "name": "Border Crossing",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/border.8a1def21.jpg",
+        "link": "bordercrossing_loud",
+        "category": "both"
+    },
+    {
+        "id": 11,
+        "name": "Border Crystals",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/bordercrystals.36c83c80.jpg",
+        "link": "bordercrystals",
+        "category": "loud"
+    },
+    {
+        "id": 12,
+        "name": "Breakfast in Tijuana",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/breakfast.7d657561.jpg",
+        "link": "breakfastintijuana_loud",
+        "category": "both"
+    },
+    {
+        "id": 13,
+        "name": "Brooklyn 10-10",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/brooklyn10.e7222959.jpg",
+        "link": "brooklyn10-10",
+        "category": "loud"
+    },
+    {
+        "id": 14,
+        "name": "Brooklyn Bank",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/brooklyn.d6523d89.jpg",
+        "link": "brooklynbank",
+        "category": "loud"
+    },
+    {
+        "id": 15,
+        "name": "Buluc's Mansion",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/bulucs.0810f6a9.jpg",
+        "link": "bulucsmansion_loud",
+        "category": "both"
+    },
+    {
+        "id": 16,
+        "name": "Cook Off",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/cookoff.abbbf33c.jpg",
+        "link": "cookoff",
+        "category": "loud"
+    },
+    {
+        "id": 17,
+        "name": "Counterfeit",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/counterfeit.015dd75f.jpg",
+        "link": "counterfeit",
+        "category": "both"
+    },
+    {
+        "id": 18,
+        "name": "Cursed Kill Room",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/default.f2f003a6.jpg",
+        "link": "ckr",
+        "category": "loud"
+    },
+    {
+        "id": 19,
+        "name": "Diamond Heist",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/diamondheist.6f201078.jpg",
+        "link": "diamondheist_loud",
+        "category": "both"
+    },
+    {
+        "id": 20,
+        "name": "Diamond Store",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/diamondstore.6efb9282.jpg",
+        "link": "diamondstore_loud",
+        "category": "both"
+    },
+    {
+        "id": 21,
+        "name": "Dragon Heist",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/dragon.17ff4387.jpg",
+        "link": "dragonheist_loud",
+        "category": "both"
+    },
+    {
+        "id": 22,
+        "name": "Election day",
+        "subname": "(day 1: Right Track)",
+        "isLoud": "(loud)",
+        "img": "/static/media/electionday.baaa8182.jpg",
+        "link": "electionday_day1_loud",
+        "category": "both"
+    },
+    {
+        "id": 23,
+        "name": "Election day",
+        "subname": "(day 2: Swing Vote)",
+        "isLoud": "(loud)",
+        "img": "/static/media/electionday.baaa8182.jpg",
+        "link": "electionday_day2_loud",
+        "category": "both"
+    },
+    {
+        "id": 24,
+        "name": "Election day",
+        "subname": "(day 2: Breaking Ballot)",
+        "isLoud": "",
+        "img": "/static/media/electionday.baaa8182.jpg",
+        "link": "electionday_day2C_loud",
+        "category": "both"
+    },
+    {
+        "id": 25,
+        "name": "Firestarter",
+        "subname": "(day 1: Airport)",
+        "isLoud": "(loud)",
+        "img": "/static/media/firestarter.8fd64577.jpg",
+        "link": "firestarter_day1_loud",
+        "category": "both"
+    },
+    {
+        "id": 26,
+        "name": "Firestarter",
+        "subname": "(day 2: FBI Server)",
+        "isLoud": "(loud)",
+        "img": "/static/media/firestarter.8fd64577.jpg",
+        "link": "firestarter_day2_loud",
+        "category": "both"
+    },
+    {
+        "id": 27,
+        "name": "Firestarter",
+        "subname": "(day 3: Trustee Bank)",
+        "isLoud": "(loud)",
+        "img": "/static/media/firestarter.8fd64577.jpg",
+        "link": "firestarter_day3_loud",
+        "category": "both"
+    },
+    {
+        "id": 28,
+        "name": "First World Bank",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/fwb.17b07d75.jpg",
+        "link": "fwb_loud",
+        "category": "both"
+    },
+    {
+        "id": 29,
+        "name": "Four Stores",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/fourstores.28a6d041.jpg",
+        "link": "fourstores",
+        "category": "both"
+    },
+    {
+        "id": 30,
+        "name": "Framing Frame",
+        "subname": "(day 1: Art Gallery)",
+        "isLoud": "(loud)",
+        "img": "/static/media/framingframe.2b27199b.jpg",
+        "link": "framingframe_day1_loud",
+        "category": "both"
+    },
+    {
+        "id": 31,
+        "name": "Framing Frame",
+        "subname": "(day 2: Train Trade)",
+        "isLoud": "(loud)",
+        "img": "/static/media/framingframe.2b27199b.jpg",
+        "link": "framingframe_day2_loud",
+        "category": "both"
+    },
+    {
+        "id": 32,
+        "name": "Framing Frame",
+        "subname": "(day 3: Framing)",
+        "isLoud": "(loud)",
+        "img": "/static/media/framingframe.2b27199b.jpg",
+        "link": "framingframe_day3_loud",
+        "category": "both"
+    },
+    {
+        "id": 33,
+        "name": "Go Bank",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/gobank.e5923360.jpg",
+        "link": "gobank_loud",
+        "category": "both"
+    },
+    {
+        "id": 34,
+        "name": "Goat Simulator",
+        "subname": "(day 1: This was not the deal)",
+        "isLoud": "",
+        "img": "/static/media/goat.3cf5b307.jpg",
+        "link": "goatsimulator_day1",
+        "category": "loud"
+    },
+    {
+        "id": 35,
+        "name": "Goat Simulator",
+        "subname": "(day 2: Dirty Work)",
+        "isLoud": "",
+        "img": "/static/media/goat.3cf5b307.jpg",
+        "link": "goatsimulator_day2",
+        "category": "loud"
+    },
+    {
+        "id": 36,
+        "name": "Golden Grin Casino",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/ggc.6d7c142d.jpg",
+        "link": "ggc_loud",
+        "category": "loud"
+    },
+    {
+        "id": 37,
+        "name": "Green Bridge",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/green.d1ee3b06.jpg",
+        "link": "greenbridge",
+        "category": "loud"
+    },
+    {
+        "id": 38,
+        "name": "Heat Street",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/heatstreet.6a1fc8bd.jpg",
+        "link": "heatstreet",
+        "category": "loud"
+    },
+    {
+        "id": 39,
+        "name": "Hell's Island",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/hells.5883b8bd.jpg",
+        "link": "hellsisland",
+        "category": "loud"
+    },
+    {
+        "id": 40,
+        "name": "Henry's Rock",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/henryscock.7ebf36ce.jpg",
+        "link": "henrysrock",
+        "category": "loud"
+    },
+    {
+        "id": 41,
+        "name": "Hotline Miami",
+        "subname": "(day 1: Hotline Miami)",
+        "isLoud": "",
+        "img": "/static/media/hotlinemiami.a5828e73.jpg",
+        "link": "hotlinemiami_day1",
+        "category": "loud"
+    },
+    {
+        "id": 42,
+        "name": "Hotline Miami",
+        "subname": "(day 2: Four Floors)",
+        "isLoud": "",
+        "img": "/static/media/hotlinemiami.a5828e73.jpg",
+        "link": "hotlinemiami_day2",
+        "category": "loud"
+    },
+    {
+        "id": 43,
+        "name": "Hoxton Breakout",
+        "subname": "(day 1: The Breakout)",
+        "isLoud": "",
+        "img": "/static/media/hoxtonbreakout.ff3610a7.jpg",
+        "link": "hoxtonbreakout_day1",
+        "category": "loud"
+    },
+    {
+        "id": 44,
+        "name": "Hoxton Breakout",
+        "subname": "(day 2: The Search)",
+        "isLoud": "",
+        "img": "/static/media/hoxtonbreakout.ff3610a7.jpg",
+        "link": "hoxtonbreakout_day2",
+        "category": "loud"
+    },
+    {
+        "id": 45,
+        "name": "Hoxton Revenge",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/hoxrev.bfec9fdb.jpg",
+        "link": "hoxtonrevenge_loud",
+        "category": "both"
+    },
+    {
+        "id": 46,
+        "name": "Jewelry Store",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/jewelry.0220babf.jpg",
+        "link": "jewelrystore_loud",
+        "category": "both"
+    },
+    {
+        "id": 47,
+        "name": "Lab Rats",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/default.f2f003a6.jpg",
+        "link": "labrats",
+        "category": "loud"
+    },
+    {
+        "id": 48,
+        "name": "Mallcrasher",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/mallcrasher.99907277.jpg",
+        "link": "mallcrasher",
+        "category": "both"
+    },
+    {
+        "id": 49,
+        "name": "Meltdown",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/meltdown.4ba0ef69.jpg",
+        "link": "meltdown",
+        "category": "loud"
+    },
+    {
+        "id": 50,
+        "name": "Nightclub",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/nightclub.d8fc4cfb.jpg",
+        "link": "nightclub_loud",
+        "category": "both"
+    },
+    {
+        "id": 51,
+        "name": "No Mercy",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/nomercy.65a95be5.jpg",
+        "link": "nomercy",
+        "category": "loud"
+    },
+    {
+        "id": 52,
+        "name": "Panic Room",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/panicroom.5b74e329.jpg",
+        "link": "panicroom",
+        "category": "loud"
+    },
+    {
+        "id": 53,
+        "name": "Prison Nightmare",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/default.f2f003a6.jpg",
+        "link": "prisonnightmare",
+        "category": "loud"
+    },
+    {
+        "id": 54,
+        "name": "Rats",
+        "subname": "(day 1: Cook Off)",
+        "isLoud": "",
+        "img": "/static/media/rats.7e1f0451.jpg",
+        "link": "rats_day1",
+        "category": "loud"
+    },
+    {
+        "id": 55,
+        "name": "Rats",
+        "subname": "(day 2: Code for Meth)",
+        "isLoud": "",
+        "img": "/static/media/rats.7e1f0451.jpg",
+        "link": "rats_day2",
+        "category": "loud"
+    },
+    {
+        "id": 56,
+        "name": "Rats",
+        "subname": "(day 3: Bus Stop)",
+        "isLoud": "",
+        "img": "/static/media/rats.7e1f0451.jpg",
+        "link": "rats_day3",
+        "category": "loud"
+    },
+    {
+        "id": 57,
+        "name": "Reservoir Dogs",
+        "subname": "(day 2: Highland Mortuary)",
+        "isLoud": "",
+        "img": "/static/media/reservoirdogs.0909ca6b.jpg",
+        "link": "rdh_day2",
+        "category": "loud"
+    },
+    {
+        "id": 58,
+        "name": "Reservoir Dogs",
+        "subname": "(day 1: Garnet Group Boutique)",
+        "isLoud": "",
+        "img": "/static/media/reservoirdogs.0909ca6b.jpg",
+        "link": "rdh_day1",
+        "category": "loud"
+    },
+    {
+        "id": 59,
+        "name": "Safe House Nightmare",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/default.f2f003a6.jpg",
+        "link": "shn",
+        "category": "loud"
+    },
+    {
+        "id": 60,
+        "name": "Safe House Raid",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/safehouse.7f36aeb5.jpg",
+        "link": "shr",
+        "category": "loud"
+    },
+    {
+        "id": 61,
+        "name": "San Martín Bank",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/sanmartin.6a16f466.jpg",
+        "link": "sanmartínbank_loud",
+        "category": "both"
+    },
+    {
+        "id": 62,
+        "name": "Santa's Workshop",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/santasworkshop.b235bf5a.jpg",
+        "link": "santasworkshop",
+        "category": "loud"
+    },
+    {
+        "id": 63,
+        "name": "Scarface Mansion",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/scarface.b1d435a8.jpg",
+        "link": "scarfacemansion_loud",
+        "category": "both"
+    },
+    {
+        "id": 64,
+        "name": "Shacklethorne Auction",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/shacklethorne.6bf1d98e.jpg",
+        "link": "shacklethorne_loud",
+        "category": "both"
+    },
+    {
+        "id": 65,
+        "name": "Slaughterhouse",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/slaughterhouse.b5a35e66.jpg",
+        "link": "slaughterhouse",
+        "category": "loud"
+    },
+    {
+        "id": 66,
+        "name": "Stealing Xmas",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/stealingxmas.6886236a.jpg",
+        "link": "stealingxmas",
+        "category": "loud"
+    },
+    {
+        "id": 67,
+        "name": "The Alesso Heist",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/thealesso.c054800e.jpg",
+        "link": "thealessoheist_loud",
+        "category": "both"
+    },
+    {
+        "id": 68,
+        "name": "The Big Bank",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/thebigbank.741bcab1.jpg",
+        "link": "thebigbank_loud",
+        "category": "both"
+    },
+    {
+        "id": 69,
+        "name": "The Biker Heist",
+        "subname": "(day 1: Lion's Den)",
+        "isLoud": "",
+        "img": "/static/media/bikers.01becb3a.jpg",
+        "link": "tbh_day1",
+        "category": "loud"
+    },
+    {
+        "id": 70,
+        "name": "The Biker Heist",
+        "subname": "(day 2: Interception)",
+        "isLoud": "",
+        "img": "/static/media/bikers2.51c3acc7.jpg",
+        "link": "tbh_day2",
+        "category": "loud"
+    },
+    {
+        "id": 71,
+        "name": "The Bomb: Dockyard",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/thebombdockyard.0642b095.jpg",
+        "link": "thebombdockyard_loud",
+        "category": "both"
+    },
+    {
+        "id": 72,
+        "name": "The Bomb: Forest",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/transportforest.f0ede125.jpg",
+        "link": "thebombforest",
+        "category": "loud"
+    },
+    {
+        "id": 73,
+        "name": "The Diamond",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/thediamond.a11bf7bc.jpg",
+        "link": "thediamond_loud",
+        "category": "both"
+    },
+    {
+        "id": 74,
+        "name": "The Ukrainian Prisoner",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/theukrainianprisoner.b148f3f2.jpg",
+        "link": "tup_loud",
+        "category": "both"
+    },
+    {
+        "id": 75,
+        "name": "The White House",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/thewhite.6e124ae5.jpg",
+        "link": "thewhitehouse_loud",
+        "category": "both"
+    },
+    {
+        "id": 76,
+        "name": "Transports",
+        "subname": "(all others)",
+        "isLoud": "",
+        "img": "/static/media/transport.084bd64d.jpg",
+        "link": "",
+        "category": "loud"
+    },
+    {
+        "id": 77,
+        "name": "Transport: Train Heist",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/train.b2100511.jpg",
+        "link": "tth",
+        "category": "stealth"
+    },
+    {
+        "id": 78,
+        "name": "Ukrainian Job",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/ukrainian.1492f6c6.jpg",
+        "link": "ukrainianjob",
+        "category": "both"
+    },
+    {
+        "id": 79,
+        "name": "Undercover",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/undercover.6614f1c8.jpg",
+        "link": "undercover",
+        "category": "loud"
+    },
+    {
+        "id": 80,
+        "name": "Watchdogs",
+        "subname": "(day 1: Truck Load)",
+        "isLoud": "",
+        "img": "/static/media/watchdogs.7036d270.jpg",
+        "link": "watchdogs_day1",
+        "category": "loud"
+    },
+    {
+        "id": 81,
+        "name": "Watchdogs",
+        "subname": "(day 2: Boat Load)",
+        "isLoud": "",
+        "img": "/static/media/watchdogs.7036d270.jpg",
+        "link": "watchdogs_day2",
+        "category": "loud"
+    },
+    {
+        "id": 82,
+        "name": "White Xmas",
+        "subname": "",
+        "isLoud": "",
+        "img": "/static/media/whitexmas.d19a06db.jpg",
+        "link": "whitexmas",
+        "category": "loud"
+    }
+]

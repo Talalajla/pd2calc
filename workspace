@@ -1,0 +1,9 @@
+importAll = imgs => {
+    let images = {};
+    imgs.keys().map((img, i) => images[img.replace('../', '')] = imgs(img));
+    return images
+}
+
+(render)
+const images = this.importAll(require.context('../images/maps/loud', false, /\.jpg/));
+Object.values(images);

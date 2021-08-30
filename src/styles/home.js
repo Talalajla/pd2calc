@@ -30,7 +30,7 @@ export const Side = styled.div`
     }
 
     svg {
-        color: ${({stealth}) => stealth?"#6FC4FC":"#F56600"};
+        color: ${item => item.paint === "blue" ? "#6FC4FC" : "#F56600" };
         filter: drop-shadow(0 0 3px black);
     }
 
@@ -41,12 +41,12 @@ export const Side = styled.div`
             filter: grayscale(0);
 
             &>div>* {
-                color: ${({stealth}) => stealth?"#6FC4FC":"#F56600"};
+                color: ${item => item.paint === "blue" ? "#6FC4FC" : "#F56600" };
                 font-size: 70px;
             }
 
             &>div>div {
-                transform: ${({stealth}) => stealth?"rotate(-5deg)":"rotate(5deg)"};
+                transform: ${item => item.paint === "blue" ? "rotate(-5deg)":"rotate(5deg)" };
             }
             
             img {
