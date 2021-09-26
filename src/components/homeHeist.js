@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Content, Main, Main2, Main3, Players, PhotoBox, DiffBox, ReqBox, Rest, BonusBox, Result, Desk, SendBox, Frame, InnerFrame, Send, TextBox, PC, PC_SCREEN, PC_LEG, PC_STAND, PC_DISPLAY,
     PC_POWER, PC_CLOSE, PC_BAR, PC_FILE, PC_FILE_TOP, PC_FILE_CONTENT, PC_FILE_TITLE, PC_FILE_EXP, PC_MORE_DETAILS, PC_FILE_DETAILS, PC_FILE_DETAILS_TITLE,
-    PC_BACK_BTN, PC_FILE_DETAILS_DATA, PC_FILE_SPEC, PC_SPEC_COMPONENT, PC_ERROR, PC_ERROR_TITLE, PC_ERROR_TEXT, PC_BLUESCREEN, PC_BS_LEFT, PC_BS_RIGHT, PC_BS_FACE, PC_BS_TEXT, PC_BS_QR, PC_BS_LOGO
+    PC_BACK_BTN, PC_FILE_DETAILS_DATA, PC_FILE_SPEC, PC_SPEC_COMPONENT, PC_ERROR, PC_ERROR_TITLE, PC_ERROR_TEXT, PC_BLUESCREEN, PC_BS_LEFT, PC_BS_RIGHT, PC_BS_FACE, PC_BS_TEXT, PC_BS_QR, PC_BS_LOGO, PC_BS_TIMER
 } from "../styles/heist-main";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign, faFileWord, faFileCode, faFileUpload, faFileAlt, faDesktop, faKey, faInfoCircle, faCalculator, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
@@ -151,11 +151,22 @@ class HomeHeist extends Component {
         return item.value;
     }
 
+    bluescreenTime = () => {
+        let status = 0;
+        for (var i = 0; i < 100; i++) {
+            const timer = Math.round(Math.random() * (1000 - 550) + 550);
+            // console.log("Timer:", timer);
+            setTimeout(() => console.log("test"), timer);
+        }
+        // console.log(status);
+
+    }
+
     countEXP = (e) => {
         e.preventDefault();
 
-        const randomNum = Math.round(Math.random()*10);
-        if (randomNum === 1) this.setState({whatAboutBluescreen: true});
+        const randomNum = Math.round(Math.random()*1);
+        if (randomNum === 1) this.setState({whatAboutBluescreen: true}, this.bluescreenTime);
 
         const form = e.currentTarget;
         
@@ -627,6 +638,7 @@ class HomeHeist extends Component {
                                         <PC_BS_LEFT>
                                             <PC_BS_FACE>&#58;&#40;</PC_BS_FACE>
                                             <PC_BS_TEXT>Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.</PC_BS_TEXT>
+                                            <PC_BS_TIMER>0% complete</PC_BS_TIMER>
                                             <PC_BS_QR>
                                                 <img src={qr} width="50" alt="QR Code" />
                                                 <span>You found any problems while using the app? You'll find me there.</span>

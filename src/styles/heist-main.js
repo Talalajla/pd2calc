@@ -1592,6 +1592,7 @@ export const PC_BLUESCREEN = styled(PC_CLOSE)`
     color: #fff;
     padding: 0 10%;
     display: flex;
+    z-index: 20;
 `;
 
 export const PC_BS_LEFT = styled.div`
@@ -1629,6 +1630,12 @@ export const PC_BS_TEXT = styled.div`
         font-size: 12.5px;
     }
 `;
+
+export const PC_BS_TIMER = styled.div`
+    padding: 5px 0;
+    font-size: 15px;
+`;
+
 export const PC_BS_QR = styled.div`
     width: 75%;
     display: flex;
