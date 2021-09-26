@@ -15,7 +15,7 @@ export const Navbar = styled.nav`
     }
 `;
 
-export const NAV_ITEM = styled.div`
+export const NavItemRow = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -34,14 +34,14 @@ export const NAV_ITEM = styled.div`
     }
 `; 
 
-export const NAV_LIST = styled.div`
+export const NavListRow = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
 `;
 
-export const NAV_LIST_ITEM = styled.div`
+export const NavListItemRow = styled.div`
     padding: 10px;
     font-size: 3vmin;
     color: #C7C7C7;

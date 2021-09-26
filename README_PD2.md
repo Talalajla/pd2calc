@@ -49,16 +49,24 @@ Mayhem  :   x11,5
 DW      :   x13
 DS      :   x14
 ---RISK---
-$default = $classic - $penalty
 
-$risk = $default * $modifier;
-$perkBonus = ($default + $risk) * (0.45 + $teamboosts);
-$infamy = ($default + $risk) * lvl(0 - 2.05);
-$crew = ($default + $risk) * $amount(0 - 0.3);
-$gage = ($default + $risk) * 0.05;
+---MULTIPLIERS---
+BASE (basic EXP from each heist completed),
+PENALTY: (loss EXP cause of LVL [10+ lower player's LVL than JC on map]),
+RISK: (bonus EXP dependable on heist difficulty),
+CUSTODY: (loss EXP if player was in custody when heist finished),
+CREW: (bonus EXP for each player excluding host),
+BONUS: (bonus EXP for each TEAMBOOST applied on weapon & perkdeck bonus),
+INFAMY: (bonus for each infamy LVL [max XXV]),
+GAGE: (bonus EXP for each gage package found),
+STEALTH: (bonus EXP if last heist was completed in stealth),
+HEAT: (bonus or loss EXP depending on the frequency of finishing particular heist)
+---MULTIPLIERS---
 
-
-$default + $risk + $perkBonus + $infamy + $crew + $gage + $bonus
+---FORMULA---
+RESULT = (BASE - PENALTY + RISK) + CREW + BONUS + INFAMY + GAGE + STEALTH + HEAT
+RESULT (in custody) = (BASE - PENALTY + RISK - CUSTODY) + CREW + BONUS + INFAMY + GAGE + STEALTH + HEAT
+---FORMULA---
 
 Test data: {
     {
@@ -242,7 +250,6 @@ BASE CALC:
     Ukrainian 35 500 (0 bags; rotating code)
     Ukrainian ? (0 bags; kc)
     chyba 4150~
-    
 }
 
 Bulucs:

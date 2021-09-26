@@ -7,6 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Stealth from "./pages/stealth";
 import Loud from "./pages/loud";
+import Tutorial from "./pages/tutorial";
 
 import Aftershock from "./pages/heists/aftershock";
 import Alaskan from "./pages/heists/alaskandeal";
@@ -137,6 +138,7 @@ class App extends Component {
               <Route exact path="/" component={Home}/> 
               <Route exact path="/stealth" component={Stealth}/>
               <Route exact path="/loud" component={Loud}/>
+              <Route exact path="/tutorial" component={Tutorial}/>
               <Route exact path="/cookoff" component={CookOff}/>
               <Route exact path="/aftershock" component={Aftershock}/>
               <Route exact path="/alaskandeal" component={Alaskan}/>

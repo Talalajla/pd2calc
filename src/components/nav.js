@@ -1,5 +1,5 @@
 import { Component } from "react";
-import {Navbar, NAV_ITEM, NAV_LIST, NAV_LIST_ITEM, Screw, Indent} from "../styles/nav";
+import {Navbar, NavItemRow, NavListRow, NavListItemRow, Screw, Indent} from "../styles/nav";
 import { Link } from "react-router-dom";
 
 class Nav extends Component {
@@ -16,23 +16,24 @@ class Nav extends Component {
 
 const NavItem = ({text}) => {
     return(
-        <NAV_ITEM>
+        <NavItemRow>
             <Screw left top><Indent type="type1" /></Screw>
             <p>{text}</p>
             <Screw right top><Indent type="type2" /></Screw>
-        </NAV_ITEM>
+        </NavItemRow>
     );
 }
 
 const NavList = () => {
     return(
-        <NAV_LIST>
+        <NavListRow>
             <Screw bot left><Indent type="type3" /></Screw>
-            <NAV_LIST_ITEM as={Link} to="/" >Home</NAV_LIST_ITEM>
-            <NAV_LIST_ITEM as={Link} to="/stealth" >Stealth</NAV_LIST_ITEM>
-            <NAV_LIST_ITEM as={Link} to="/loud" >Loud</NAV_LIST_ITEM>
+            <NavListItemRow as={Link} to="/" >Home</NavListItemRow>
+            <NavListItemRow as={Link} to="/stealth" >Stealth</NavListItemRow>
+            <NavListItemRow as={Link} to="/loud" >Loud</NavListItemRow>
+            <NavListItemRow as={Link} to="/tutorial" >Help</NavListItemRow>
             <Screw bot right><Indent /></Screw>
-        </NAV_LIST>
+        </NavListRow>
     );
 }
 
