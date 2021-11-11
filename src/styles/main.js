@@ -8,8 +8,7 @@ export const Main = styled.main`
 `;
 
 export const MainTitle = styled.div`
-    display: flex;
-    justify-content: center;
+    text-align: center;
     width: 100%;
     padding: 20px;
     font-size: 6vmin;
@@ -26,7 +25,7 @@ export const HeistGallery = styled.div`
     align-items: start;
     justify-content: center;
     gap: 20px;
-    padding: 30px 0;
+    padding: 30px 10px;
 `;
 
 export const HeistItem = styled.div`
@@ -100,12 +99,16 @@ export const SearchStealth = styled.input.attrs({type: "search"})`
     background: #eee;
     border-radius: 3px;
     min-width: 300px;
-    height: 50px;
+    max-height: 50px;
     padding: 10px 15px;
     place-self: center;
     border: 2px solid black;
     outline: 0;
     font-size: 20px;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        min-width: auto;
+    }
 `;
 
 export const ChooseType = styled.div`
@@ -115,12 +118,20 @@ export const ChooseType = styled.div`
     padding: 20px 0;
     gap: 30px;
     font-size: 20px;
+
+    @media(max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+        width: 220px;
+        margin: auto;
+    }
 `;
 
 export const RadioLabel = styled.label`
     display: flex;
     align-items: center;
     gap: 5px;
+    cursor: pointer;
 
     div {
         width: 15px;
@@ -131,6 +142,8 @@ export const RadioLabel = styled.label`
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        top: 1px;
 
         span {
             opacity: none;

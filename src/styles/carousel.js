@@ -23,6 +23,15 @@ export const CarouselContent = styled.div`
         flex-grow: 1;
         display: grid;
         place-items: center;
+
+        img {
+            max-width: 750px;
+
+            ${({theme}) => theme.resolutions.phone} {
+                max-width: 100vw;
+                padding: 0 20px;
+            }
+        }
     }
 `;
 export const Controls = styled.div`
@@ -31,6 +40,7 @@ export const Controls = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 20px 0;
 `;
 
 export const Position = styled.div`

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { Content, Main, Main2, Main3, Players, PhotoBox, DiffBox, ReqBox, Rest, BonusBox, Result, Desk, SendBox, Frame, InnerFrame, Send, TextBox, PC, PC_SCREEN, PC_LEG, PC_STAND, PC_DISPLAY,
     PC_POWER, PC_CLOSE, PC_BAR, PC_FILE, PC_FILE_TOP, PC_FILE_CONTENT, PC_FILE_TITLE, PC_FILE_EXP, PC_MORE_DETAILS, PC_FILE_DETAILS, PC_FILE_DETAILS_TITLE,
-    PC_BACK_BTN, PC_FILE_DETAILS_DATA, PC_FILE_SPEC, PC_SPEC_COMPONENT, PC_ERROR, PC_ERROR_TITLE, PC_ERROR_TEXT, PC_BLUESCREEN, PC_BS_LEFT, PC_BS_RIGHT, PC_BS_FACE, PC_BS_TEXT, PC_BS_QR, PC_BS_LOGO, PC_BS_TIMER
+    PC_BACK_BTN, PC_FILE_DETAILS_DATA, PC_FILE_SPEC, PC_SPEC_COMPONENT, PC_ERROR, PC_ERROR_TITLE, PC_ERROR_TEXT, PC_BLUESCREEN, PC_BS_LEFT, PC_BS_RIGHT, PC_BS_FACE, PC_BS_TEXT, PC_BS_QR, PC_BS_LOGO, PC_BS_TIMER, PC_POST, PC_POST_TEXT, PC_DISPLAYS
 } from "../styles/heist-main";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign, faFileWord, faFileCode, faFileUpload, faFileAlt, faDesktop, faKey, faInfoCircle, faCalculator, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
@@ -64,10 +64,17 @@ class HomeHeist extends Component {
             errorShow: false,
             errorNum: null,
             whatAboutBluescreen: false,
+            bluescreenPerc: 0,
+            runPost: false,
         };
+
+        this.POST = createRef();
     }
 
     checkValues = (e) => {
+        this.goBack();
+        console.log("zmiana")
+        
         const form = e.currentTarget;
 
         this.props.fLootBonus && form.req2.value === "8" ? this.setState({fLootBonus: true}) : this.setState({fLootBonus: false});
@@ -151,22 +158,62 @@ class HomeHeist extends Component {
         return item.value;
     }
 
-    bluescreenTime = () => {
-        let status = 0;
-        for (var i = 0; i < 100; i++) {
-            const timer = Math.round(Math.random() * (1000 - 550) + 550);
-            // console.log("Timer:", timer);
-            setTimeout(() => console.log("test"), timer);
-        }
-        // console.log(status);
+    writeTextTyper = (text) => {
+        var contentArray = text.split(""),
+            current = 0,
+            elem = this.POST.current;
+        setInterval(() => {
+            if (current < contentArray.length) {  elem.textContent += contentArray[current++]; }
+        }, 30);
+    };
 
+    bluescreenTime = () => {
+        const timer = Math.round(Math.random() * (2000 - 500) + 500);
+        const percents = Math.round(Math.random() * (20 - 3) + 3);
+        if (this.state.bluescreenPerc + percents < 100) {
+            const repeat = setInterval(() => {
+                this.setState({bluescreenPerc: this.state.bluescreenPerc + percents});
+                clearInterval(repeat);
+                return this.bluescreenTime();
+            }, timer);
+            
+        } else { 
+            this.setState({bluescreenPerc: 100, runPost: true});
+            const elem = this.POST.current; 
+            setTimeout(() => elem.textContent = "» KEKWindowOS v1.51 Loading ...  Completed ", 0);
+            setTimeout(() => this.writeTextTyper("\nnmap -sS -p- -PP -PE -PS80,443 -PA3389 -PU40125 -A -T4 -oA ic.files.talalajla.heists-%D 10.31.251.103", 50));
+            setTimeout(() => this.writeTextTyper("\nStarting Nmap ( http://nmap.org )"), 3700);
+            setTimeout(() => {
+                elem.textContent += `\nNmap scan report for ic.files.fednet.agency (10.31.251.103) \n(The 65526 ports scanned but not shown below are in state: closed) \n \nPORT       STATE    SERVICE       VERSION \n22/tcp     filtered msrpc \n25/tcp     filtered heist \n53/tcp     filtered talabios-ns \n80/tcp     filtered talabios-dgm \n1002/tcp   open     kekwindow-ircp? \n16552/tcp  open     unknown \nDevice type: general purpose \nRunning: GoodForPeoplePC \nOS details: KEKWindow - PrivNet Fork w/KEKWindow Compatibility v1.51`;
+            }, 4700);
+            setTimeout(() => {
+                elem.textContent += `\n\nHost script results: TalaBIOS name: Talalajla, TalaBIOS user: ${this.state.nickname ? this.state.nickname : 'unknown'},  TalaBIOS MAC: CB:B2:78:6C:93:B4 (IBM) \n|_smbv2-enabled: Server doesn't support SMBv2 protocol \n| smb-os-discovery:   \n|   OS: KEKWindow \n|_  Name: WORKGROUP\\Talalajla \n\n#`;
+                elem.style.position = "absolute";
+                elem.style.bottom = 0;
+            }, 5500);
+            setTimeout(() => this.writeTextTyper(" sshnuke 10.31.251.103 -rootpw-'741414J14' "), 6000);
+            setTimeout(() => elem.textContent += `\nConnecting to 10.31.251.103:ssh ...`, 7000);
+            setTimeout(() => elem.textContent += ` successful.`, 7500);
+            setTimeout(() => elem.textContent += `\nAttempting to exploit SSNv1 CRC32 ...`, 8000);
+            setTimeout(() => elem.textContent += ` successful.`, 8500);
+            setTimeout(() => elem.textContent += `\nResetting root password to "741414J14"`, 9000);
+            setTimeout(() => elem.textContent += `\n\n#`, 9300);
+            setTimeout(() => this.writeTextTyper(" ssh 10.31.251.103 -l Com_S_Garrett."), 9700);
+            setTimeout(() => elem.textContent += `\nTalalajla@10.31.251.103 password: `, 10300);
+            setTimeout(() => this.writeTextTyper("*********"), 10500);
+            setTimeout(() => elem.textContent += `Welcome back, Talalaja!\nLoading KEKWindow Interface ... `, 11200);
+            setTimeout(() => elem.textContent += ` successful.`, 12000);
+            setTimeout(() => this.setState({bluescreenPerc: 0, runPost: false, whatAboutBluescreen: false}), 12000);
+            return;
+        }
+    
     }
 
     countEXP = (e) => {
         e.preventDefault();
 
-        const randomNum = Math.round(Math.random()*1);
-        if (randomNum === 1) this.setState({whatAboutBluescreen: true}, this.bluescreenTime);
+        const randomNum = Math.round(Math.random()*100);
+        if (randomNum === 1 || randomNum === 4 || randomNum === 7 || randomNum === 69 || randomNum === 96) this.setState({whatAboutBluescreen: true}, this.bluescreenTime);
 
         const form = e.currentTarget;
         
@@ -206,6 +253,9 @@ class HomeHeist extends Component {
         
         if(this.props.imgName.includes("Slaughterhouse") && this.state.ovkPlus)
             r1 *= 0.8;
+
+        if(this.props.imgName.includes("Black Cat") && r3 !== "0")
+            r4 = 0;
 
         let classic = parseInt(addBags) * parseInt(scale) + r0 + r1 + r2 + r3 + r4 + r5 + r6 + r7 + r8;
 
@@ -471,7 +521,8 @@ class HomeHeist extends Component {
                     </Result>
                     <PC>
                         <PC_SCREEN>
-                            <PC_DISPLAY>
+                            <PC_DISPLAYS>
+                            <PC_DISPLAY close={this.state.pcScreen ? true : false}>
                                 <FontAwesomeIcon icon={faDesktop} style={{position:'absolute', left: '10px', top: '10px', color:'#fff', filter: 'drop-shadow(0 0 2px black)', cursor:'pointer'}} onClick={this.toggleWindowSpec} />
                                 <FontAwesomeIcon icon={faInfoCircle} style={{position:'absolute', left: '12px', top: '50px', color:'#fff', filter: 'drop-shadow(0 0 2px black)', cursor:'pointer'}} onClick={this.showInfo} />
                                 <FontAwesomeIcon icon={faCalculator} style={{position:'absolute', left: '12px', top: '90px', color:'#fff', filter: 'drop-shadow(0 0 2px black)', cursor:'pointer'}}/>
@@ -530,6 +581,10 @@ class HomeHeist extends Component {
                                         <PC_FILE_DETAILS_DATA>
                                             <table>
                                                 <tbody>
+                                                    <tr>
+                                                        <td>Suspect name:</td>
+                                                        <td>{this.state.nickname}</td>
+                                                    </tr>
                                                     <tr>
                                                         <td>Whole EXP:</td>
                                                         <td>{this.state.EXP}</td>
@@ -612,7 +667,8 @@ class HomeHeist extends Component {
                                     <FontAwesomeIcon icon={faFileUpload} />
                                     <div style={{position: "absolute", right:"5px", fontFamily:"sans-serif", fontSize: "15px"}} >21:37</div>
                                 </PC_BAR>
-                                {this.state.pcScreen && <PC_CLOSE />}
+                                
+                                
                                 {
                                     this.state.errorShow && 
                                     <PC_ERROR>
@@ -634,11 +690,12 @@ class HomeHeist extends Component {
                                 }
                                 {
                                     this.state.whatAboutBluescreen &&
+                                    <>
                                     <PC_BLUESCREEN>
                                         <PC_BS_LEFT>
                                             <PC_BS_FACE>&#58;&#40;</PC_BS_FACE>
                                             <PC_BS_TEXT>Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.</PC_BS_TEXT>
-                                            <PC_BS_TIMER>0% complete</PC_BS_TIMER>
+                                            <PC_BS_TIMER>{this.state.bluescreenPerc}% complete</PC_BS_TIMER>
                                             <PC_BS_QR>
                                                 <img src={qr} width="50" alt="QR Code" />
                                                 <span>You found any problems while using the app? You'll find me there.</span>
@@ -648,10 +705,15 @@ class HomeHeist extends Component {
                                             <PC_BS_LOGO><img src={dollar} width="80" alt="Dollar Sign" /></PC_BS_LOGO>
                                         </PC_BS_RIGHT>
                                     </PC_BLUESCREEN>
+                                    <PC_POST goPost={this.state.runPost ? true : false}>
+                                        <PC_POST_TEXT ref={this.POST}></PC_POST_TEXT>
+                                    </PC_POST>
+                                    </>
                                 }
 
                             </PC_DISPLAY>
-                            
+                            <PC_CLOSE />
+                            </PC_DISPLAYS>
                             <PC_POWER onClick={this.toggleScreen} />
                         </PC_SCREEN>
                         <PC_LEG></PC_LEG>

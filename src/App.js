@@ -18,6 +18,8 @@ import BTM from "./pages/heists/btm";
 import BigOil1 from "./pages/heists/bigoild_day1";
 import BigOil2 from "./pages/heists/bigoild_day2";
 import Birth from "./pages/heists/birthofsky";
+import Black from "./pages/heists/blackcat";
+import Black_Loud from "./pages/heists/blackcat_loud";
 import Boiling from "./pages/heists/boilingpoint";
 import Border from "./pages/heists/border";
 import Border_Loud from "./pages/heists/border_loud";
@@ -149,6 +151,8 @@ class App extends Component {
               <Route exact path="/bigoil_day1" component={BigOil1}/>
               <Route exact path="/bigoil_day2" component={BigOil2}/>
               <Route exact path="/birthofsky" component={Birth}/>
+              <Route exact path="/blackcat" component={Black}/>
+              <Route exact path="/blackcat_loud" component={Black_Loud}/>
               <Route exact path="/boilingpoint" component={Boiling}/>
               <Route exact path="/bordercrossing" component={Border}/>
               <Route exact path="/bordercrossing_loud" component={Border_Loud}/>

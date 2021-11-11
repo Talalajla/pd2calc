@@ -4,11 +4,23 @@ import note2 from "../images/note2.svg";
 import note3 from "../images/note3.svg";
 import note4 from "../images/note4.svg";
 import cb from "../images/checkbox1.svg";
+import cb2 from "../images/checkbox2.svg";
+import cb3 from "../images/checkbox3.svg";
+import cb4 from "../images/checkbox4.svg";
 import cbChecked from "../images/checkbox1checked.svg";
+import cbChecked2 from "../images/checkbox2checked.svg";
+import cbChecked3 from "../images/checkbox3checked.svg";
+import cbChecked4 from "../images/checkbox4checked.svg";
 import cbBlack from "../images/checkbox-black.svg";
+import cbBlack2 from "../images/checkbox-black2.svg";
+import cbBlack3 from "../images/checkbox-black3.svg";
+import cbBlack4 from "../images/checkbox-black4.svg";
 import cbBlackChecked from "../images/checkbox-blackChecked.svg";
-import cbGreen from "../images/checkbox3.svg";
-import cbGreenChecked from "../images/checkbox3checked.svg";
+import cbBlackChecked2 from "../images/checkbox-blackChecked2.svg";
+import cbBlackChecked3 from "../images/checkbox-blackChecked3.svg";
+import cbBlackChecked4 from "../images/checkbox-blackChecked4.svg";
+import cbGreen from "../images/checkboxGreen.svg";
+import cbGreenChecked from "../images/checkboxGreenchecked.svg";
 import wood from "../images/wooden.jpg";
 import clipMetal from "../images/clip.svg";
 import skull1 from "../images/skull1.png";
@@ -357,14 +369,24 @@ export const CrewRadio = styled.input.attrs({type: 'radio', name: 'crew'})`
     opacity: 0;
 
     :checked~div {
-        background: url(${cbChecked}) center/cover;
+        background: ${({num}) => {
+        if(num === "1") return `url(${cbChecked}) center/cover no-repeat`
+        else if (num === "2") return `url(${cbChecked2}) center/cover no-repeat`
+        else if (num === "3") return `url(${cbChecked3}) center/cover no-repeat`
+        else if (num === "4") return `url(${cbChecked4}) center/cover no-repeat`
+    }};
     }
 `;
 
 export const CrewBox = styled.div`
     width: 4vmin;
     height: 4vmin;
-    background: url(${cb}) center/cover;
+    background: ${({num}) => {
+        if(num === "1") return `url(${cb}) center/cover no-repeat`
+        else if (num === "2") return `url(${cb2}) center/cover no-repeat`
+        else if (num === "3") return `url(${cb3}) center/cover no-repeat`
+        else if (num === "4") return `url(${cb4}) center/cover no-repeat`
+    }};
 
     ${({theme}) => theme.resolutions.photoBr} {
         width: 20px;
@@ -790,7 +812,12 @@ export const JailLabel = styled(CrewLabel)`
 `;
 
 export const JailBox = styled(CrewBox)`
-    background: url(${cbBlack}) center/contain no-repeat;
+    background: ${({num}) => {
+        if(num === "1") return `url(${cbBlack}) center/contain no-repeat`
+        else if (num === "2") return `url(${cbBlack2}) center/contain no-repeat`
+        else if (num === "3") return `url(${cbBlack3}) center/contain no-repeat`
+        else if (num === "4") return `url(${cbBlack4}) center/contain no-repeat`
+    }};
 `;
 
 export const JailRadio = styled.input.attrs({type: 'radio', name: 'jail'})`
@@ -798,7 +825,12 @@ export const JailRadio = styled.input.attrs({type: 'radio', name: 'jail'})`
     opacity: 0;
 
     :checked~div {
-        background: url(${cbBlackChecked}) center/cover no-repeat;
+        background: ${({num}) => {
+            if(num === "1") return `url(${cbBlackChecked}) center/contain no-repeat`
+            else if (num === "2") return `url(${cbBlackChecked2}) center/contain no-repeat`
+            else if (num === "3") return `url(${cbBlackChecked3}) center/contain no-repeat`
+            else if (num === "4") return `url(${cbBlackChecked4}) center/contain no-repeat`
+        }};
     }
 `;
 
@@ -1508,6 +1540,11 @@ export const PC_POWER = styled.div`
     }
 `;
 
+export const PC_DISPLAYS = styled.div`
+    position: relative;
+    height: 100%;
+`;
+
 export const PC_DISPLAY = styled.div`
     width: 100%;
     height: 100%;
@@ -1515,7 +1552,9 @@ export const PC_DISPLAY = styled.div`
     display: grid;
     place-items: center;
     position: relative;
-
+    transition: all .1s;
+    transform: ${({close}) => close ? "scale(0)" : "scale(1)"};
+    z-index: 1;
 `;
 
 export const PC_LEG = styled.div`
@@ -1558,7 +1597,6 @@ export const PC_CLOSE = styled.div`
     background: #121212;
     top: 0;
     left: 0;
-    z-index: 100;
 `;
 
 export const PC_ERROR = styled(PC_CLOSE)`
@@ -1650,6 +1688,22 @@ export const PC_BS_QR = styled.div`
 export const PC_BS_LOGO = styled.div`
     color: #fff;
     filter: invert(100%);
+`;
+
+/*
+?   POST
+*/
+
+export const PC_POST = styled(PC_CLOSE)`
+    z-index: 21;
+    background: #121212;
+    color: green;
+    display: ${({goPost}) => goPost ? "block" : "none"};
+    overflow: hidden;
+`;
+
+export const PC_POST_TEXT = styled.pre`
+    margin: 0;
 `;
 
 export const PC_BAR = styled.div`

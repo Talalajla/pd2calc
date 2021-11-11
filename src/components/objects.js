@@ -112,20 +112,20 @@ export const Paper = () => {
                 <StickyTitle>Players</StickyTitle>
                 <CrewCheckboxes>
                     <CrewLabel>
-                        <CrewRadio value="1" defaultChecked required />
-                        <CrewBox />
+                        <CrewRadio num="1"  value="1" defaultChecked required />
+                        <CrewBox num="1" />
                     </CrewLabel>
                     <CrewLabel>
-                        <CrewRadio value="2" />
-                        <CrewBox />
+                        <CrewRadio num="2"  value="2" />
+                        <CrewBox num="2" />
                     </CrewLabel>
                     <CrewLabel>
-                        <CrewRadio value="3" />
-                        <CrewBox />
+                        <CrewRadio num="3"  value="3" />
+                        <CrewBox num="3" />
                     </CrewLabel>
                     <CrewLabel>
-                        <CrewRadio value="4" />
-                        <CrewBox />
+                        <CrewRadio num="4"  value="4" />
+                        <CrewBox num="4" />
                     </CrewLabel>
                 </CrewCheckboxes>
                 <CrewAmount>
@@ -144,20 +144,20 @@ export const Custody = () => {
             <JailTitle><span>Players in jail</span><span>while escaping</span></JailTitle>
             <CrewCheckboxes>
                 <JailLabel>
-                    <JailRadio value="0" defaultChecked required />
-                    <JailBox />
+                    <JailRadio num="1" value="0" defaultChecked required />
+                    <JailBox num="1" />
                 </JailLabel>
                 <JailLabel>
-                    <JailRadio value="1" />
-                    <JailBox />
+                    <JailRadio num="2" value="1" />
+                    <JailBox num="2" />
                 </JailLabel>
                 <JailLabel>
-                    <JailRadio value="2" />
-                    <JailBox />
+                    <JailRadio num="3" value="2" />
+                    <JailBox num="3" />
                 </JailLabel>
                 <JailLabel>
-                    <JailRadio value="3" />
-                    <JailBox />
+                    <JailRadio num="4" value="3" />
+                    <JailBox num="4" />
                 </JailLabel>
             </CrewCheckboxes>
             <JailAmount>

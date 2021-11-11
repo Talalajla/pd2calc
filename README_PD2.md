@@ -500,20 +500,123 @@ EXAMPLE DATA "DRAGON":
     MIN: 12500
 
 
+BLACK CAT:
+
+//  -- STEALTH --
+/
+    BASE | NORMAL | DS/OD (both with 51% EXP Boost & 15 Stealth boost)
+    2000 [8188] [122.820]               - talk to triad
+    2000 [8188] [122.820]               - pick up gear
+    1000 [4094] [61.410]                - find li deng (spa)
+    2000 [8188] [122.820]               - find li deng's safe
+    2000 [8188] [122.820]               - open safe
+    4000 [16376] [245.640]              - enter the casino (find second guy)
+        4000 [16376] [SKIPPED]          - plant and listen bug [can be skipped by picking up card before this even happens]
+    2000 [8188] [122.820]               - pick up card in his room
+    2000 [8188] [122.820]               - pick up fingerprint/hand
+    2000 [8188] [122.820]               - find the vault
+    1000 [4094] [61.410]                - hack slots
+    2000 [8188] [122.820]               - disable lasers/cut wires
+    1000 [4094] [61.410]                - open the vault
+    --- 27.000 BASE (23.000 with skipped bug) ---
+    1000 [4094] [61.410]                - secure required money bags
+    up to 16x500 [2047x4] [30.705x12]   - secured money bags (vault)
+    up to 5x500 [random] [random]       - secured optional bags (x2 coke; x2 weaps; x1 money)
+        2000 [8188]                     - plant ink-bomb in vault (lose at least 1 money bag)
+        or
+        2000 [8188] [122.820]           - loot at least 16 of 17 money bags4  
+    1000 [4094] [61.410]                - lower boat
+
+    // overall 41,500 (bug; full loot)
+    // overall 33,000 (bug; 4xMoney; destroyed rest)
+    // overall DS 37,500 (skipped bug; full loot)
+    // overall 41,000 (15 vault bags + bomb & 5 opt. lootbags (16/17 moneyBags))
+    // overall 40,500 (14 vault bags + bomb & 5 opt. lootbags (15/17 moneyBags))
+
+-- 148.919 (14 vault money + 1 from safe)
+-- 158.847 (15 vault money + 1 from safe)
+
+//  -- LOUD --
+/
+    BASE | OVk // 6197 code | 4070 code
+    2000 [79.260]                   - talk to triad         // 6052
+    2000 [79.260]                   - pick up gear          // 6052
+    2000 [19.815]                   - find Li Deng (spa)    // 6052
+    500  [79.260]                   - find Li Deng's safe   // 1513
+    2000 [79.260]                   - open safe             // 6052
+    500  [19.815]                   - find Xun Kang         // 1513
+    500  [19.815]                   - shoot glass           // 1513
+    500  [19.815]                   - thermite finished     // 1513
+    4000 [158.520]                  - get handprint         // 12105 // +1513 (safe moneybag)
+    4000 [158.520]                  - get to the vault      // 12104
+        // C4 Path (30.000 BASE):
+        2000 [79.260]               - blow wall with C4     // 6052
+        9000 [356.670]              - finished sawing       // 27234
+        3000 [118.890]              - set the winch         // 9078
+        6000 [237.780]              - finish winching       // 18156
+        5000 [198.150]              - kill the snipers      // 15130
+        3000 [118.890]              - heli arrives          // 9078
+        1000 [39.630]               - secure the vault      // 3026
+        1000 [39.630]               - escape available      // 3026
+        - OR -
+        // Override Path (18.000-24.000 BASE):
+        500  [19.815]               - find control panel    // 1513
+        3000 [118.890]              - disable firewall      // 9078
+        3000 [118.890]              - finish hacking        // 9078
+        500  [19.815]               - open the vault        // 1513
+        500  [19.815]               - each secured bag      // 1513*bags
+        500  [19.815]               - secure required bags  // 1513 (83.215 XP 4/16; 101.371 XP 16/16)
+        2000 [79.260]               - secured 16 money bags // 6052 (107.423)
+        500  [19.815]               - signal heli           // 1513
+        6000 [237.780]              - heli arrived          // 18156
+    500  [19.815]                   - each secured opt. bag // 1513 (max 5)
+
+loud/stealth entrance (NOT default) 
++ 500  - fetch info 
+- 2000 - talk to triad
+- 2000 - pick up gear
+
+casino [Xun Kang] before spa [Li Deng] (STEALTH default start):
+- 4000 - bug?
+    {
+        enter the casino    >> 1000 XP out of 4000 XP;
+        find spa            >> 0 XP out of 1000 XP;
+    }
+
+
+spa [Li Deng] before casino [Xun Kang] (LOUD default start):
+- 1500 - bug?
+    {
+        enter the casino >> 500 XP out of 2000 XP;
+    }
++ 2000 - bug?
+    {
+        enter spa 2000 XP out of 9 XP;
+    }
+
+
+
+MIN EXP: 
+    23.500 (stealth entrance, skipped planting bug, normal diff [4 bags only], ink bomb, stealth escape, casino first bug); 
+MAX EXP:
+    51.000 (default entrance, loud, c4, x6 optional loot (with hidden safe), spa before casino)
+
+loud first casino:
+2k eq
+2k talk
+2k casino
+.5k shoot
+.5k thermite
+4k hand
+.5k safe
+2k open safe
+4k get to the vault
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+overall (normal, default start; Override Path, 1 opt. bag, full loot) 
+    base: 42.500
 
 // ERRORS:
 

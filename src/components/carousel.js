@@ -51,16 +51,6 @@ const Carousel = props => {
                 {subtitles}
             </TutSubTitleItem>
         </TutSubTitle>
-        <CarouselContainer>
-            <CarouselContent style={{ transform: `translateX(-${index * 100}%)` }}>
-                {images}
-            </CarouselContent>
-        </CarouselContainer>
-        <Description>
-            <DescriptionItem style={{ transform: `translateX(-${index * 100}%)` }}>
-                {descriptions}
-            </DescriptionItem>
-        </Description>
         <Controls>
             <Btn onClick={goPrev}>
                 <img src={left} alt="left control arrow" style={{
@@ -78,6 +68,17 @@ const Carousel = props => {
                 }}/>
             </Btn>
         </Controls>
+        <CarouselContainer>
+            <CarouselContent style={{ transform: `translateX(-${index * 100}%)` }}>
+                {images}
+            </CarouselContent>
+        </CarouselContainer>
+        <Description>
+            <DescriptionItem style={{ transform: `translateX(-${index * 100}%)` }}>
+                {descriptions}
+            </DescriptionItem>
+        </Description>
+
         </>
     );
 } 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
     width: 100%;
     display: grid;
-    grid-template-rows: auto auto minmax(300px, 1fr) auto;
+    grid-template-rows: auto auto auto minmax(300px, 1fr) auto;
     gap: 10px;
     padding: 20px;
 `;
@@ -12,6 +12,10 @@ export const TutTitle = styled.div`
     font-size: 6vmin;
     font-family: "Exo 2";
     justify-self: center;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        font-size: 25px;
+    }
 `;
 
 export const TutSubTitle = styled.div`
@@ -21,6 +25,10 @@ export const TutSubTitle = styled.div`
     font-size: 4.5vmin;
     font-family: "Exo 2", Roboto;
     text-align: center;
+
+    ${({theme}) => theme.resolutions.photoBr} {
+        font-size: 17px;
+    }
 `;
 
 export const TutSubTitleItem = styled.div`
@@ -53,24 +61,30 @@ export const DescriptionItem = styled.div`
         flex-grow: 1;
         text-align: center;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
 
         p {
-            max-width: 1000px;
-            margin: auto;
+            max-width: 750px;
+            margin: 0 auto;
             text-align: center;
-            font-size: 20px;
-            line-height: 30px;
+            font-size: 22px;
             letter-spacing: .5px;
+
+            ${({theme}) => theme.resolutions.photoBr} {
+                font-size: 15px;
+                line-height: 18px;
+            }
         }
     }
 `;
 
 export const HomeBtn = styled.div`
-    border-radius: 5px;
+    border-radius: 15px;
     background: #121212;
-    padding: 10px 25px;
+    padding: 25px 50px;
     font-size: 25px;
     color: #fff;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 `;
