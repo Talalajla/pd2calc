@@ -612,11 +612,59 @@ loud first casino:
 2k open safe
 4k get to the vault
 
-
-
-
 overall (normal, default start; Override Path, 1 opt. bag, full loot) 
     base: 42.500
+
+
+
+
+MOUNTAIN MASTER: 
+
+//  -- STEALTH --
+/
+    <!-- 42.500 -->
+    <!-- 38.000 (no tea, 4 gold) -->
+    BASE | NORMAL | (51% EXP Boost & 15 Stealth boost)
+    1000 [45.034]                    - enter backside
+    4000 [180.136]                   - pull 3 leavers
+    2000 [90.068]                    - call elevator from the basement
+    2000 [90.068]                    - rewire fusebox
+    3000 [135.102]                   - access the elevator shaft
+    2000 [90.068]                    - cut the glass
+    3000 [135.102]                   - find hidden server room
+    2000 [90.068]                    - steal HDD
+    6000 [270.204]                   - decrypt and secure HDD
+    1000 [4.000]                    - trigger fire alarm
+    4000 [16.376]                   - kill the triad leader
+    4x500 [26.700]                  - basic gold bag
+    // Additional loot
+    500 [26.700]                    - tea set secured
+    4x1000 [53.400]                 - each additional gold bag
+
+
+//  -- LOUD --
+/
+    <!-- 42.500 -->
+    BASE | NORMAL | (51% EXP Boost & 15 Stealth boost)
+    5000 [17.622]                   - hack electicity
+    1000 [3.524]                    - call the elevator from the basement
+    1000 [3.525]                    - rewire fusebox
+    2000 [7.049]                    - access the elevator shaft
+    2000 [7.048]                    - call elevator to the top
+    2000 [7.049]                    - break the doors
+    2000 [7.049]                    - find hidden server room
+    8000 [28.195]                   - steal HDD // 23k overall
+        7000 [24.675]                   - car path          // 30k overall 
+        5000 [17.622]                   - thermite path     // 28k overall
+    2000 [7.049]                    - trigger fire alarm 
+    3000 [14.098]                   - kill the triad leader
+    4x500 [1.762]                   - basic gold bag
+    // Additional loot
+    500 [1.762]                     - tea set secured
+    4x1000 [3525]                   - each additional gold bag
+
+
+
 
 // ERRORS:
 

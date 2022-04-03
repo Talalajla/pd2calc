@@ -81,6 +81,8 @@ import Jewelry_Loud from "./pages/heists/jewelry_loud"
 import LabRats from "./pages/heists/labrats";
 import Mallcrasher from "./pages/heists/mallcrasher";
 import Meltdown from "./pages/heists/meltdown";
+import MountainMaster from "./pages/heists/mountainmaster";
+import MountainMaster_Loud from "./pages/heists/mountainmaster_loud";
 import Murky from "./pages/heists/murky";
 import Nightclub from "./pages/heists/nightclub";
 import Nightclub_Loud from "./pages/heists/nightclub_loud";
@@ -213,6 +215,8 @@ class App extends Component {
               <Route exact path="/labrats" component={LabRats}/>
               <Route exact path="/mallcrasher" component={Mallcrasher}/>
               <Route exact path="/meltdown" component={Meltdown}/>
+              <Route exact path="/mountainmaster" component={MountainMaster}/>
+              <Route exact path="/mountainmaster_loud" component={MountainMaster_Loud}/>
               <Route exact path="/murky" component={Murky}/>
               <Route exact path="/nightclub" component={Nightclub}/>
               <Route exact path="/nightclub_loud" component={Nightclub_Loud}/>

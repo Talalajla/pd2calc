@@ -79,7 +79,7 @@
         "isLoud": "(loud)",
         "img": "/static/media/blackcat.f1c57330.jpg",
         "link": "blackcat_loud",
-        "category": "loud"    
+        "category": "both"    
     },
     {
         "id": 10,
@@ -452,6 +452,15 @@
     },
     {
         "id": 51,
+        "name": "Mountain Master",
+        "subname": "",
+        "isLoud": "(loud)",
+        "img": "/static/media/default.f2f003a6.jpg",
+        "link": "mountainmaster_loud",
+        "category": "both"
+    },
+    {
+        "id": 52,
         "name": "Nightclub",
         "subname": "",
         "isLoud": "(loud)",
@@ -460,7 +469,7 @@
         "category": "both"
     },
     {
-        "id": 52,
+        "id": 53,
         "name": "No Mercy",
         "subname": "",
         "isLoud": "",
@@ -469,7 +478,7 @@
         "category": "loud"
     },
     {
-        "id": 53,
+        "id": 54,
         "name": "Panic Room",
         "subname": "",
         "isLoud": "",
@@ -478,7 +487,7 @@
         "category": "loud"
     },
     {
-        "id": 54,
+        "id": 55,
         "name": "Prison Nightmare",
         "subname": "",
         "isLoud": "",
@@ -487,7 +496,7 @@
         "category": "loud"
     },
     {
-        "id": 55,
+        "id": 56,
         "name": "Rats",
         "subname": "(day 1: Cook Off)",
         "isLoud": "",
@@ -496,7 +505,7 @@
         "category": "loud"
     },
     {
-        "id": 56,
+        "id": 57,
         "name": "Rats",
         "subname": "(day 2: Code for Meth)",
         "isLoud": "",
@@ -505,7 +514,7 @@
         "category": "loud"
     },
     {
-        "id": 57,
+        "id": 58,
         "name": "Rats",
         "subname": "(day 3: Bus Stop)",
         "isLoud": "",
@@ -514,7 +523,7 @@
         "category": "loud"
     },
     {
-        "id": 58,
+        "id": 59,
         "name": "Reservoir Dogs",
         "subname": "(day 2: Highland Mortuary)",
         "isLoud": "",
@@ -523,7 +532,7 @@
         "category": "loud"
     },
     {
-        "id": 59,
+        "id": 60,
         "name": "Reservoir Dogs",
         "subname": "(day 1: Garnet Group Boutique)",
         "isLoud": "",
@@ -532,7 +541,7 @@
         "category": "loud"
     },
     {
-        "id": 60,
+        "id": 61,
         "name": "Safe House Nightmare",
         "subname": "",
         "isLoud": "",
@@ -541,7 +550,7 @@
         "category": "loud"
     },
     {
-        "id": 61,
+        "id": 62,
         "name": "Safe House Raid",
         "subname": "",
         "isLoud": "",
@@ -550,7 +559,7 @@
         "category": "loud"
     },
     {
-        "id": 62,
+        "id": 63,
         "name": "San Martín Bank",
         "subname": "",
         "isLoud": "(loud)",
@@ -559,7 +568,7 @@
         "category": "both"
     },
     {
-        "id": 63,
+        "id": 64,
         "name": "Santa's Workshop",
         "subname": "",
         "isLoud": "",
@@ -568,7 +577,7 @@
         "category": "loud"
     },
     {
-        "id": 64,
+        "id": 65,
         "name": "Scarface Mansion",
         "subname": "",
         "isLoud": "(loud)",
@@ -577,7 +586,7 @@
         "category": "both"
     },
     {
-        "id": 65,
+        "id": 66,
         "name": "Shacklethorne Auction",
         "subname": "",
         "isLoud": "(loud)",
@@ -586,7 +595,7 @@
         "category": "both"
     },
     {
-        "id": 66,
+        "id": 67,
         "name": "Slaughterhouse",
         "subname": "",
         "isLoud": "",
@@ -595,7 +604,7 @@
         "category": "loud"
     },
     {
-        "id": 67,
+        "id": 68,
         "name": "Stealing Xmas",
         "subname": "",
         "isLoud": "",
@@ -604,7 +613,7 @@
         "category": "loud"
     },
     {
-        "id": 68,
+        "id": 69,
         "name": "The Alesso Heist",
         "subname": "",
         "isLoud": "(loud)",
@@ -613,7 +622,7 @@
         "category": "both"
     },
     {
-        "id": 69,
+        "id": 70,
         "name": "The Big Bank",
         "subname": "",
         "isLoud": "(loud)",
@@ -622,7 +631,7 @@
         "category": "both"
     },
     {
-        "id": 70,
+        "id": 71,
         "name": "The Biker Heist",
         "subname": "(day 1: Lion's Den)",
         "isLoud": "",
@@ -631,7 +640,7 @@
         "category": "loud"
     },
     {
-        "id": 71,
+        "id": 72,
         "name": "The Biker Heist",
         "subname": "(day 2: Interception)",
         "isLoud": "",
@@ -640,7 +649,7 @@
         "category": "loud"
     },
     {
-        "id": 72,
+        "id": 73,
         "name": "The Bomb: Dockyard",
         "subname": "",
         "isLoud": "(loud)",
@@ -649,7 +658,7 @@
         "category": "both"
     },
     {
-        "id": 73,
+        "id": 74,
         "name": "The Bomb: Forest",
         "subname": "",
         "isLoud": "",
@@ -658,7 +667,7 @@
         "category": "loud"
     },
     {
-        "id": 74,
+        "id": 75,
         "name": "The Diamond",
         "subname": "",
         "isLoud": "(loud)",
@@ -667,7 +676,7 @@
         "category": "both"
     },
     {
-        "id": 75,
+        "id": 76,
         "name": "The Ukrainian Prisoner",
         "subname": "",
         "isLoud": "(loud)",
@@ -676,7 +685,7 @@
         "category": "both"
     },
     {
-        "id": 76,
+        "id": 77,
         "name": "The White House",
         "subname": "",
         "isLoud": "(loud)",
@@ -685,7 +694,7 @@
         "category": "both"
     },
     {
-        "id": 77,
+        "id": 78,
         "name": "Transports",
         "subname": "(all others)",
         "isLoud": "",
@@ -694,7 +703,7 @@
         "category": "loud"
     },
     {
-        "id": 78,
+        "id": 79,
         "name": "Transport: Train Heist",
         "subname": "",
         "isLoud": "(loud)",
@@ -703,7 +712,7 @@
         "category": "stealth"
     },
     {
-        "id": 79,
+        "id": 80,
         "name": "Ukrainian Job",
         "subname": "",
         "isLoud": "(loud)",
@@ -712,7 +721,7 @@
         "category": "both"
     },
     {
-        "id": 80,
+        "id": 81,
         "name": "Undercover",
         "subname": "",
         "isLoud": "",
@@ -721,7 +730,7 @@
         "category": "loud"
     },
     {
-        "id": 81,
+        "id": 82,
         "name": "Watchdogs",
         "subname": "(day 1: Truck Load)",
         "isLoud": "",
@@ -730,7 +739,7 @@
         "category": "loud"
     },
     {
-        "id": 82,
+        "id": 83,
         "name": "Watchdogs",
         "subname": "(day 2: Boat Load)",
         "isLoud": "",
@@ -739,7 +748,7 @@
         "category": "loud"
     },
     {
-        "id": 83,
+        "id": 84,
         "name": "White Xmas",
         "subname": "",
         "isLoud": "",

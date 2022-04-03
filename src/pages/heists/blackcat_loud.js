@@ -20,6 +20,7 @@ class Heist extends Component {
                     limitStart={['', '', '', '', '4', '0']}
                     limitEnd={['', '', '', '', '16', '6']}
                     values={['34000', '-1500', '-500', '14000', '500', '500']}
+                    isLoud
                 />
             </>
         );

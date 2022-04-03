@@ -21,61 +21,59 @@ const Tutorial = () => {
             <Carousel>
                 <div>
                     <div>What is it?</div>
-                    <div><img src={tut1}></img></div>
+                    <div><img src={tut1} alt="Main Page with questionmarks"></img></div>
                     <div><p>You are on tutorial page. You can learn here how to use this calculator properly.</p></div>
                 </div>
                 <div>
                     <div>Let's start</div>
-                    <div><img src={tut2}></img></div>
+                    <div><img src={tut2} alt="Choose category pic"/></div>
                     <div><p>At the beginning you need to select wheter you want to scout stealth or loud heists. Next step is to choose heist you're looking for. Search bar might be useful.</p></div>
                 </div>
                 <div>
                     <div>Required data</div>
-                    <div><img src={tut3}></img></div>
+                    <div><img src={tut3} alt="Difficulty tab"/></div>
                     <div><p>First and most important thing is to choose the difficulty of heist. You can do it by clicking individual skull (or dash sign if it's normal difficulty).</p></div>
                 </div>
                 <div>
                     <div>Required data</div>
-                    <div><img src={tut4}></img></div>
+                    <div><img src={tut4} alt="Players info papers"/></div>
                     <div><p>When difficulty is selected, you need to choose how many players participated in the heist and how many of them finished it in custody. You can do it by clicking individual red/black square.</p></div>
                 </div>
                 <div>
                     <div>Required data</div>
-                    <div><img src={tut5}></img></div>
+                    <div><img src={tut5} alt="Tablet with infamy and lvl"/></div>
                     <div><p>And the last data, that is required is level&amp;infamy. When it comes to the infamy, you can do it by clicking and selecting an option. And after that just enter your level in field below (0-100).</p></div>
                 </div>
                 <div>
                     <div>Optional data</div>
-                    <div><img src={tut6}></img></div>
+                    <div><img src={tut6} alt="Requirements paper"/></div>
                     <div><p>Now let's look at some optional data. First thing you might notice will be the piece of paper with requirements. First row is already selected, because it's related with completing the heist. Next rows are optional, empty fields can be filled with simple click, but if field includes a (default) number, then you can change value after click.</p></div>
                 </div>
                 <div>
                     <div>Optional data</div>
-                    <div><img src={tut7}></img></div>
+                    <div><img src={tut7} alt="Gage bonus paper"/></div>
                     <div><p>When requirements are done, you can select how many Gage packages have you found during the heist. Just click to open select menu.</p></div>
                 </div>
                 <div>
                     <div>Optional data</div>
-                    <div><img src={tut8}></img></div>
+                    <div><img src={tut8} alt="Map bonuses paper"/></div>
                     <div><p>Last optional data are bonuses. You can fill data by clicking and selecting values. Teamboosts are provided by weapon mods, perkdeck bonus is activated when you are using perkdeck with at least 4th level. Heat bonus depends on your frequency of finishing particular heist and the stealth bonus is given if you finished last heist in stealth.</p></div>
                 </div>
                 <div>
                     <div>Details</div>
-                    <div><img src={tut9}></img></div>
+                    <div><img src={tut9} alt="JC indicator"/></div>
                     <div><p>If you have a good eye, there is a chance, that you will notice number above the heist photo. This is the JC level, that indicates anticipated level you should have to play this heist. If the difference between you and JC level is at least 11 levels, you will lose some EXP.</p></div>
                 </div>
                 <div>
                     <div>Last step</div>
-                    <div><img src={tut10}/></div>
+                    <div><img src={tut10} alt="PC with red button"/></div>
                     <div><p>It's almost done, all you have to do is to press the red button on the screen.</p></div>
                 </div>
                 <div>
                     <div>That's all!</div>
                     <div>
                         <HomeBtn as={Link} to="/">
-                            <span>→ → →</span>
-                            <span>Go Home</span>
-                            <span>→ → →</span>
+                            <span>SCOUT!</span>
                         </HomeBtn>
                     </div>
                     <div><p>Now you can go back to home page and scout some heists. Enjoy it!</p></div>

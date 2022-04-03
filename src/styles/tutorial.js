@@ -79,12 +79,21 @@ export const DescriptionItem = styled.div`
 `;
 
 export const HomeBtn = styled.div`
-    border-radius: 15px;
-    background: #121212;
-    padding: 25px 50px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
     font-size: 25px;
-    color: #fff;
-    cursor: pointer;
+    font-weight: 700;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    border: 5px solid #121212;
+    cursor: pointer;
+    transition: all .2s;
+
+    :hover {
+        background: #121212;
+        color: #eee;
+    }
 `;
