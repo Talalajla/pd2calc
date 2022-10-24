@@ -14,7 +14,7 @@ class Heist extends Component {
                     tr21="Each goat secured" tr22="+500"
                     tr31="Each cage built" tr32="+500"
                     tr41="Each cage picked up by plane" tr42="+500"
-                    status={['rCB', 'rCB', 'rS', 'rS', 'rS']}
+                    status={['rCB', 'rS', 'rS', 'rS', 'rS']}
                     limitStart={['', '5', '1', '1', '']}
                     limitEnd={['', '15', '15', '15', '']}
                     values={['21000', '500', '500', '500', '50000']}

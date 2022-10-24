@@ -34,6 +34,7 @@ import Bulucs_loud from "./pages/heists/bulucs_loud";
 import Carshop from "./pages/heists/carshop";
 import CookOff from "./pages/heists/cookoff";
 import Couterfeit from "./pages/heists/counterfeit";
+import Couterfeit_Loud from "./pages/heists/counterfeit_loud";
 import CKR from "./pages/heists/cursedkillroom";
 import Dragon from "./pages/heists/dragon";
 import Dragon_Loud from "./pages/heists/dragon_loud";
@@ -76,11 +77,13 @@ import Hoxton1 from "./pages/heists/hoxtonbreakout_day1";
 import Hoxton2 from "./pages/heists/hoxtonbreakout_day2";
 import HoxRev from "./pages/heists/hoxrev";
 import HoxRev_Loud from "./pages/heists/hoxrev_loud";
-import Jewelry from "./pages/heists/jewelry"
-import Jewelry_Loud from "./pages/heists/jewelry_loud"
+import Jewelry from "./pages/heists/jewelry";
+import Jewelry_Loud from "./pages/heists/jewelry_loud";
 import LabRats from "./pages/heists/labrats";
 import Mallcrasher from "./pages/heists/mallcrasher";
 import Meltdown from "./pages/heists/meltdown";
+import Midland from "./pages/heists/midland_ranch";
+import Midland_Loud from "./pages/heists/midland_ranch_loud";
 import MountainMaster from "./pages/heists/mountainmaster";
 import MountainMaster_Loud from "./pages/heists/mountainmaster_loud";
 import Murky from "./pages/heists/murky";
@@ -130,142 +133,143 @@ import Yacht from "./pages/heists/yacht";
 import Nav from "./components/nav";
 
 class App extends Component {
-
-  render() {
-    return (
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-          <BrowserRouter >
-            <Nav />
-            <Switch>
-              <Route exact path="/" component={Home}/> 
-              <Route exact path="/stealth" component={Stealth}/>
-              <Route exact path="/loud" component={Loud}/>
-              <Route exact path="/tutorial" component={Tutorial}/>
-              <Route exact path="/cookoff" component={CookOff}/>
-              <Route exact path="/aftershock" component={Aftershock}/>
-              <Route exact path="/alaskandeal" component={Alaskan}/>
-              <Route exact path="/artgallery" component={Art}/>
-              <Route exact path="/artgallery_loud" component={Art_Loud}/>
-              <Route exact path="/bank" component={Bank}/>
-              <Route exact path="/btm" component={BTM}/>
-              <Route exact path="/bigoil_day1" component={BigOil1}/>
-              <Route exact path="/bigoil_day2" component={BigOil2}/>
-              <Route exact path="/birthofsky" component={Birth}/>
-              <Route exact path="/blackcat" component={Black}/>
-              <Route exact path="/blackcat_loud" component={Black_Loud}/>
-              <Route exact path="/boilingpoint" component={Boiling}/>
-              <Route exact path="/bordercrossing" component={Border}/>
-              <Route exact path="/bordercrossing_loud" component={Border_Loud}/>
-              <Route exact path="/bordercrystals" component={BorderCrystals}/>
-              <Route exact path="/breakfastintijuana" component={Breakfast}/>
-              <Route exact path="/breakfastintijuana_loud" component={Breakfast_Loud}/>
-              <Route exact path="/breakin'feds" component={BreakingFeds}/>
-              <Route exact path="/brooklyn10-10" component={Brooklyn10}/>
-              <Route exact path="/brooklynbank" component={Brooklyn}/>
-              <Route exact path="/bulucsmansion" component={Bulucs}/>
-              <Route exact path="/bulucsmansion_loud" component={Bulucs_loud}/>
-              <Route exact path="/carshop" component={Carshop}/>
-              <Route exact path="/counterfeit" component={Couterfeit}/>
-              <Route exacy path="/ckr" component={CKR}/>
-              <Route exact path="/diamondstore" component={DiamondStore}/>
-              <Route exact path="/diamondheist" component={DiamondHeist}/>
-              <Route exact path="/diamondheist_loud" component={DiamondHeist_Loud}/>
-              <Route exact path="/dragonheist" component={Dragon}/>
-              <Route exact path="/dragonheist_loud" component={Dragon_Loud}/>
-              <Route exact path="/electionday_day1" component={Election1}/>
-              <Route exact path="/electionday_day1_loud" component={Election1_Loud}/>
-              <Route exact path="/electionday_day2" component={Election2}/>
-              <Route exact path="/electionday_day2_loud" component={Election2_Loud}/>
-              <Route exact path="/electionday_day2c_loud" component={Election2c_Loud}/>
-              <Route exact path="/firestarter_day1" component={Fire1} />
-              <Route exact path="/firestarter_day1_loud" component={Fire1_Loud} />
-              <Route exact path="/firestarter_day2" component={Fire2} />
-              <Route exact path="/firestarter_day2_loud" component={Fire2_Loud} />
-              <Route exact path="/firestarter_day3" component={Fire3} />
-              <Route exact path="/firestarter_day3_loud" component={Fire3_Loud} />
-              <Route exact path="/fourstores" component={Four} />
-              <Route exact path="/fwb" component={FWB}/>
-              <Route exact path="/fwb_loud" component={FWB_Loud}/>
-              <Route exact path="/framingframe_day1" component={Framing1} />
-              <Route exact path="/framingframe_day1_loud" component={Framing1_Loud} />
-              <Route exact path="/framingframe_day2" component={Framing2} />
-              <Route exact path="/framingframe_day2_loud" component={Framing2_Loud} />
-              <Route exact path="/framingframe_day3" component={Framing3} />
-              <Route exact path="/framingframe_day3_loud" component={Framing3_Loud} />
-              <Route exact path="/gobank" component={GoBank}/>
-              <Route exact path="/gobank_loud" component={GoBank_Loud}/>
-              <Route exact path="/ggc" component={GGC}/>
-              <Route exact path="/ggc_loud" component={GGC_Loud}/>
-              <Route exact path="/goatsimulator_day1" component={Goat1}/>
-              <Route exact path="/goatsimulator_day2" component={Goat2}/>
-              <Route exact path="/greenbridge" component={Green}/>
-              <Route exact path="/heatstreet" component={Heat}/>
-              <Route exact path="/hellsisland" component={Hells}/>
-              <Route exact path="/henrysrock" component={Henrys}/>
-              <Route exact path="/hotlinemiami_day1" component={Hotline1}/>
-              <Route exact path="/hotlinemiami_day2" component={Hotline2}/>
-              <Route exact path="/hoxtonbreakout_day1" component={Hoxton1}/>
-              <Route exact path="/hoxtonbreakout_day2" component={Hoxton2}/>
-              <Route exact path="/hoxtonrevenge" component={HoxRev}/>
-              <Route exact path="/hoxtonrevenge_loud" component={HoxRev_Loud}/>
-              <Route exact path="/jewelrystore" component={Jewelry}/>
-              <Route exact path="/jewelrystore_loud" component={Jewelry_Loud}/>
-              <Route exact path="/labrats" component={LabRats}/>
-              <Route exact path="/mallcrasher" component={Mallcrasher}/>
-              <Route exact path="/meltdown" component={Meltdown}/>
-              <Route exact path="/mountainmaster" component={MountainMaster}/>
-              <Route exact path="/mountainmaster_loud" component={MountainMaster_Loud}/>
-              <Route exact path="/murky" component={Murky}/>
-              <Route exact path="/nightclub" component={Nightclub}/>
-              <Route exact path="/nightclub_loud" component={Nightclub_Loud}/>
-              <Route exact path="/nomercy" component={Nomercy}/>
-              <Route exact path="/panicroom" component={Panic}/>
-              <Route exact path="/prisonnightmare" component={Prison}/>
-              <Route exact path="/rats_day1" component={Rats1}/>
-              <Route exact path="/rats_day2" component={Rats2}/>
-              <Route exact path="/rats_day3" component={Rats3}/>
-              <Route exact path="/rdh_day1" component={Reservoir1}/>
-              <Route exact path="/rdh_day2" component={Reservoir2}/>
-              <Route exact path="/shn" component={SafehouseNight}/>
-              <Route exact path="/shr" component={Safehouse}/>
-              <Route exact path="/sanmartínbank" component={SanMartin}/>
-              <Route exact path="/sanmartínbank_loud" component={SanMartin_Loud}/>
-              <Route exact path="/santasworkshop" component={SantasWork}/>
-              <Route exact path="/shacklethorne" component={Shacklethorne}/>
-              <Route exact path="/shacklethorne_loud" component={Shacklethorne_Loud}/>
-              <Route exact path="/shadowraid" component={Shadow}/>
-              <Route exact path="/scarfacemansion" component={Scarface}/>
-              <Route exact path="/scarfacemansion_loud" component={Scarface_Loud}/>
-              <Route exact path="/slaughterhouse" component={Slaughterhouse}/>
-              <Route exact path="/stealingxmas" component={StealingXmas}/>
-              <Route exact path="/thealessoheist" component={TheAlesso}/>
-              <Route exact path="/thealessoheist_loud" component={TheAlesso_Loud}/>
-              <Route exact path="/thebigbank" component={TheBigBank}/>
-              <Route exact path="/thebigbank_loud" component={TheBigBank_Loud}/>
-              <Route exact path="/tbh_day1" component={TheBikerHeist1}/>
-              <Route exact path="/tbh_day2" component={TheBikerHeist2}/>
-              <Route exact path="/thebombdockyard" component={TheBombDock}/>
-              <Route exact path="/thebombforest" component={TheBombForest}/>
-              <Route exact path="/thediamond" component={TheDiamond}/>
-              <Route exact path="/tup" component={TheUkrainian}/>
-              <Route exact path="/tup_loud" component={TheUkrainian_Loud}/>
-              <Route exact path="/thewhitehouse" component={TheWhiteHouse}/>
-              <Route exact path="/thewhitehouse_loud" component={TheWhiteHouse_Loud}/>
-              <Route exact path="/theyachtheist" component={Yacht}/>
-              <Route exact path="/tth" component={Train}/>
-              <Route exact path="/ukrainianjob" component={Ukrainian}/>
-              <Route exact path="/undercover" component={Undercover}/>
-              <Route exact path="/watchdogs_day1" component={Watchdogs1}/>
-              <Route exact path="/watchdogs_day2" component={Watchdogs2}/>
-              <Route exact path="/whitexmas" component={White}/>
-            </Switch>
-          </BrowserRouter>
-        </>
-      </ThemeProvider>
-    );
-  }
+	render() {
+		return (
+			<ThemeProvider theme={theme}>
+				<>
+					<GlobalStyles />
+					<BrowserRouter>
+						<Nav />
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route exact path="/stealth" component={Stealth} />
+							<Route exact path="/loud" component={Loud} />
+							<Route exact path="/tutorial" component={Tutorial} />
+							<Route exact path="/cookoff" component={CookOff} />
+							<Route exact path="/aftershock" component={Aftershock} />
+							<Route exact path="/alaskandeal" component={Alaskan} />
+							<Route exact path="/artgallery" component={Art} />
+							<Route exact path="/artgallery_loud" component={Art_Loud} />
+							<Route exact path="/bank" component={Bank} />
+							<Route exact path="/btm" component={BTM} />
+							<Route exact path="/bigoil_day1" component={BigOil1} />
+							<Route exact path="/bigoil_day2" component={BigOil2} />
+							<Route exact path="/birthofsky" component={Birth} />
+							<Route exact path="/blackcat" component={Black} />
+							<Route exact path="/blackcat_loud" component={Black_Loud} />
+							<Route exact path="/boilingpoint" component={Boiling} />
+							<Route exact path="/bordercrossing" component={Border} />
+							<Route exact path="/bordercrossing_loud" component={Border_Loud} />
+							<Route exact path="/bordercrystals" component={BorderCrystals} />
+							<Route exact path="/breakfastintijuana" component={Breakfast} />
+							<Route exact path="/breakfastintijuana_loud" component={Breakfast_Loud} />
+							<Route exact path="/breakin'feds" component={BreakingFeds} />
+							<Route exact path="/brooklyn10-10" component={Brooklyn10} />
+							<Route exact path="/brooklynbank" component={Brooklyn} />
+							<Route exact path="/bulucsmansion" component={Bulucs} />
+							<Route exact path="/bulucsmansion_loud" component={Bulucs_loud} />
+							<Route exact path="/carshop" component={Carshop} />
+							<Route exact path="/counterfeit" component={Couterfeit} />
+							<Route exact path="/counterfeit_loud" component={Couterfeit_Loud} />
+							<Route exacy path="/ckr" component={CKR} />
+							<Route exact path="/diamondstore" component={DiamondStore} />
+							<Route exact path="/diamondheist" component={DiamondHeist} />
+							<Route exact path="/diamondheist_loud" component={DiamondHeist_Loud} />
+							<Route exact path="/dragonheist" component={Dragon} />
+							<Route exact path="/dragonheist_loud" component={Dragon_Loud} />
+							<Route exact path="/electionday_day1" component={Election1} />
+							<Route exact path="/electionday_day1_loud" component={Election1_Loud} />
+							<Route exact path="/electionday_day2" component={Election2} />
+							<Route exact path="/electionday_day2_loud" component={Election2_Loud} />
+							<Route exact path="/electionday_day2c_loud" component={Election2c_Loud} />
+							<Route exact path="/firestarter_day1" component={Fire1} />
+							<Route exact path="/firestarter_day1_loud" component={Fire1_Loud} />
+							<Route exact path="/firestarter_day2" component={Fire2} />
+							<Route exact path="/firestarter_day2_loud" component={Fire2_Loud} />
+							<Route exact path="/firestarter_day3" component={Fire3} />
+							<Route exact path="/firestarter_day3_loud" component={Fire3_Loud} />
+							<Route exact path="/fourstores" component={Four} />
+							<Route exact path="/fwb" component={FWB} />
+							<Route exact path="/fwb_loud" component={FWB_Loud} />
+							<Route exact path="/framingframe_day1" component={Framing1} />
+							<Route exact path="/framingframe_day1_loud" component={Framing1_Loud} />
+							<Route exact path="/framingframe_day2" component={Framing2} />
+							<Route exact path="/framingframe_day2_loud" component={Framing2_Loud} />
+							<Route exact path="/framingframe_day3" component={Framing3} />
+							<Route exact path="/framingframe_day3_loud" component={Framing3_Loud} />
+							<Route exact path="/gobank" component={GoBank} />
+							<Route exact path="/gobank_loud" component={GoBank_Loud} />
+							<Route exact path="/ggc" component={GGC} />
+							<Route exact path="/ggc_loud" component={GGC_Loud} />
+							<Route exact path="/goatsimulator_day1" component={Goat1} />
+							<Route exact path="/goatsimulator_day2" component={Goat2} />
+							<Route exact path="/greenbridge" component={Green} />
+							<Route exact path="/heatstreet" component={Heat} />
+							<Route exact path="/hellsisland" component={Hells} />
+							<Route exact path="/henrysrock" component={Henrys} />
+							<Route exact path="/hotlinemiami_day1" component={Hotline1} />
+							<Route exact path="/hotlinemiami_day2" component={Hotline2} />
+							<Route exact path="/hoxtonbreakout_day1" component={Hoxton1} />
+							<Route exact path="/hoxtonbreakout_day2" component={Hoxton2} />
+							<Route exact path="/hoxtonrevenge" component={HoxRev} />
+							<Route exact path="/hoxtonrevenge_loud" component={HoxRev_Loud} />
+							<Route exact path="/jewelrystore" component={Jewelry} />
+							<Route exact path="/jewelrystore_loud" component={Jewelry_Loud} />
+							<Route exact path="/labrats" component={LabRats} />
+							<Route exact path="/mallcrasher" component={Mallcrasher} />
+							<Route exact path="/meltdown" component={Meltdown} />
+							<Route exact path="/midland_ranch" component={Midland} />
+							<Route exact path="/mountainmaster" component={MountainMaster} />
+							<Route exact path="/mountainmaster_loud" component={MountainMaster_Loud} />
+							<Route exact path="/murky" component={Murky} />
+							<Route exact path="/nightclub" component={Nightclub} />
+							<Route exact path="/nightclub_loud" component={Nightclub_Loud} />
+							<Route exact path="/nomercy" component={Nomercy} />
+							<Route exact path="/panicroom" component={Panic} />
+							<Route exact path="/prisonnightmare" component={Prison} />
+							<Route exact path="/rats_day1" component={Rats1} />
+							<Route exact path="/rats_day2" component={Rats2} />
+							<Route exact path="/rats_day3" component={Rats3} />
+							<Route exact path="/rdh_day1" component={Reservoir1} />
+							<Route exact path="/rdh_day2" component={Reservoir2} />
+							<Route exact path="/shn" component={SafehouseNight} />
+							<Route exact path="/shr" component={Safehouse} />
+							<Route exact path="/sanmartínbank" component={SanMartin} />
+							<Route exact path="/sanmartínbank_loud" component={SanMartin_Loud} />
+							<Route exact path="/santasworkshop" component={SantasWork} />
+							<Route exact path="/shacklethorne" component={Shacklethorne} />
+							<Route exact path="/shacklethorne_loud" component={Shacklethorne_Loud} />
+							<Route exact path="/shadowraid" component={Shadow} />
+							<Route exact path="/scarfacemansion" component={Scarface} />
+							<Route exact path="/scarfacemansion_loud" component={Scarface_Loud} />
+							<Route exact path="/slaughterhouse" component={Slaughterhouse} />
+							<Route exact path="/stealingxmas" component={StealingXmas} />
+							<Route exact path="/thealessoheist" component={TheAlesso} />
+							<Route exact path="/thealessoheist_loud" component={TheAlesso_Loud} />
+							<Route exact path="/thebigbank" component={TheBigBank} />
+							<Route exact path="/thebigbank_loud" component={TheBigBank_Loud} />
+							<Route exact path="/tbh_day1" component={TheBikerHeist1} />
+							<Route exact path="/tbh_day2" component={TheBikerHeist2} />
+							<Route exact path="/thebombdockyard" component={TheBombDock} />
+							<Route exact path="/thebombforest" component={TheBombForest} />
+							<Route exact path="/thediamond" component={TheDiamond} />
+							<Route exact path="/tup" component={TheUkrainian} />
+							<Route exact path="/tup_loud" component={TheUkrainian_Loud} />
+							<Route exact path="/thewhitehouse" component={TheWhiteHouse} />
+							<Route exact path="/thewhitehouse_loud" component={TheWhiteHouse_Loud} />
+							<Route exact path="/theyachtheist" component={Yacht} />
+							<Route exact path="/tth" component={Train} />
+							<Route exact path="/ukrainianjob" component={Ukrainian} />
+							<Route exact path="/undercover" component={Undercover} />
+							<Route exact path="/watchdogs_day1" component={Watchdogs1} />
+							<Route exact path="/watchdogs_day2" component={Watchdogs2} />
+							<Route exact path="/whitexmas" component={White} />
+						</Switch>
+					</BrowserRouter>
+				</>
+			</ThemeProvider>
+		);
+	}
 }
 
 export default App;

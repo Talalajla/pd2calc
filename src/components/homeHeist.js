@@ -75,15 +75,54 @@ class HomeHeist extends Component {
         this.goBack();
         console.log("zmiana")
 
-        if(this.props.imgName.includes("Black Cat") && this.props.isLoud && e.target.name === "req4") {
-            if (e.target.checked) {
-                e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelector("select[name=req5]").disabled = true;
-                e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelectorAll("td").forEach(td => td.style.textDecoration = "line-through");
-            } else {
-                e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelector("select[name=req5]").disabled = false;
-                e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelectorAll("td").forEach(td => td.style.textDecoration = "none");
+        if(this.props.imgName.includes("Black Cat") && this.props.isLoud) {
+            const trContainer = e.target.parentElement.parentElement.parentElement.parentElement;
+            if (e.target.name === "req4" && e.target.checked) {
+                console.log(trContainer.children[5].querySelector("input[name=req5]"));
+                trContainer.children[5].querySelector("input[name=req5]").disabled = true;
+                trContainer.children[6].querySelector("input[name=req6]").disabled = true;
+                trContainer.children[7].querySelector("select[name=req7]").disabled = true;
+                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                // e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelectorAll("td").forEach(td => td.style.textDecoration = "line-through");
+            } else if (e.target.name === "req4" && !e.target.checked) {
+                trContainer.children[5].querySelector("input[name=req5]").disabled = false;
+                trContainer.children[6].querySelector("input[name=req6]").disabled = false;
+                trContainer.children[7].querySelector("select[name=req7]").disabled = false;
+                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                // e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelectorAll("td").forEach(td => td.style.textDecoration = "none");
+            }  else if (e.target.name === "req5" && e.target.checked) {
+                trContainer.children[4].querySelector("input[name=req4]").disabled = true;
+                trContainer.children[6].querySelector("input[name=req6]").disabled = true;
+                trContainer.children[7].querySelector("select[name=req7]").disabled = true;
+                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+            } else if (e.target.name === "req5" && !e.target.checked) {
+                trContainer.children[4].querySelector("input[name=req4]").disabled = false;
+                trContainer.children[6].querySelector("input[name=req6]").disabled = false;
+                trContainer.children[7].querySelector("select[name=req7]").disabled = false;
+                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+            } else if (e.target.name === "req6" && e.target.checked) {
+                trContainer.children[4].querySelector("input[name=req4]").disabled = true;
+                trContainer.children[5].querySelector("input[name=req5]").disabled = true;
+                trContainer.children[7].querySelector("select[name=req7]").disabled = true;
+                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+            } else if (e.target.name === "req6" && !e.target.checked) {
+                trContainer.children[4].querySelector("input[name=req4]").disabled = false;
+                trContainer.children[5].querySelector("input[name=req5]").disabled = false;
+                trContainer.children[7].querySelector("select[name=req7]").disabled = false;
+                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
             }
-            
         }
         
         const form = e.currentTarget;
@@ -265,10 +304,12 @@ class HomeHeist extends Component {
         if(this.props.imgName.includes("Slaughterhouse") && this.state.ovkPlus)
             r1 *= 0.8;
 
-        console.log(form.req5);
-        let classic = parseInt(addBags) * parseInt(scale) + r0 + r1 + r2 + r3 + r4 + r5 + r6 + r7 + r8;
+        // Reset XP from bags when C4 was used
+        if(this.props.imgName.includes("Black Cat") && this.props.isLoud && (r3 !== 0 || r4 !== -0 || r5 !== 0))
+            r6 = 0;
 
-        console.log(r0, r1, r2, r3, r4, r5);
+        let classic = parseInt(addBags) * parseInt(scale) + r0 + r1 + r2 + r3 + r4 + r5 + r6 + r7 + r8;
+        // console.log(r0, r1, r2, r3, r4, r5, r6, r7, r8);
 
         // BASE addition
         if(this.props.imgName.includes("Henry's Rock") && r4!==0) 
