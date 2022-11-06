@@ -80,6 +80,7 @@ import HoxRev_Loud from "./pages/heists/hoxrev_loud";
 import Jewelry from "./pages/heists/jewelry";
 import Jewelry_Loud from "./pages/heists/jewelry_loud";
 import LabRats from "./pages/heists/labrats";
+import LostInTransit from "./pages/heists/lostintransit";
 import Mallcrasher from "./pages/heists/mallcrasher";
 import Meltdown from "./pages/heists/meltdown";
 import Midland from "./pages/heists/midland_ranch";
@@ -216,6 +217,7 @@ class App extends Component {
 							<Route exact path="/jewelrystore" component={Jewelry} />
 							<Route exact path="/jewelrystore_loud" component={Jewelry_Loud} />
 							<Route exact path="/labrats" component={LabRats} />
+							<Route exact path="/lostintransit" component={LostInTransit} />
 							<Route exact path="/mallcrasher" component={Mallcrasher} />
 							<Route exact path="/meltdown" component={Meltdown} />
 							<Route exact path="/midland_ranch" component={Midland} />

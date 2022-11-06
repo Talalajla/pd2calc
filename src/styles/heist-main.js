@@ -348,7 +348,7 @@ export const CrewCheckboxes = styled.div`
     }
 
     ${({theme}) => theme.resolutions.tablet} {
-        gap: 0;
+        gap: 5px;
     }
 
     img {
@@ -362,6 +362,20 @@ export const CrewLabel = styled.label`
     cursor: pointer;
     display: flex;
     justify-content: center;
+    position: relative;
+
+    ::after {
+        position: absolute;
+        bottom: -30px;
+        text-align: center;
+        font-size: 18px;
+        color: ${({theme}) => theme.colors.crew};
+    }
+
+    :nth-child(1)::after { content: '1'; }
+    :nth-child(2)::after { content: '2'; }
+    :nth-child(3)::after { content: '3'; }
+    :nth-child(4)::after { content: '4'; }
 `;
 
 export const CrewRadio = styled.input.attrs({type: 'radio', name: 'crew'})`
@@ -381,6 +395,8 @@ export const CrewRadio = styled.input.attrs({type: 'radio', name: 'crew'})`
 export const CrewBox = styled.div`
     width: 4vmin;
     height: 4vmin;
+    min-width: 20px;
+    min-height: 20px;
     background: ${({num}) => {
         if(num === "1") return `url(${cb}) center/cover no-repeat`
         else if (num === "2") return `url(${cb2}) center/cover no-repeat`
@@ -666,7 +682,7 @@ export const PolaroidFrame = styled.div`
     top: 35%;
     transform: translate(-50%, -50%) scale(1.2) rotate(5deg); */
     transform: scale(1.2) rotate(5deg);
-    width: 20vmin;
+    width: 19vmin;
     height: 25vmin;
     background: url(${polaroid}) center/cover no-repeat;
     display: grid;
@@ -808,7 +824,13 @@ export const JailTitle = styled.div`
 
 export const JailLabel = styled(CrewLabel)`
     transform: none;
-    color: ${({theme}) => theme.colors.jail};
+
+    ::after { color: ${({theme}) => theme.colors.jail};}
+
+    :nth-child(1)::after { content: '0'; }
+    :nth-child(2)::after { content: '1'; }
+    :nth-child(3)::after { content: '2'; }
+    :nth-child(4)::after { content: '3'; }
 `;
 
 export const JailBox = styled(CrewBox)`
@@ -1163,17 +1185,17 @@ export const DisplayPhoto = styled.img.attrs({src: `${avatar1}`})`
 export const DisplayInfo = styled.div`
     height: calc(100% - 41px);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 5px;
+    /* justify-content: center; */
+    /* align-items: center; */
     gap: 10px;
 `;
 export const DisplayLVL = styled.div`
     position: relative;
-    top: -10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 200px;
+    width: 180px;
 
     &>div {
         display: grid;

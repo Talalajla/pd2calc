@@ -128,12 +128,12 @@ export const Paper = () => {
                         <CrewBox num="4" />
                     </CrewLabel>
                 </CrewCheckboxes>
-                <CrewAmount>
+                {/* <CrewAmount>
                     <p>1</p>
                     <p>2</p>
                     <p>3</p>
                     <p>4</p>
-                </CrewAmount>
+                </CrewAmount> */}
             </StickyPaper>
         );
 }
@@ -160,12 +160,12 @@ export const Custody = () => {
                     <JailBox num="4" />
                 </JailLabel>
             </CrewCheckboxes>
-            <JailAmount>
+            {/* <JailAmount>
                 <p>0</p>
                 <p>1</p>
                 <p>2</p>
                 <p>3</p>
-            </JailAmount>
+            </JailAmount> */}
         </JailNote>
     );
 }
@@ -337,7 +337,7 @@ export class Tablet extends Component {
                         </DisplayBGTop>
                         <DisplayTitle>Suspect</DisplayTitle>
                         <DisplayInfo>
-                            <DisplayPhoto />
+                            {/* <DisplayPhoto /> */}
                             <DisplayLVL>
                                 <div><span>Name:</span> <Nickname name="nickname" onInput={this.storageValues} defaultValue={localStorage.getItem("Nickname")} /></div>
                                 <div>Infamy: <Infamy name="infamy" onChange={this.getInfamy} value={localStorage.getItem("Infamy")} onInput={this.storageValues} >{lvls.map(lvl => <option key={lvl} >{lvl}</option>)}</Infamy></div>

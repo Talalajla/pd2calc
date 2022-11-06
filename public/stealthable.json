@@ -201,6 +201,14 @@
     },
     {
         "id": 26,
+        "name": "Lost in Transit",
+        "subname": "",
+        "img": "/static/media/transit.3bba7246.jpg",
+        "link": "lostintransit",
+        "category": "both"
+    },
+    {
+        "id": 27,
         "name": "Mallcrasher",
         "subname": "",
         "img": "/static/media/mallcrasher.99907277.jpg",
@@ -208,7 +216,7 @@
         "category": "both"
     },
     {
-        "id": 27,
+        "id": 28,
         "name": "Midland Ranch",
         "subname": "",
         "img": "/static/media/midland.d2fd1d43.jpg",
@@ -216,7 +224,7 @@
         "category": "both"
     },
     {
-        "id": 28,
+        "id": 29,
         "name": "Mountain Master",
         "subname": "",
         "img": "/static/media/default.f2f003a6.jpg",
@@ -224,7 +232,7 @@
         "category": "both"
     },
     {
-        "id": 29,
+        "id": 30,
         "name": "Murky Station",
         "subname": "",
         "img": "/static/media/murky.aae8e49c.jpg",
@@ -232,7 +240,7 @@
         "category": "stealth"
     },
     {
-        "id": 30,
+        "id": 31,
         "name": "Nightclub",
         "subname": "",
         "img": "/static/media/nightclub.d8fc4cfb.jpg",
@@ -240,7 +248,7 @@
         "category": "both"
     },
     {
-        "id": 31,
+        "id": 32,
         "name": "San Martín Bank",
         "subname": "",
         "img": "/static/media/sanmartin.6a16f466.jpg",
@@ -248,7 +256,7 @@
         "category": "both"
     },
     {
-        "id": 32,
+        "id": 33,
         "name": "Scarface Mansion",
         "subname": "",
         "img": "/static/media/scarface.b1d435a8.jpg",
@@ -256,7 +264,7 @@
         "category": "both"
     },
     {
-        "id": 33,
+        "id": 34,
         "name": "Shacklethorne Auction",
         "subname": "",
         "img": "/static/media/shacklethorne.6bf1d98e.jpg",
@@ -264,7 +272,7 @@
         "category": "both"
     },
     {
-        "id": 34,
+        "id": 35,
         "name": "Shadow Raid",
         "subname": "",
         "img": "/static/media/shadowraid.053cf8ce.jpg",
@@ -272,7 +280,7 @@
         "category": "stealth"
     },
     {
-        "id": 35,
+        "id": 36,
         "name": "The Alesso Heist",
         "subname": "",
         "img": "/static/media/thealesso.c054800e.jpg",
@@ -280,7 +288,7 @@
         "category": "both"
     },
     {
-        "id": 36,
+        "id": 37,
         "name": "The Big Bank",
         "subname": "",
         "img": "/static/media/thebigbank.741bcab1.jpg",
@@ -288,7 +296,7 @@
         "category": "both"
     },
     {
-        "id": 37,
+        "id": 38,
         "name": "The Bomb: Dockyard",
         "subname": "",
         "img": "/static/media/thebombdockyard.0642b095.jpg",
@@ -296,7 +304,7 @@
         "category": "both"
     },
     {
-        "id": 38,
+        "id": 39,
         "name": "The Diamond",
         "subname": "",
         "img": "/static/media/thediamond.a11bf7bc.jpg",
@@ -304,7 +312,7 @@
         "category": "both"
     },
     {
-        "id": 39,
+        "id": 40,
         "name": "The Ukrainian Prisoner",
         "subname": "",
         "img": "/static/media/theukrainianprisoner.b148f3f2.jpg",
@@ -312,7 +320,7 @@
         "category": "both"
     },
     {
-        "id": 40,
+        "id": 41,
         "name": "The White House",
         "subname": "",
         "img": "/static/media/thewhite.6e124ae5.jpg",
@@ -320,7 +328,7 @@
         "category": "both"
     },
     {
-        "id": 41,
+        "id": 42,
         "name": "The Yacht Heist",
         "subname": "",
         "img": "/static/media/theyacht.85ec5bae.jpg",
@@ -328,7 +336,7 @@
         "category": "stealth"
     },
     {
-        "id": 42,
+        "id": 43,
         "name": "Transport: Train Heist",
         "subname": "",
         "img": "/static/media/train.b2100511.jpg",
@@ -336,7 +344,7 @@
         "category": "both"
     },
     {
-        "id": 43,
+        "id": 44,
         "name": "Ukrainian Job",
         "subname": "",
         "img": "/static/media/ukrainian.1492f6c6.jpg",
