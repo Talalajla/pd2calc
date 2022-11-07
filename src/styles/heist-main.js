@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import note from "../images/note.svg";
 import note2 from "../images/note2.svg";
 import note3 from "../images/note3.svg";
@@ -1183,12 +1183,12 @@ export const DisplayPhoto = styled.img.attrs({src: `${avatar1}`})`
     left: -10px;
 `;
 export const DisplayInfo = styled.div`
-    height: calc(100% - 41px);
+    /* height: calc(100% - 41px); */
     display: flex;
-    padding: 5px;
+    padding: 5px 10px;
     /* justify-content: center; */
     /* align-items: center; */
-    gap: 10px;
+    gap: 20px;
 `;
 export const DisplayLVL = styled.div`
     position: relative;
@@ -1211,6 +1211,25 @@ export const DisplayLVL = styled.div`
             display: flex;
             justify-content: center;
         }
+    }
+`;
+export const DisplayCircle = styled.div`
+    code {
+        font-size: 24px;
+        position: relative;
+        right: 3px;
+    }
+`;
+export const DisplaySliderTitle = styled.div`
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-left: 25px;
+        width: 80px;
     }
 `;
 export const DisplayBGTop = styled.div`

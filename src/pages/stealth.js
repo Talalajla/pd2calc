@@ -46,7 +46,6 @@ class Stealth extends Component {
 	};
 
 	render() {
-		console.log(Mild);
 		return (
 			<Main>
 				<MainTitle>Choose heist you want to scout</MainTitle>

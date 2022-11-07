@@ -51,6 +51,7 @@ class HomeHeist extends Component {
             jailedEXP: null,
             EXP: null,
             pcScreen: false,
+            lvlProg: 0,
 
             zindexVal: 1,
             zindexSpec: 1,
@@ -198,6 +199,8 @@ class HomeHeist extends Component {
             default: this.setState({infamyBonus: 0});
         }
     }
+
+    setLvlProgress = (lvl) => this.setState({lvlProg: +lvl});
 
     numberWithCommas = x => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
@@ -369,6 +372,7 @@ class HomeHeist extends Component {
 
         const result = Math.round(basic + ExpCrew + ExpBonus + ExpInfamy + ExpGage + ExpStealth + ExpHeat);
 
+
         // ERRORS
         if (crew < 0) {  
             this.setState({errorShow: true, errorNum: 1});
@@ -478,7 +482,58 @@ class HomeHeist extends Component {
             stealth: this.numberWithCommas(ExpStealth),
             heat: this.numberWithCommas(ExpHeat),
             EXP: this.numberWithCommas(result) 
-        });
+        }, () => this.countLevels(result));
+    }
+    countLevels = (exp) => {
+        const LVL = localStorage.getItem('pd2calc_level');
+
+        const expArray = [
+            900, 1250, 1550, 1850, 2200, 2600, 3000, 3500, 4000, 4600, 
+            4601, 4611, 4637, 4687, 4771, 4895, 5068, 5299, 5595, 5965, 
+            6417, 6959, 7600, 8347, 9208, 10193, 11308, 12563, 13965, 15523, 
+            17245, 19139, 21213, 23476, 25935, 28599, 31476, 34574, 37902, 41467, 
+            45278, 49342, 53670, 58267, 63143, 68306, 73763, 79524, 85596, 91988, 
+            98707, 105762, 113161, 120913, 129025, 137506, 146363, 155606, 165242, 175279, 
+            185726, 196591, 207881, 219606, 231774, 244392, 257468, 271012, 285031, 299533, 
+            314527, 330021, 346022, 362540, 379582, 397156, 415271, 433936, 453157, 472943, 
+            493303, 514245, 535776, 557906, 580642, 603992, 627965, 652569, 677811, 703701, 
+            730247, 757456, 785336, 813897, 843146, 873091, 903741, 935104, 967187, 1000000];
+        console.log('lvl: ', +LVL, '; lvl %: ', this.state.lvlProg, '; exp: ', exp);
+        // ! 10 → 11: 4611xp ; got: 32'940xp + 0% so:
+        // 5151000 -      95 → 96
+        //     96 → 97
+        //    97 → 98
+        // 1     98 → 99
+        //      99 → 100
+
+
+        if (LVL < 100) {
+            let counter = 0,
+                i = +LVL,
+                xpLeft = 0;
+
+
+            while (exp > 0 && i < 100) {
+                const expToNext = +expArray[i];
+                console.log(exp);
+
+                if (exp - expToNext > 0) {
+                    exp -= expToNext;
+                    counter++;
+                    i++;
+                    if (i === 100)
+                        xpLeft = exp;
+                } else {
+                    xpLeft = exp;
+                    exp = 0;
+                }          
+            }
+            if (i === 100)
+                console.log(`Now you have 100lv with ${xpLeft}xp added to your infamy pool!`);
+            else
+                console.log(`Now you have ${i}lvl with ${xpLeft} xp left.`);
+        }
+
     }
 
     toggleScreen = (e) => {
@@ -511,11 +566,12 @@ class HomeHeist extends Component {
     }
 
     componentDidMount = () => this.setState({
-        nickname: localStorage.getItem("Nickname"),
-        inf: localStorage.getItem("Infamy"),
+        nickname: localStorage.getItem("pd2calc_nickname"),
+        inf: localStorage.getItem("pd2calc_infamy"),
     });
 
     render() {
+        console.log("progress", this.state.lvlProg);
 
         return(
             <Content onSubmit={this.countEXP} onChange={this.checkValues}>
@@ -565,7 +621,7 @@ class HomeHeist extends Component {
                     <BonusBox>
                         <Bonus />
                     </BonusBox>
-                    <Tablet infamy={this.infamyBoost} nickname={this.state.nickname} localVal={this.state.inf} />
+                    <Tablet infamy={this.infamyBoost} nickname={this.state.nickname} localVal={this.state.inf} lvlProgress={this.setLvlProgress} />
                 </Main2>
                 
                 <Main3>
