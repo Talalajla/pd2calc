@@ -500,31 +500,30 @@ class HomeHeist extends Component {
             730247, 757456, 785336, 813897, 843146, 873091, 903741, 935104, 967187, 1000000];
         console.log('lvl: ', +LVL, '; lvl %: ', this.state.lvlProg, '; exp: ', exp);
         // ! 10 → 11: 4611xp ; got: 32'940xp + 0% so:
-        // 5151000 -      95 → 96
-        //     96 → 97
-        //    97 → 98
-        // 1     98 → 99
-        //      99 → 100
 
 
         if (LVL < 100) {
-            let counter = 0,
-                i = +LVL,
+            let i = +LVL,
                 xpLeft = 0;
-
+            let currentExp = +expArray[i]*this.state.lvlProg/100;
+            let toNextLvl = Math.round(+expArray[i]-currentExp*100)/100;
+            console.log("current xp: ", currentExp, " to next: ", toNextLvl, " full: ", +expArray[i]);
 
             while (exp > 0 && i < 100) {
-                const expToNext = +expArray[i];
-                console.log(exp);
+                let expToNext = +expArray[i];
+                if (toNextLvl != 0) {
+                    expToNext = toNextLvl;
+                    toNextLvl = 0;
+                }
 
                 if (exp - expToNext > 0) {
                     exp -= expToNext;
-                    counter++;
                     i++;
+                    currentExp = 0;
                     if (i === 100)
                         xpLeft = exp;
                 } else {
-                    xpLeft = exp;
+                    xpLeft = exp + currentExp;
                     exp = 0;
                 }          
             }
@@ -533,7 +532,6 @@ class HomeHeist extends Component {
             else
                 console.log(`Now you have ${i}lvl with ${xpLeft} xp left.`);
         }
-
     }
 
     toggleScreen = (e) => {
