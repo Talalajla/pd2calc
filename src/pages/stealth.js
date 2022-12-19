@@ -2,7 +2,6 @@ import { Component } from "react";
 import axios from "axios";
 import { Main, MainTitle, HeistGallery, HeistItem, HeistName, SearchStealth, RadioLabel, RadioBtn, ChooseType } from "../styles/main";
 import { Link } from "react-router-dom";
-import Mild from "../images/maps/loud/reservoirdogs.jpg";
 
 class Stealth extends Component {
 	constructor(props) {

@@ -18,17 +18,103 @@ export const TutTitle = styled.div`
     }
 `;
 
+export const TutItems = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 0;
+
+    img {
+        max-width: 400px;
+    }
+
+    ${({theme}) => theme.resolutions.tablet} {
+        width: 100%;
+        max-width: unset;
+    }
+
+    >div {
+        display: flex;
+        gap: 30px;
+        max-height: 600px;
+        padding: 50px 0;
+
+        :nth-child(even) {
+            justify-content: flex-end;
+        }
+        :nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        >div {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            margin: 0;
+            max-width: 400px;
+            font-size: 22px;
+            line-height: 30px;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        ${({theme}) => theme.resolutions.phone} {
+            flex-direction: column;
+            max-height: unset;
+            align-items: center;
+            text-align: center;
+
+            :nth-child(odd) {
+                flex-direction: column-reverse;
+            }
+            
+            img {
+                max-width: 200px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+    }
+`;
+
 export const TutSubTitle = styled.div`
     justify-self: center;
     width: 100%;
     overflow: hidden;
-    font-size: 4.5vmin;
+    font-size: 20px;
     font-family: "Exo 2", Roboto;
     text-align: center;
 
     ${({theme}) => theme.resolutions.photoBr} {
         font-size: 17px;
     }
+    p {
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    img {
+        width: 100%;
+        max-width: 800px;
+    }
+`;
+
+export const TutFinish = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 32px;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
 `;
 
 export const TutSubTitleItem = styled.div`

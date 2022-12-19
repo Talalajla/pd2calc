@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import note from "../images/note.svg";
 import note2 from "../images/note2.svg";
 import note3 from "../images/note3.svg";
@@ -33,7 +33,6 @@ import tape from "../images/tape.png";
 import tape2 from "../images/tape2.png";
 import holder from "../images/holder.svg";
 import holderBot from "../images/holder_bottom.svg";
-import avatar1 from "../images/avatar1.jpg";
 import infinite from "../images/infinite.png";
 import desk from "../images/desk2.png";
 
@@ -407,32 +406,6 @@ export const CrewBox = styled.div`
     ${({theme}) => theme.resolutions.photoBr} {
         width: 20px;
         height: 20px;
-    }
-`;
-
-export const CrewAmount = styled.div`
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-
-    ${({theme}) => theme.resolutions.photoBr} {
-        width: 80%;
-        margin: auto;
-    }
-
-    ${({theme}) => theme.resolutions.tablet} {
-        gap: 0;
-    }
-
-    p {
-        text-align: center;
-        width: 35px;
-        font-size: 2vmin;
-        color: ${({theme}) => theme.colors.crew};
-
-        ${({theme}) => theme.resolutions.photoBr} {
-            font-size: 12px;
-        }
     }
 `;
 
@@ -856,12 +829,6 @@ export const JailRadio = styled.input.attrs({type: 'radio', name: 'jail'})`
     }
 `;
 
-export const JailAmount = styled(CrewAmount)`
-    
-    p {
-        color: ${({theme}) => theme.colors.jail};
-    }
-`;
 
 /*
 ?   BONUS
@@ -1176,12 +1143,7 @@ export const DisplayTitle = styled.div`
 ;
     padding: 5px;
 `;
-export const DisplayPhoto = styled.img.attrs({src: `${avatar1}`})`
-    height: 50%;
-    position: relative;
-    top: -10px;
-    left: -10px;
-`;
+
 export const DisplayInfo = styled.div`
     /* height: calc(100% - 41px); */
     display: flex;
@@ -1845,6 +1807,9 @@ export const PC_FILE_EXP = styled.div`
 
     p:not(:first-of-type) {
         margin: 3px;
+    }
+    p:last-of-type {
+        font-size: 15px;
     }
 `;
 

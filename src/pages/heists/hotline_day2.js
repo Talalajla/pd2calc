@@ -15,7 +15,7 @@ class Heist extends Component {
                     tr31="Each secured bag (max 10 counts)" tr32="+1000"
                     status={['rCB', 'rCB', 'rS']}
                     limitStart={['', '', '0']}
-                    limitEnd={['', '', '10']}
+                    limitEnd={['', '', '16']}
                     values={['14000', '2000', '1000']}
                 />
             </>

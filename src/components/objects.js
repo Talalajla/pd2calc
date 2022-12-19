@@ -1,11 +1,11 @@
-import { Component, useState } from "react";
+import { Component } from "react";
 import { RequireNotes, Tape, StickyPaper, StickyTitle, CrewCheckboxes, CrewLabel, CrewRadio,
-    CrewBox, CrewAmount, GageNote, GageLabel, ClipTitle, ClipPaper, Clip, ClipMetal,
+    CrewBox, GageNote, GageLabel, ClipTitle, ClipPaper, Clip, ClipMetal,
     Skulls, Skull, Skull2, Skull3, Skull4, Difficulty, Normal, DiffLabel, DiffRadio, CirclePick, DiffName,
     DiffUnderScore, GageSelect, PolaroidFrame, PolaroidPhoto, PolaroidTitle, JC, Tape2, JailNote, JailTitle,
-    JailLabel, JailBox, JailRadio, JailAmount, BonusNote, BoostLabels, BoostLabel, BoostTitle, BoostSelect, BoostCheckbox,
+    JailLabel, JailBox, JailRadio, BonusNote, BoostLabels, BoostLabel, BoostTitle, BoostSelect, BoostCheckbox,
     BoostCheckboxStyle, HeatTitle, StealthTitle, HeatLabel, HeatInput, StealthSelect, StealthOption, LVLBox,  Holder, Device,
-    Display, Camera, DisplayTitle, DisplayPhoto, DisplayInfo, DisplayLVL, DisplayBGTop, DisplayDot, DisplayClose, Nickname,
+    Display, Camera, DisplayTitle, DisplayInfo, DisplayLVL, DisplayBGTop, DisplayDot, DisplayClose, Nickname,
     Infamy, Lvl, InfiniteBox, InfiniteInput, DisplayMenu, HolderBottom, DisplayCircle, DisplaySliderTitle} from "../styles/heist-main";
 import { RCB, RIN, RS, setArray } from "./reqCheckbox";
 import CircularSlider from "@fseehawer/react-circular-slider";
@@ -126,12 +126,6 @@ export const Paper = () => {
                         <CrewBox num="4" />
                     </CrewLabel>
                 </CrewCheckboxes>
-                {/* <CrewAmount>
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p>4</p>
-                </CrewAmount> */}
             </StickyPaper>
         );
 }
@@ -158,12 +152,6 @@ export const Custody = () => {
                     <JailBox num="4" />
                 </JailLabel>
             </CrewCheckboxes>
-            {/* <JailAmount>
-                <p>0</p>
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
-            </JailAmount> */}
         </JailNote>
     );
 }
@@ -335,7 +323,6 @@ export class Tablet extends Component {
                         </DisplayBGTop>
                         <DisplayTitle>Suspect</DisplayTitle>
                         <DisplayInfo>
-                            {/* <DisplayPhoto /> */}
                             <DisplayLVL>
                                 <div><span>Name:</span> <Nickname name="nickname" onInput={this.storageValues} defaultValue={localStorage.getItem("pd2calc_nickname")} /></div>
                                 <div>Infamy: <Infamy name="infamy" onChange={this.getInfamy} value={localStorage.getItem("pd2calc_infamy")} onInput={this.storageValues} >{lvls.map(lvl => <option key={lvl} >{lvl}</option>)}</Infamy></div>
@@ -344,7 +331,7 @@ export class Tablet extends Component {
                             <DisplayCircle>
                                 <CircularSlider
                                     min={0} 
-                                    max={100} 
+                                    max={99} 
                                     width={100} 
                                     dataIndex={50}
                                     hideKnob={true}
@@ -365,7 +352,7 @@ export class Tablet extends Component {
                         </DisplayInfo>
                         <DisplaySliderTitle>
                             Level progression
-                            <img src={TabletArrow} />
+                            <img src={TabletArrow} alt=''/>
                         </DisplaySliderTitle>
                         <DisplayMenu>
                             <div></div>

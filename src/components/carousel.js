@@ -16,27 +16,21 @@ const Carousel = props => {
     });
 
     const [index, setIndex] = useState(0);
-    const [length, setLength] = useState(images.length);
+    const length = images.length;
 
-    useEffect(() => {
-        setLength(images.length)
-    }, [images])
 
     const goNext = () => {
-        if (index < length - 1) {
-            setIndex(prevState => prevState + 1);
-        }
+        if (index < length - 1) setIndex(prevState => prevState + 1);
     }
 
     const goPrev = () => {
-        if (index > 0) {
-            setIndex(prevState => prevState - 1);
-        }
+        if (index > 0) setIndex(prevState => prevState - 1);
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const checkKey = (e) => {
-        if (e.keyCode === 37) {goPrev()}
-        else if (e.keyCode === 39) {goNext()}
+        if (e.keyCode === 37) goPrev()
+        else if (e.keyCode === 39) goNext()
     }
 
     useEffect(() => {

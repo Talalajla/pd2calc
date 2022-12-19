@@ -24,6 +24,8 @@ class HomeHeist extends Component {
             nickname: '',
             inf: '',
             lvl: '',
+            newLvl: '',
+            newExp: '',
 
             difficulty: null,
 
@@ -506,12 +508,13 @@ class HomeHeist extends Component {
             let i = +LVL,
                 xpLeft = 0;
             let currentExp = +expArray[i]*this.state.lvlProg/100;
-            let toNextLvl = Math.round(+expArray[i]-currentExp*100)/100;
+            let toNextLvl = Math.round((+expArray[i]-currentExp)*100)/100;
+            let percLeft;
             console.log("current xp: ", currentExp, " to next: ", toNextLvl, " full: ", +expArray[i]);
 
             while (exp > 0 && i < 100) {
                 let expToNext = +expArray[i];
-                if (toNextLvl != 0) {
+                if (toNextLvl !== 0) {
                     expToNext = toNextLvl;
                     toNextLvl = 0;
                 }
@@ -527,10 +530,15 @@ class HomeHeist extends Component {
                     exp = 0;
                 }          
             }
-            if (i === 100)
-                console.log(`Now you have 100lv with ${xpLeft}xp added to your infamy pool!`);
-            else
-                console.log(`Now you have ${i}lvl with ${xpLeft} xp left.`);
+            if (i === 100) percLeft = 100;
+            else percLeft = Math.round(xpLeft/expArray[i]*100);
+
+            this.setState({newLvl: i, newExp: percLeft});
+
+            if (i === 100) console.log(`Now you have 100lv with ${xpLeft}xp added to your infamy pool!`);
+            else console.log(`Now you have ${i}lvl with ${xpLeft} xp left.`);
+        } else {
+            this.setState({newLvl: 100, newExp: 100});
         }
     }
 
@@ -661,9 +669,12 @@ class HomeHeist extends Component {
                                                 this.state.EXP &&                                         
                                                 <PC_FILE_EXP>
                                                     <p>This mission provides:</p>
-                                                    <p>{this.state.EXP} EXP</p>
-                                                    {this.state.jailedEXP &&
-                                                    <p>{this.state.jailedEXP} EXP (Custody)</p>}
+                                                    {
+                                                    this.state.jailedEXP
+                                                    ? <p>{this.state.jailedEXP} EXP (Custody)</p>
+                                                    : <p>{this.state.EXP} EXP</p>
+                                                    }
+                                                    <p>After it you'll have {this.state.newLvl}lvl and {this.state.newExp}% EXP!</p>
 
                                                     <PC_MORE_DETAILS onClick={this.showDetails}>Details</PC_MORE_DETAILS>
                                                     <PC_BACK_BTN onClick={this.goBack}>Back</PC_BACK_BTN>
