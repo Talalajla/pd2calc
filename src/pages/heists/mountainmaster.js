@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Mountain} imgName="Mountain master" jc="30"
-                    tr11="Default (completion)" tr12="38000"
-                    tr21="Tea Set Secured" tr22="+500"
-                    tr31="Each additional gold bag secured" tr32="+1000"
-                    status={['rCB', 'rCB', 'rS']}
-                    limitStart={['','','0']}
-                    limitEnd={['', '','4']}
-                    values={['38000', '500', '1000']}
+                    requirements={[
+						["Default (completion)", "38000", "rCB"], ["Tea Set Secured", "500", "rCB"],
+                        ["Each additional gold bag secured", "1000", "rS", "0", "4"]
+					]}
                 />
             </>
         );

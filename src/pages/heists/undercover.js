@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Under} imgName="Undercover" jc="30"
-                    tr11="Default (completion)" tr12="24500"
-                    tr21="Car lifted with confirmed server" tr22="+1000"
-                    tr31="Hack was interrupted" tr32="+1000"
-                    status={['rCB', 'rCB', 'rS']}
-                    limitStart={['', '', '0']}
-                    limitEnd={['', '', '3']}
-                    values={['24500', '1000', '1000']}
+                    requirements={[
+                        ["Default (completion)", "24500", "rCB"], ["Car lifted with confirmed server", "1000", "rCB"],
+                        ["Hack was interrupted", "1000", "rS", "0", "3"]
+                    ]}
                 />
             </>
         );

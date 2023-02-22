@@ -15,7 +15,6 @@ import hdd from "../images/hdd.svg";
 import dollar from "../images/dollar.svg";
 import qr from "../images/qrcode.svg";
 
-
 class HomeHeist extends Component {
     constructor(props) {
         super(props);
@@ -74,6 +73,7 @@ class HomeHeist extends Component {
         this.POST = createRef();
     }
 
+    // ! NIE DZIAŁA
     checkValues = (e) => {
         this.goBack();
         console.log("zmiana")
@@ -127,10 +127,22 @@ class HomeHeist extends Component {
                 trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
             }
         }
-        
-        const form = e.currentTarget;
 
-        this.props.fLootBonus && form.req2.value === "8" ? this.setState({fLootBonus: true}) : this.setState({fLootBonus: false});
+
+
+        if (this.props.fLootBonus) {
+            const form = e.currentTarget;
+            const bagsSecured = form.querySelectorAll('table label select')[0].value;
+
+            if (bagsSecured === "8") {
+                this.setState({fLootBonus: true});
+                this.props.requirements[2] = ["Full loot bonus", "2000", "rCB", "readonly"];
+            } else {
+                this.setState({fLootBonus: false});
+                if (this.props.requirements.length === 3) this.props.requirements.pop();
+            }
+
+        } 
     }
 
     countGage = (item) => {
@@ -140,16 +152,45 @@ class HomeHeist extends Component {
             strongRisk.includes(dif) ? this.setState({ovkPlus: true}) : this.setState({ovkPlus: false});
 
             //RED DIAMOND
-            if (strongRisk.includes(dif) && this.props.redDiamond) { this.setState({ showRed: true }) } else { this.setState({ showRed: false })}
+            if (strongRisk.includes(dif) && this.props.redDiamond) {
+                this.setState({ showRed: true });
+                this.props.requirements[2] = ["Red diamond secured (OvK+)", "2000", "rCB"];
+            } else { 
+                this.setState({ showRed: false });
+                if (this.props.redDiamond && this.props.requirements.length === 3) this.props.requirements.pop();
+            }
+
             //HELLS BONUS
-            if (strongRisk.includes(dif) && this.props.ovkHells) { this.setState({ ovkHells: true }) } else { this.setState({ ovkHells: false })}
+            if (strongRisk.includes(dif) && this.props.ovkHells) { 
+                this.setState({ ovkHells: true })
+                this.props.requirements[1] = ["Overkill+ bonus", '1000', 'rCB', 'readonly']
+            } else { 
+                this.setState({ ovkHells: false })
+                if (this.props.ovkHells && this.props.requirements.length === 2) this.props.requirements.pop();
+            }
             //GOATS BONUS
-            if (strongRisk.includes(dif) && this.props.ovkGoats) { this.setState({ ovkGoats: true }) } else { this.setState({ ovkGoats: false })}
+            if (strongRisk.includes(dif) && this.props.ovkGoats) { 
+                this.setState({ ovkGoats: true })
+                this.props.requirements[4] = ["Securing all goats in separate cages", "50000", "rCB"]
+
+            } else { 
+                this.setState({ ovkGoats: false });
+                if (this.props.ovkGoats && this.props.requirements.length === 5) this.props.requirements.pop();
+            }
 
             //SLAUGHTERHOUSE OVK+
-            if (strongRisk.includes(dif) && this.props.pigs) this.setState({ pigs: 2 })
-            else if (!strongRisk.includes(dif) && this.props.pigs)  this.setState({ pigs: 1 })
-            else this.setState({ pigs: 0 })
+            if (strongRisk.includes(dif) && this.props.pigs) {
+                this.setState({ pigs: 2 });
+                this.props.requirements[1] = ["Each bag of gold secured", "800", "rS", "6", "10"];
+            }
+            else if (!strongRisk.includes(dif) && this.props.pigs) {
+                this.setState({ pigs: 1 });
+                this.props.requirements[1] = ["Each bag of gold secured", "1000", "rS", "2", "8"];
+            }
+            else {
+                this.setState({ pigs: 0 });
+                if (this.props.pigs) this.props.requirements.pop();
+            }
 
         })
 
@@ -207,10 +248,10 @@ class HomeHeist extends Component {
     numberWithCommas = x => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
     swapOn = (item) => {
-        if (typeof item.value==="undefined" || item.checked===false) { return 0 };
-        if (item.checked===true) { return 1 };
+        if (item.tagName === "INPUT")
+            return item.checked ? 1 : 0;
 
-        return item.value;
+        return +item.value;
     }
 
     writeTextTyper = (text) => {
@@ -267,7 +308,7 @@ class HomeHeist extends Component {
     countEXP = (e) => {
         e.preventDefault();
 
-        const randomNum = Math.round(Math.random()*100);
+        const randomNum = Math.round(Math.random()*250);
         if (randomNum === 1 || randomNum === 4 || randomNum === 7 || randomNum === 69 || randomNum === 96) this.setState({whatAboutBluescreen: true}, this.bluescreenTime);
 
         const form = e.currentTarget;
@@ -292,32 +333,27 @@ class HomeHeist extends Component {
         let scale = 0;
         if (this.props.scaling) { scale = this.props.scaling };
         if (this.props.infinite) { addBags = form.additional.value };
-        // Default
-        let r0, r1, r2, r3, r4, r5, r6, r7, r8;
-        r0 = r1 = r2 = r3 = r4 = r5 = r6 = r7 = r8 = 0;
-        const val = this.props.values;
-        if (form.req1!==undefined) r0 = this.swapOn(form.req1) * parseInt(val[0]);
-        if (form.req2!==undefined) r1 = this.swapOn(form.req2) * parseInt(val[1]);
-        if (form.req3!==undefined) r2 = this.swapOn(form.req3) * parseInt(val[2]);
-        if (form.req4!==undefined) r3 = this.swapOn(form.req4) * parseInt(val[3]);
-        if (form.req5!==undefined) r4 = this.swapOn(form.req5) * parseInt(val[4]);
-        if (form.req6!==undefined) r5 = this.swapOn(form.req6) * parseInt(val[5]);
-        if (form.req7!==undefined) r6 = this.swapOn(form.req7) * parseInt(val[6]);
-        if (form.req8!==undefined) r7 = this.swapOn(form.req8) * parseInt(val[7]);
-        if (form.req9!==undefined) r8 = this.swapOn(form.req9) * parseInt(val[8]);
+
+        // Default values 
+        const baseValues = this.props.requirements.map((row) => +row[1] );
+        console.log(baseValues);
+        const elements = form.querySelectorAll('table label');
+        const inputValues = Array.from(elements).map((item) => this.swapOn(item.children[0]));
+        const expValues = inputValues.map((el, index) => el * baseValues[index]);
+
+        const expValuesSum = expValues.reduce((ac, val) => ac + val, 0);
         
         if(this.props.imgName.includes("Slaughterhouse") && this.state.ovkPlus)
-            r1 *= 0.8;
+            expValues[1] *= 0.8;
 
         // Reset XP from bags when C4 was used
-        if(this.props.imgName.includes("Black Cat") && this.props.isLoud && (r3 !== 0 || r4 !== -0 || r5 !== 0))
-            r6 = 0;
+        if(this.props.imgName.includes("Black Cat") && this.props.isLoud && (expValues[3] !== 0 || expValues[4] !== -0 || expValues[5] !== 0))
+            expValues[6] = 0;
 
-        let classic = parseInt(addBags) * parseInt(scale) + r0 + r1 + r2 + r3 + r4 + r5 + r6 + r7 + r8;
-        // console.log(r0, r1, r2, r3, r4, r5, r6, r7, r8);
+        let classic = parseInt(addBags) * parseInt(scale) + expValuesSum;
 
         // BASE addition
-        if(this.props.imgName.includes("Henry's Rock") && r4!==0) 
+        if(this.props.imgName.includes("Henry's Rock") && expValues[4] !== 0) 
             classic+=2000
         // Difficulty
         const diffArr = Array.from(form.diff);
@@ -357,7 +393,7 @@ class HomeHeist extends Component {
         const ExpCrew = Math.round(basic * crew);
         const ExpBonus = Math.round(basic * bonus / 100);
         const ExpInfamy = Math.round(basic * infamy / 100);
-        const ExpGage = Math.round(basic * (5 * gage/gageMax) / 100);
+        const ExpGage = Math.round(basic * (5 * gage / gageMax) / 100);
         const ExpStealth = Math.round((basic + ExpCrew + ExpBonus + ExpInfamy + ExpGage) * (stealth / 100));
         let ExpHeat;
         if (heatBool) { ExpHeat = Math.round((basic + ExpCrew + ExpBonus + ExpInfamy + ExpGage + ExpStealth) * (heat / 100)) }
@@ -376,6 +412,7 @@ class HomeHeist extends Component {
 
 
         // ERRORS
+        // ! DODAĆ BLACKCAT C4 LOUD WALIDACJE
         if (crew < 0) {  
             this.setState({errorShow: true, errorNum: 1});
             setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
@@ -384,10 +421,10 @@ class HomeHeist extends Component {
 
         if (this.props.imgName.includes("Henry's Rock")) {
             let amount = 0;
-            if (r1!==0) amount++;
-            if (r2!==0) amount++;
-            if (r3!==0) amount++;
-            if (r4!==0) amount++;
+            if (expValues[1] !== 0) amount++;
+            if (expValues[2] !== 0) amount++;
+            if (expValues[3] !== 0) amount++;
+            if (expValues[4] !== 0) amount++;
             if (amount !== 2) {
                 this.setState({errorShow: true, errorNum: 3});
                 setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
@@ -397,13 +434,13 @@ class HomeHeist extends Component {
 
         if (this.props.imgName.includes('Stealing Xmas') || this.props.imgName.includes("The Biker Heist (day 1)")) {
             let amount = 0;
-            if (r1!==0 && this.props.imgName.includes('Stealing Xmas')) amount++;
-            if (r2!==0) amount++;
-            if (r3!==0) amount++;
-            if (r4!==0) amount++;
-            if (r5!==0) amount++;
-            if (r6!==0) amount++;
-            if (r7!==0) amount++;
+            if (expValues[1] !==  0 && this.props.imgName.includes('Stealing Xmas')) amount++;
+            if (expValues[2] !== 0) amount++;
+            if (expValues[3] !== 0) amount++;
+            if (expValues[4] !== 0) amount++;
+            if (expValues[5] !== 0) amount++;
+            if (expValues[6] !== 0) amount++;
+            if (expValues[7] !== 0) amount++;
             if (amount !== 3) {
                 if(this.props.imgName.includes('Stealing Xmas'))
                     this.setState({errorShow: true, errorNum: 4});
@@ -414,17 +451,17 @@ class HomeHeist extends Component {
                 return;
             }
 
-            if (((r4!==0 && r5!==0) || (r6!==0 && r7!==0)) && this.props.imgName.includes('Stealing Xmas')) {
+            if (((expValues[4] !== 0 && expValues[5] !== 0) || (expValues[6] !== 0 && expValues[7] !== 0)) && this.props.imgName.includes('Stealing Xmas')) {
                 this.setState({errorShow: true, errorNum: 5});
                 setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
                 return;
             }
         }
 
-        if (this.props.imgName.includes("The Ukrainian Prisoner") && this.props.tr12 === "35500") {
+        if (this.props.imgName.includes("The Ukrainian Prisoner") && this.props.requirements[0][1] === "35500") {
             let amount = 0;
-            if (r1 !== 0) amount++;
-            if (r2 !== 0) amount++;
+            if (expValues[1] !== 0) amount++;
+            if (expValues[2] !== 0) amount++;
             if (amount === 2) {
                 this.setState({errorShow: true, errorNum: 7});
                 setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
@@ -432,7 +469,7 @@ class HomeHeist extends Component {
             }
         }
 
-        if (this.props.imgName.includes("Carshop") && (players - jailed) < r1/1000) {
+        if (this.props.imgName.includes("Carshop") && (players - jailed) < expValues[1] / 1000) {
             this.setState({errorShow: true, errorNum: 8});
             setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
             return;
@@ -440,9 +477,9 @@ class HomeHeist extends Component {
 
         if (this.props.imgName.includes("Golden Grin Casino") && this.props.tr12 === "59250") {
             let amount = 0;
-            if(r1 !== 0) amount++;
-            if(r2 !== 0) amount++;
-            if(r3 !== 0) amount++;
+            if(expValues[1] !== 0) amount++;
+            if(expValues[2] !== 0) amount++;
+            if(expValues[3] !== 0) amount++;
             if (amount >= 2) {
                 this.setState({errorShow: true, errorNum: 9});
                 setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
@@ -452,9 +489,9 @@ class HomeHeist extends Component {
 
         if (this.props.imgName.includes("Lab Rats")) {
             let amount = 0;
-            if (r2 !== 0) amount++;
-            if (r3 !== 0) amount++;
-            if (r4 !== 0) amount++;
+            if (expValues[2] !== 0) amount++;
+            if (expValues[3] !== 0) amount++;
+            if (expValues[4] !== 0) amount++;
             if (amount > 1) {
                 this.setState({errorShow: true, errorNum: 10});
                 setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
@@ -463,7 +500,7 @@ class HomeHeist extends Component {
         }
 
         if (this.props.imgName.includes("Rats (day 1)")) {
-            if (r1 !== 0 && r2 !== 0) {
+            if (expValues[1] !== 0 && expValues[2] !== 0) {
                 this.setState({errorShow: true, errorNum: 11});
                 setTimeout(function() { this.setState({ errorShow: false })}.bind(this), 5000);
                 return;
@@ -577,7 +614,7 @@ class HomeHeist extends Component {
     });
 
     render() {
-        console.log("progress", this.state.lvlProg);
+        // console.log("progress", this.state.lvlProg);
 
         return(
             <Content onSubmit={this.countEXP} onChange={this.checkValues}>
@@ -601,15 +638,7 @@ class HomeHeist extends Component {
 
                     <ReqBox>
                         <Requirements 
-                            tr11={this.props.tr11} tr12={this.props.tr12}
-                            tr21={this.props.tr21} tr22={this.props.tr22}
-                            tr31={this.props.tr31} tr32={this.props.tr32}
-                            tr41={this.props.tr41} tr42={this.props.tr42}
-                            tr51={this.props.tr51} tr52={this.props.tr52}
-                            tr61={this.props.tr61} tr62={this.props.tr62}
-                            tr71={this.props.tr71} tr72={this.props.tr72}
-                            tr81={this.props.tr81} tr82={this.props.tr82}
-                            tr91={this.props.tr91} tr92={this.props.tr92}
+                            requirements={this.props.requirements}
                             status={this.props.status}
                             limitStart={this.props.limitStart}
                             limitEnd={this.props.limitEnd}

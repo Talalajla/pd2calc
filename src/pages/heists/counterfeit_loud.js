@@ -9,15 +9,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Counter} imgName="Counterfeit" jc="30"
-                    default="24000" 
-                    tr11="Default (4 bags)" tr12="21000" 
-                    tr21="C4 in basement" tr22="+2000"
-                    tr31="Printed bags" tr32="+4000"
-                    tr41="Secured bags into heli" tr42="+1000"
-                    status={['rCB', 'rCB', 'rS', 'rS']}
-                    limitStart={['', '', '0', '0']}
-                    limitEnd={['', '', '150', '150']}
-                    values={['21000', '2000', '4000', '1000']}
+                    requirements={[
+                        ["Default (completion)", "21000", "rCB"], ["C4 in basement", "2000", "rCB"],
+                        ["Printed money bags", "4000", "rS", "0", "150"], ["Secured money bags (heli)", "1000", "rS", "0", "150"]
+                    ]}
                 />
             </>
         );

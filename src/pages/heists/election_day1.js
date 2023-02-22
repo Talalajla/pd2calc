@@ -10,12 +10,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Election} imgName="Election Day (day 1)" jc="40"
-                    tr11="Default (completion)" tr12="2000"
-                    tr21="Escape after 3 minutes" tr22="+4000"
-                    status={['rCB', 'rCB']}
-                    limitStart={['', '']}
-                    limitEnd={['', '']}
-                    values={['2000', '4000']}
+                    requirements={[
+                        ["Default (completion)", "2000", "rCB"], ["Escape after 3 minutes", "4000", "rCB"]
+                    ]}
                 />
             </>
         );

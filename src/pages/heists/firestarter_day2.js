@@ -7,19 +7,11 @@ class Heist extends Component {
 		return (
 			<>
 				<HomeHeist
-					src={Fire}
-					imgName="Firestarter (day 2)"
-					jc="50"
-					tr11="Default (completion)"
-					tr12="6000"
-					tr21="Escape after 3 minutes"
-					tr22="+6000"
-					tr31="Each bag secured"
-					tr32="+1000"
-					status={["rCB", "rCB", "rS"]}
-					limitStart={["", "", "1"]}
-					limitEnd={["", "", "3"]}
-					values={["6000", "6000", "1000"]}
+					src={Fire} imgName="Firestarter (day 2)" jc="50"
+					requirements={[
+                        ["Default (completion)", "6000", "rCB"], ["Escape after 3 minutes", "6000", "rCB"],
+						["Each bag secured", "1000", "rS", "1", "3"]
+                    ]}
 				/>
 			</>
 		);

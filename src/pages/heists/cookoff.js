@@ -9,14 +9,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Cook} imgName="Cook Off" jc="50"
-                    default="24000" 
-                    tr11="Default (4 bags)" tr12="24000" 
-                    tr21="Every additional bag" tr22="+8000"
-                    infinite scaling="8000" limit="1200"
-                    status={['rCB', '']}
-                    limitStart={['', '']}
-                    limitEnd={['', '']}
-                    values={['24000']}
+                    requirements={[
+                        ["Default (completion)", "24000", "rCB"], ["Each additional bag secured", "8000", "rS", "0", "100"]
+                    ]}
                 />
             </>
         );

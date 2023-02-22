@@ -10,11 +10,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Heat} imgName="Heat Street" jc="50"
-                    tr11="Default (completion)" tr12="26000"
-                    status={['rCB']}
-                    limitStart={['']}
-                    limitEnd={['']}
-                    values={['26000']}
+                    requirements={[
+                        ["Default (completion)", "26000", "rCB"]
+                    ]}
                 />
             </>
         );

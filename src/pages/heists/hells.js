@@ -10,12 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Hells} imgName="Hell's Island" jc="30"
-                    tr11="Default (completion)" tr12="17000"
-                    status={['rCB']}
-                    limitStart={['', '']}
-                    limitEnd={['', '']}
-                    values={['17000', '1000']}
-                    ovkHells="true"
+                    requirements={[
+                        ["Default (completion)", "17000", "rCB"]
+                    ]}
+                    ovkHells
                 />
             </>
         );

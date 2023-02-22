@@ -9,12 +9,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Biker} imgName="The Biker Heist (day 2)" jc="30"
-                    tr11="Default (completion)" tr12="10000"
-                    tr21="Each bag secured" tr22="+500"
-                    status={['rCB', 'rS']}
-                    limitStart={['', '1']}
-                    limitEnd={['', '9']}
-                    values={['1000', '500']}
+                    requirements={[
+                        ["Default (completion)", "10000", "rCB"], ["Each bag secured", "500", "rS", "1", "9"]
+                    ]}
                 />
             </>
         );

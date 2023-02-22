@@ -10,15 +10,11 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Santas} imgName="Santa's Workshop" jc="10"
-                    tr11="Default (completion)" tr12="4000"
-                    tr21="Safe event completed" tr22="+4000"
-                    tr31="Money/diamonds from safe" tr32="+8000"
-                    tr41="Toast from safe" tr42="+12000"
-                    tr51="Each finished and secured present" tr52="+2000"
-                    status={['rCB', 'rCB', 'rCB', 'rCB', 'rS']}
-                    limitStart={['', '', '', '', '4']}
-                    limitEnd={['', '', '', '', '500']}
-                    values={['4000', '4000', '8000', '12000', '2000']}
+                    requirements={[
+						["Default (completion)", "4000", "rCB"], ["Safe event completed", "4000", "rCB"],
+                        ["Money/diamonds from safe", "8000", "rCB"], ["Toast from safe", "12000", "rCB"],
+                        ["Each finished and secured present", "2000", "rS", "4", "5000"]
+					]}
                 />
             </>
         );

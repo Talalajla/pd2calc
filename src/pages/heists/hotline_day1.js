@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Hotline} imgName="Hotline Miami (day 1)" jc="60"
-                    tr11="Default (completion)" tr12="26000"
-                    tr21="Each meth cooked" tr22="+500"
-                    tr31="Each secured bag" tr32="+1000"
-                    status={['rCB', 'rS', 'rS']}
-                    limitStart={['', '0', '0']}
-                    limitEnd={['', '7', '16']}
-                    values={['26000', '500', '1000']}
+                    requirements={[
+                        ["Default (completion)", "26000", "rCB"], ["Each meth cooked", "500", "rS", "0", "7"],
+                        ["Each secured bag", "1000", "rS", "0", "16"]
+                    ]}
                 />
             </>
         );

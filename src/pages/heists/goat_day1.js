@@ -10,15 +10,11 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Goat} imgName="Goat simulator (day 1)" jc="30"
-                    tr11="Default (completion)" tr12="3000"
-                    tr21="Drill/saw finished" tr22="+1500"
-                    tr31="Powerbox hacked" tr32="+1500"
-                    tr41="Each debis removed" tr42="+1500"
-                    tr51="Each goat secured" tr52="+1500"
-                    status={['rCB', 'rCB', 'rCB', 'rS', 'rS']}
-                    limitStart={['', '', '', '0', '5']}
-                    limitEnd={['', '', '', '4', '15']}
-                    values={['3000', '1500', '1500', '1500', '1500']}
+                    requirements={[
+                        ["Default (completion)", "3000", "rCB"], ["Drill/saw finished", "1500", "rCB"],
+                        ["Powerbox hacked", "1500", "rCB"], ["Each debris removed", "1500", "rS", "0", "4"],
+                        ["Each goat secured", "1500", "rS", "5", "15"]
+                    ]}
                 />
             </>
         );

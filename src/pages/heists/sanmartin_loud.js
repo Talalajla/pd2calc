@@ -7,19 +7,11 @@ class Heist extends Component {
 		return (
 			<>
 				<HomeHeist
-					src={San}
-					imgName="San Martín Bank"
-					jc="30"
-					tr11="Default (completion)"
-					tr12="32000"
-					tr21="Stealth beginning (loud after picking up keychain and drilling instead of using it)"
-					tr22="+8000"
-					tr31="Each bag secured"
-					tr32="+1000"
-					status={["rCB", "rCB", "rS"]}
-					limitStart={["", "", "1"]}
-					limitEnd={["", "", "11"]}
-					values={["32000", "8000", "1000"]}
+					src={San} imgName="San Martín Bank" jc="30"
+					requirements={[
+						["Default (completion)", "32000", "rCB"], ["Stealth beginning (loud after picking up keychain and drilling instead of using it)", "8000", "rCB"],
+						["Each bag secured", "1000", "rS", "1", "11"]
+					]}
 				/>
 			</>
 		);

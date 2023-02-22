@@ -10,14 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={TheAlesso} imgName="The Alesso Heist" jc="60"
-                    tr11="Default (completion)" tr12="9000"
-                    tr21="Each 2 x C4 charges picked" tr22="+2000"
-                    tr31="Each 3 x C4 charges set" tr32="+2000"
-                    tr41="Each money bag secured" tr42="+1500"
-                    status={['rCB', 'rS', 'rS', 'rS']}
-                    limitStart={['', '2', '1', '3']}
-                    limitEnd={['', '5', '3', '18']}
-                    values={['9000', '2000', '2000', '1500']}
+                    requirements={[
+                        ["Default (completion)", "9000", "rCB"], ["Each 2 x C4 charges picked", "2000", "rS", "2", "5"], 
+                        ["Each 3 x C4 charges set", "2000", "rS", "1", "3"], ["Each money bag secured", "1500", "rS", "3", "18"] 
+                    ]}
                 />
             </>
         );

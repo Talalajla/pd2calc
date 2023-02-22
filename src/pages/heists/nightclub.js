@@ -7,17 +7,10 @@ class Heist extends Component {
 		return (
 			<>
 				<HomeHeist
-					src={NC}
-					imgName="Nightclub"
-					jc="30"
-					tr11="Default (completion)"
-					tr12="10000"
-					tr21="Each bag secured"
-					tr22="+1000"
-					status={["rCB", "rS"]}
-					limitStart={["", "4"]}
-					limitEnd={["", "13"]}
-					values={["10000", "1000"]}
+					src={NC} imgName="Nightclub" jc="30"
+					requirements={[
+						["Default (completion)", "10000", "rCB"], ["Each bag secured", "1000", "rS", "4", "13"]
+					]}
 				/>
 			</>
 		);

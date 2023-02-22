@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Breakfast from "../../images/maps/stealth/breakfast.jpg";
 
 class Heist extends Component {
 
@@ -9,12 +8,10 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Breakfast} imgName="Breakfast in Tijuana" jc="30"
-                    tr11="Default (completion)" tr12="22000"
-                    status={['rCB']}
-                    limitStart={['']}
-                    limitEnd={['']}
-                    values={['22000']}
+                    src="/images/maps/both/breakfast.jpg" imgName="Breakfast in Tijuana" jc="30"
+                    requirements={[
+                        ["Default (completion)", "22000", "rCB"]
+                    ]}
                 />
             </>
         );

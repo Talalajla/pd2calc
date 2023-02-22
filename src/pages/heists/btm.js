@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import BTM from "../../images/maps/loud/beneathmountain.jpg";
 
 class Heist extends Component {
 
@@ -9,14 +8,11 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={BTM} imgName="Beneath the Mountain" jc="30"
-                    tr11="Default (completion)" tr12="19000"
-                    tr21="Each vault with loot opened" tr22="+1000"
-                    tr31="Each bag secured" tr32="+700"
-                    status={['rCB', 'rS', 'rS']}
-                    limitStart={['', '2', '2']}
-                    limitEnd={['', '4', '10']}
-                    values={['19000', '1000', '700']}
+                    src="/images/maps/loud/beneathmountain.jpg" imgName="Beneath the Mountain" jc="30"
+                    requirements={[
+                        ["Default (completion)", "19000", "rCB"], ["Each vault with loot opened", "1000", "rS", "2", "4"],
+                        ["Each bag secured", "700", "2", "10"]
+                    ]}
                 />
             </>
         );

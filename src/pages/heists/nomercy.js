@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Nomercy} imgName="No Mercy" jc="30"
-                    tr11="Default (completion)" tr12="20000"
-                    tr21="Each patient's room drilled" tr22="+7000"
-                    tr31="Stealth beginning (without playing doctor &amp; cutting wires)" tr32="+12000"
-                    status={['rCB', 'rS', 'rCB']}
-                    limitStart={['', '1', '']}
-                    limitEnd={['', '3', '']}
-                    values={['20000', '7000', '12000']}
+                    requirements={[
+						["Default (completion)", "20000", "rCB"], ["Each patient's room drilled", "7000", "rS", "1", "3"],
+                        ["Stealth beginning (without playing doctor & cutting wires)", "12000", "rCB"]
+					]}
                 />
             </>
         );

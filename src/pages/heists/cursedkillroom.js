@@ -10,12 +10,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={CKR} imgName="Cursed Kill Room" jc="30"
-                    tr11="Default (completion)" tr12="2000"
-                    tr21="Each bag secured" tr22="+1000"
-                    status={['rCB', 'rS']}
-                    limitStart={['', '0']}
-                    limitEnd={['', '80']}
-                    values={['2000', '1000']}
+                    requirements={[
+                        ["Default (completion)", "2000", "rCB"], ["Each bag secured", "1000", "rS", "0", "80"]
+                    ]}
                 />
             </>
         );

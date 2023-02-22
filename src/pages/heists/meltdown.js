@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Meltdown} imgName="Meltdown" jc="30"
-                    tr11="Default (completion)" tr12="20000" 
-                    tr21="Each bonus bag secured" tr22="1500"
-                    status={['rCB', 'rS']}
-                    limitStart={['', '0', '']}
-                    limitEnd={['', '8', '']}
-                    values={['20000', '1500', '2000']}
-                    fLootBonus="true"
+                    requirements={[
+                        ["Default (completion)", "20000", "rCB"], ["Each bonus bag secured", "1500", "rS", "0", "8"]
+                    ]}
+                    fLootBonus
                 />
             </>
         );

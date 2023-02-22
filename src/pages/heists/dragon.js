@@ -10,14 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Dragon} imgName="Dragon Heist" jc="30"
-                    tr11="Default (completion)" tr12="12500"
-                    tr21="Keycard used on vault" tr22="+2000"
-                    tr31="Entering auction back room" tr32="+3000"
-                    tr41="Each bag secured (excl . dragon)" tr42="+1000"
-                    status={['rCB', 'rCB', 'rCB', 'rS']}
-                    limitStart={['', '', '', '0']}
-                    limitEnd={['', '', '', '14']}
-                    values={['12500', '2000', '3000', '1000']}
+                    requirements={[
+                        ["Default (completion)", "12500", "rCB"], ["Keycard used on vault", "2000", "rCB"],
+                        ["Entering auction back room", "3000", "rCB"], ["Each bag secured (excl . dragon)", "1000", "rS", "0", "14"]
+                    ]}
                 />
             </>
         );

@@ -10,12 +10,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Framing} imgName="Framing Frame (day 2)" jc="50"
-                    tr11="Default (completion)" tr12="2000"
-                    tr21="Each painting secured" tr22="+500"
-                    status={['rCB', 'rS']}
-                    limitStart={['', '4']}
-                    limitEnd={['', '9']}
-                    values={['2000', '500']}
+                    requirements={[
+                        ["Default (completion)", "16000", "rCB"], ["Each painting secured", "500", "rS", "4", "9"]
+                    ]}
                 />
             </>
         );

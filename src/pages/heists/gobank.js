@@ -10,14 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Go} imgName="Go Bank" jc="40"
-                    tr11="Default (completion)" tr12="10000"
-                    tr21="Each bag secured" tr22="+1000"
-                    tr31="Blackmailer appears" tr32="-1000"
-                    tr41="Vault already opened" tr42="-6000"
-                    status={['rCB', 'rS', 'rCB', 'rCB']}
-                    limitStart={['', '1', '', '']}
-                    limitEnd={['', '12', '', '']}
-                    values={['10000', '1000', '-1000', '-6000']}
+                    requirements={[
+                        ["Default (completion)", "10000", "rCB"], ["Each bag secured", "1000", "rS", "1", "12"],
+                        ["Blackmailer appears", "-1000", "rCB"], ["Vault already opened", "-6000", "rCB"]
+                    ]}
                 />
             </>
         );

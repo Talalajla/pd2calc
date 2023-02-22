@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Bulucs from "../../images/maps/stealth/bulucs.jpg";
 
 class Heist extends Component {
 
@@ -9,14 +8,11 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Bulucs} imgName="Buluc's Mansion" jc="30"
-                    tr11="Default (completion)" tr12="25000"
-                    tr21="Bomb instead of hack " tr22="+2000"
-                    tr31="Helicopter escape" tr32="-2000"
-                    status={['rCB', 'rCB', 'rCB']}
-                    limitStart={['', '', '']}
-                    limitEnd={['', '', '']}
-                    values={['25000', '2000', '-2000']}
+                    src="/images/maps/both/bulucs.jpg" imgName="Buluc's Mansion" jc="30"
+                    requirements={[
+                        ["Default (completion)", "25000", "rCB"], ["Bomb instead of hack", "2000", "rCB"],
+                        ["Helicopter escape", "-2000", "rCB"]
+                    ]}
                 />
             </>
         );

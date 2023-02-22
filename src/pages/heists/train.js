@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Train} imgName="Transport: Train Heist" jc="70"
-                    tr11="Default (completion)" tr12="11000"
-                    tr21="Each vault opened" tr22="3000"
-                    tr31="Each ammo bag secured" tr32="800"
-                    status={['rCB', 'rS', 'rS']}
-                    limitStart={['', '2', '4']}
-                    limitEnd={['', '3', '20']}
-                    values={['11000', '3000', '800']}
+                    requirements={[
+                        ["Default (completion)", "11000", "rCB"], ["Each vault opened", "3000", "rS", "2", "3"],
+                         ["Each ammo bag secured", "800", "rS", "4", "20"]
+                    ]}
                 />
             </>
         );

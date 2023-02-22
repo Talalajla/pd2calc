@@ -10,12 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Car} imgName="Carshop" jc="30"
-                    tr11="Default (completion)" tr12="9000"
-                    tr21="Each car secured" tr22="+1000"
-                    status={['rCB', 'rS']}
-                    limitStart={['', '1']}
-                    limitEnd={['', '4']}
-                    values={['9000', '1000']}
+                    requirements={[
+                        ["Default (completion)", "9000", "rCB"], ["Each car secured", "1000", "rS", "1", "4"]
+                    ]}
+
                 />
             </>
         );

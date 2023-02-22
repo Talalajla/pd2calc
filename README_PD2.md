@@ -706,3 +706,7 @@ Minimalna ilość dowodów
 
 Rats (1)
 nie mogą się endingi nakładać
+
+
+HOSTILE TAKEOVER:
+14826 | Find 3 dirts

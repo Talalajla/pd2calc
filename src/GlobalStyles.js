@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import bg from "./images/background.png";
 
 const GlobalStyle = createGlobalStyle`
@@ -16,18 +16,19 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
-        height: 100%;
+        /* height: 100%; */
         background: url(${bg}) ;    
         overflow-x: hidden;
     }
 
     #root {
-        height: 100%;
+        /* height: 100%; */
         padding-top: 15px;
         display: grid;
         grid-template-rows: auto 1fr;
         background-color: rgba(0,0,0,0.3);
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
+        min-height: 100vh;
         overflow-x: hidden;
     }
 

@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Diamond} imgName="Diamond Heist" jc="30"
-                    tr11="Default (completion)" tr12="18000"
-                    tr21="Each bag of diamond secured" tr22="+400"
-                    status={['rCB', 'rS', 'rCB']}
-                    limitStart={['','4', '']}
-                    limitEnd={['', '8', '']}
-                    values={['18000', '400', '2000']}
-                    redDiamond='true'
+                    requirements={[
+                        ["Default (completion)", "18000", "rCB"], ["Each bag of diamonds secured", "400", "rS", "4", "8"]
+                    ]}
+                    redDiamond
                 />
             </>
         );

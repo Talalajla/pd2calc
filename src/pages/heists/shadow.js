@@ -10,14 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Shadow} imgName="Shadow Raid" jc="30"
-                    tr11="Default (completion)" tr12="4000"
-                    tr21="Each bag secured (up to 16)" tr22="+500"
-                    tr31="Whole armor secured" tr32="+6000"
-                    tr41="Stealth escape" tr42="+4000"
-                    status={['rCB', 'rS', 'rCB', 'rCB']}
-                    limitStart={['', '3', '','']}
-                    limitEnd={['', '16', '','']}
-                    values={['4000', '500', '6000', '4000']}
+                    requirements={[
+						["Default (completion)", "4000", "rCB"], ["Each bag secured (up to 16)", "500", "rS", "3", "16"],
+                        ["Whole armor secured", "6000", "rCB"], ["Stealth escape", "4000", "rCB"]
+					]}
                 />
             </>
         );

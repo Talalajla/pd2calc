@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={WD} imgName="Watchdogs (day 1)" jc="50"
-                    tr11="Default (completion)" tr12="12000"
-                    tr21="All bags secured" tr22="+2000"
-                    tr31="Chopper escape" tr32="+2000"
-                    status={['rCB', 'rCB', 'rCB']}
-                    limitStart={['', '', '']}
-                    limitEnd={['', '', '']}
-                    values={['12000', '2000', '2000']}
+                    requirements={[
+                        ["Default (completion)", "12000", "rCB"], ["All bags secured", "2000", "rCB"],
+                        ["Chopper escape", "2000", "rCB"]
+                    ]}
                 />
             </>
         );

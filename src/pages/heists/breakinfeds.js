@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Feds from "../../images/maps/stealth/breakinfeds.jpg";
 
 class Heist extends Component {
 
@@ -9,14 +8,11 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Feds} imgName="Breakin' Feds" jc="30"
-                    tr11="Default (completion)" tr12="6000"
-                    tr21="Each lure of Garett" tr22="+4000"
-                    tr31="Each bag secured (with loot)" tr32="+1000"
-                    status={['rCB', 'rS', 'rS']}
-                    limitStart={['', '1', '1']}
-                    limitEnd={['', '4', '8']}
-                    values={['6000', '4000', '1000']}
+                    src="/images/maps/stealth/breakinfeds.jpg" imgName="Breakin' Feds" jc="30"
+                    requirements={[
+                        ["Default (completion)", "6000", "rCB"], ["Each lure of Garett", "4000", "rS", "1", "4"],
+                        ["Each bag secured (with loot)", "1000", "rS", "1", "8"]
+                    ]}
                 />
             </>
         );

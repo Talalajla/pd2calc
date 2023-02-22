@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={FWB} imgName="First World Bank" jc="60"
-                    tr11="Default (completion)" tr12="13500"
-                    tr21="Each money bag secured" tr22="+1000"
-                    tr31="Loud C4 escape" tr32="+4000"
-                    status={['rCB', 'rS', 'rCB']}
-                    limitStart={['','8', '']}
-                    limitEnd={['', '14', '']}
-                    values={['13500', '1000', '4000']}
+                    requirements={[
+                        ["Default (completion)", "13500", "rCB"], ["Each money bag secured", "1000", "rS", "8", "14"],
+                        ["Loud C4 escape", "4000", "rCB"]
+                    ]}
                 />
             </>
         );

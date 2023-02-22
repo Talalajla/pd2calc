@@ -10,14 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={ThePrisoner} imgName="The Ukrainian Prisoner" jc="30"
-                    tr11="Default (completion)" tr12="35500"
-                    tr21="Keycard scenario" tr22="+6000"
-                    tr31="Chinese code scenario" tr32="+500"
-                    tr41="Each bag secured" tr42="+500"
-                    status={['rCB', 'rCB', 'rCB', 'rS']}
-                    limitStart={['', '', '', '0']}
-                    limitEnd={['', '', '', '11']}
-                    values={['35500', '6000', '500', '500']}
+                    requirements={[
+                        ["Default (completion)", "35500", "rCB"], ["Keycard scenario", "6000", "rCB"], 
+                        ["Chinese code scenario", "500", "rCB"], ["Each bag secured", "500", "rS", "0", "11"]
+                    ]}
                 />
             </>
         );

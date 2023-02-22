@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Bank Heist",
         "subname": "",
-        "img": "/static/media/bank.902c0fdd.jpg",
+        "img": "/images/maps/both/bank.jpg",
         "link": "bank",
         "category": "both"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "name": "Black Cat",
         "subname": "",
-        "img": "/static/media/blackcat.f1c57330.jpg",
+        "img": "/images/maps/both/blackcat.jpg",
         "link": "blackcat",
         "category": "both"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "name": "Border Crossing",
         "subname": "",
-        "img": "/static/media/border.8a1def21.jpg",
+        "img": "/images/maps/both/border.jpg",
         "link": "bordercrossing",
         "category": "both"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "name": "Breakfast in Tijuana",
         "subname": "",
-        "img": "/static/media/breakfast.7d657561.jpg",
+        "img": "/images/maps/both/breakfast.jpg",
         "link": "breakfastintijuana",
         "category": "both"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "name": "Breakin' Feds",
         "subname": "",
-        "img": "/static/media/breakinfeds.15a29489.jpg",
+        "img": "/images/maps/stealth/breakinfeds.jpg",
         "link": "breakin'feds",
         "category": "stealth"
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "name": "Buluc's Mansion",
         "subname": "",
-        "img": "/static/media/bulucs.0810f6a9.jpg",
+        "img": "/images/maps/both/bulucs.jpg",
         "link": "bulucsmansion",
         "category": "both"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "name": "Carshop",
         "subname": "",
-        "img": "/static/media/carshop.80fffd93.jpg",
+        "img": "/images/maps/stealth/carshop.jpg",
         "link": "carshop",
         "category": "stealth"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Counterfeit",
         "subname": "",
-        "img": "/static/media/counterfeit.015dd75f.jpg",
+        "img": "/images/maps/both/counterfeit.jpg",
         "link": "counterfeit",
         "category": "both"
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "name": "Diamond Heist",
         "subname": "",
-        "img": "/static/media/diamondheist.6f201078.jpg",
+        "img": "/images/maps/both/diamondheist.jpg",
         "link": "diamondheist",
         "category": "both"
     },
@@ -75,7 +75,7 @@
         "id": 10,
         "name": "Diamond Store",
         "subname": "",
-        "img": "/static/media/diamondstore.6efb9282.jpg",
+        "img": "/images/maps/both/diamondstore.jpg",
         "link": "diamondstore",
         "category": "both"
     },
@@ -83,7 +83,7 @@
         "id": 11,
         "name": "Dragon Heist",
         "subname": "",
-        "img": "/static/media/dragon.17ff4387.jpg",
+        "img": "/images/maps/both/dragon.jpg",
         "link": "dragonheist",
         "category": "both"
     },
@@ -91,7 +91,7 @@
         "id": 12,
         "name": "Election day",
         "subname": "(day 1: Right Track)",
-        "img": "/static/media/electionday.baaa8182.jpg",
+        "img": "/images/maps/both/electionday.jpg",
         "link": "electionday_day1",
         "category": "both"
     },
@@ -99,7 +99,7 @@
         "id": 13,
         "name": "Election day",
         "subname": "(day 2: Swing Vote)",
-        "img": "/static/media/electionday.baaa8182.jpg",
+        "img": "/images/maps/both/electionday.jpg",
         "link": "electionday_day2",
         "category": "both"
     },
@@ -107,7 +107,7 @@
         "id": 14,
         "name": "Firestarter",
         "subname": "(day 1: Airport)",
-        "img": "/static/media/firestarter.8fd64577.jpg",
+        "img": "/images/maps/both/firestarter.jpg",
         "link": "firestarter_day1",
         "category": "both"
     },
@@ -115,7 +115,7 @@
         "id": 15,
         "name": "Firestarter",
         "subname": "(day 2: FBI Server)",
-        "img": "/static/media/firestarter.8fd64577.jpg",
+        "img": "/images/maps/both/firestarter.jpg",
         "link": "firestarter_day2",
         "category": "both"
     },
@@ -123,7 +123,7 @@
         "id": 16,
         "name": "Firestarter",
         "subname": "(day 3: Trustee Bank)",
-        "img": "/static/media/firestarter.8fd64577.jpg",
+        "img": "/images/maps/both/firestarter.jpg",
         "link": "firestarter_day3",
         "category": "both"
     },
@@ -131,7 +131,7 @@
         "id": 17,
         "name": "First World Bank",
         "subname": "",
-        "img": "/static/media/fwb.17b07d75.jpg",
+        "img": "/images/maps/both/fwb.jpg",
         "link": "fwb",
         "category": "both"
     },
@@ -139,7 +139,7 @@
         "id": 18,
         "name": "Four Stores",
         "subname": "",
-        "img": "/static/media/fourstores.28a6d041.jpg",
+        "img": "/images/maps/both/fourstores.jpg",
         "link": "fourstores",
         "category": "both"
     },
@@ -147,7 +147,7 @@
         "id": 19,
         "name": "Framing Frame",
         "subname": "(day 1: Art Gallery)",
-        "img": "/static/media/framingframe.2b27199b.jpg",
+        "img": "/images/maps/both/framingframe.jpg",
         "link": "framingframe_day1",
         "category": "both"
     },
@@ -155,7 +155,7 @@
         "id": 20,
         "name": "Framing Frame",
         "subname": "(day 2: Train Trade)",
-        "img": "/static/media/framingframe.2b27199b.jpg",
+        "img": "/images/maps/both/framingframe.jpg",
         "link": "framingframe_day2",
         "category": "both"
     },
@@ -163,7 +163,7 @@
         "id": 21,
         "name": "Framing Frame",
         "subname": "(day 3: Framing)",
-        "img": "/static/media/framingframe.2b27199b.jpg",
+        "img": "/images/maps/both/framingframe.jpg",
         "link": "framingframe_day3",
         "category": "both"
     },
@@ -171,7 +171,7 @@
         "id": 22,
         "name": "Go Bank",
         "subname": "",
-        "img": "/static/media/gobank.e5923360.jpg",
+        "img": "/images/maps/both/gobank.jpg",
         "link": "gobank",
         "category": "both"
     },
@@ -179,7 +179,7 @@
         "id": 23,
         "name": "Golden Grin Casino",
         "subname": "",
-        "img": "/static/media/ggc.6d7c142d.jpg",
+        "img": "/images/maps/both/ggc.jpg",
         "link": "ggc",
         "category": "both"
     },
@@ -187,7 +187,7 @@
         "id": 24,
         "name": "Hoxton Revenge",
         "subname": "",
-        "img": "/static/media/hoxrev.bfec9fdb.jpg",
+        "img": "/images/maps/both/hoxrev.jpg",
         "link": "hoxtonrevenge",
         "category": "both"
     },
@@ -195,7 +195,7 @@
         "id": 25,
         "name": "Jewelry Store",
         "subname": "",
-        "img": "/static/media/jewelry.0220babf.jpg",
+        "img": "/images/maps/both/jewelry.jpg",
         "link": "jewelrystore",
         "category": "both"
     },
@@ -203,7 +203,7 @@
         "id": 26,
         "name": "Lost in Transit",
         "subname": "",
-        "img": "/static/media/transit.3bba7246.jpg",
+        "img": "/images/maps/both/transit.jpg",
         "link": "lostintransit",
         "category": "both"
     },
@@ -211,7 +211,7 @@
         "id": 27,
         "name": "Mallcrasher",
         "subname": "",
-        "img": "/static/media/mallcrasher.99907277.jpg",
+        "img": "/images/maps/both/mallcrasher.jpg",
         "link": "mallcrasher",
         "category": "both"
     },
@@ -219,7 +219,7 @@
         "id": 28,
         "name": "Midland Ranch",
         "subname": "",
-        "img": "/static/media/midland.d2fd1d43.jpg",
+        "img": "/images/maps/both/midland.jpg",
         "link": "midland_ranch",
         "category": "both"
     },
@@ -227,7 +227,7 @@
         "id": 29,
         "name": "Mountain Master",
         "subname": "",
-        "img": "/static/media/default.f2f003a6.jpg",
+        "img": "/images/maps/both/mountainmaster.jpg",
         "link": "mountainmaster",
         "category": "both"
     },
@@ -235,7 +235,7 @@
         "id": 30,
         "name": "Murky Station",
         "subname": "",
-        "img": "/static/media/murky.aae8e49c.jpg",
+        "img": "/images/maps/stealth/murky.jpg",
         "link": "murky",
         "category": "stealth"
     },
@@ -243,7 +243,7 @@
         "id": 31,
         "name": "Nightclub",
         "subname": "",
-        "img": "/static/media/nightclub.d8fc4cfb.jpg",
+        "img": "/images/maps/both/nightclub.jpg",
         "link": "nightclub",
         "category": "both"
     },
@@ -251,7 +251,7 @@
         "id": 32,
         "name": "San Martín Bank",
         "subname": "",
-        "img": "/static/media/sanmartin.6a16f466.jpg",
+        "img": "/images/maps/both/sanmartin.jpg",
         "link": "sanmartínbank",
         "category": "both"
     },
@@ -259,7 +259,7 @@
         "id": 33,
         "name": "Scarface Mansion",
         "subname": "",
-        "img": "/static/media/scarface.b1d435a8.jpg",
+        "img": "/images/maps/both/scarface.jpg",
         "link": "scarfacemansion",
         "category": "both"
     },
@@ -267,7 +267,7 @@
         "id": 34,
         "name": "Shacklethorne Auction",
         "subname": "",
-        "img": "/static/media/shacklethorne.6bf1d98e.jpg",
+        "img": "/images/maps/both/shacklethorne.jpg",
         "link": "shacklethorne",
         "category": "both"
     },
@@ -275,7 +275,7 @@
         "id": 35,
         "name": "Shadow Raid",
         "subname": "",
-        "img": "/static/media/shadowraid.053cf8ce.jpg",
+        "img": "/images/maps/stealth/shadowraid.jpg",
         "link": "shadowraid",
         "category": "stealth"
     },
@@ -283,7 +283,7 @@
         "id": 36,
         "name": "The Alesso Heist",
         "subname": "",
-        "img": "/static/media/thealesso.c054800e.jpg",
+        "img": "/images/maps/both/thealesso.jpg",
         "link": "thealessoheist",
         "category": "both"
     },
@@ -291,7 +291,7 @@
         "id": 37,
         "name": "The Big Bank",
         "subname": "",
-        "img": "/static/media/thebigbank.741bcab1.jpg",
+        "img": "/images/maps/both/thebigbank.jpg",
         "link": "thebigbank",
         "category": "both"
     },
@@ -299,7 +299,7 @@
         "id": 38,
         "name": "The Bomb: Dockyard",
         "subname": "",
-        "img": "/static/media/thebombdockyard.0642b095.jpg",
+        "img": "/images/maps/both/thebombdockyard.jpg",
         "link": "thebombdockyard",
         "category": "both"
     },
@@ -307,7 +307,7 @@
         "id": 39,
         "name": "The Diamond",
         "subname": "",
-        "img": "/static/media/thediamond.a11bf7bc.jpg",
+        "img": "/images/maps/both/thediamond.jpg",
         "link": "thediamond",
         "category": "both"
     },
@@ -315,7 +315,7 @@
         "id": 40,
         "name": "The Ukrainian Prisoner",
         "subname": "",
-        "img": "/static/media/theukrainianprisoner.b148f3f2.jpg",
+        "img": "/images/maps/both/theukrainianprisoner.jpg",
         "link": "tup",
         "category": "both"
     },
@@ -323,7 +323,7 @@
         "id": 41,
         "name": "The White House",
         "subname": "",
-        "img": "/static/media/thewhite.6e124ae5.jpg",
+        "img": "/images/maps/both/thewhite.jpg",
         "link": "thewhitehouse",
         "category": "both"
     },
@@ -331,7 +331,7 @@
         "id": 42,
         "name": "The Yacht Heist",
         "subname": "",
-        "img": "/static/media/theyacht.85ec5bae.jpg",
+        "img": "/images/maps/stealth/theyacht.jpg",
         "link": "theyachtheist",
         "category": "stealth"
     },
@@ -339,7 +339,7 @@
         "id": 43,
         "name": "Transport: Train Heist",
         "subname": "",
-        "img": "/static/media/train.b2100511.jpg",
+        "img": "/images/maps/both/train.jpg",
         "link": "tth",
         "category": "both"
     },
@@ -347,7 +347,7 @@
         "id": 44,
         "name": "Ukrainian Job",
         "subname": "",
-        "img": "/static/media/ukrainian.1492f6c6.jpg",
+        "img": "/images/maps/both/ukrainian.jpg",
         "link": "ukrainianjob",
         "category": "both"
     }

@@ -7,19 +7,11 @@ class Heist extends Component {
 		return (
 			<>
 				<HomeHeist
-					src={San}
-					imgName="San Martín Bank"
-					jc="30"
-					tr11="Default (completion)"
-					tr12="20000"
-					tr21="Drill &#8221;shortcut&#8221; path"
-					tr22="-8000"
-					tr31="Each bag secured"
-					tr32="+1000"
-					status={["rCB", "rCB", "rS"]}
-					limitStart={["", "", "1"]}
-					limitEnd={["", "", "11"]}
-					values={["20000", "-8000", "1000"]}
+					src={San} imgName="San Martín Bank" jc="30"
+					requirements={[
+						["Default (completion)", "20000", "rCB"], ['Drill "shortcut" path', "-8000", "rCB"],
+						["Each bg secured", "1000", "rS", "1", "11"]
+					]}
 				/>
 			</>
 		);

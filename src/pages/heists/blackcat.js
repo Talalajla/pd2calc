@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Black from "../../images/maps/stealth/blackcat.jpg";
 
 class Heist extends Component {
 
@@ -9,17 +8,12 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Black} imgName="Black Cat" jc="30"
-                    tr11="Default (completion)" tr12="31000"
-                    tr21="Not default entrance" tr22="-1500"
-                    tr31="Enter the CASINO before SPA (bug)" tr32="-4000"
-                    tr41="Skipped planting bug" tr42="-4000"
-                    tr51="Each money bag secured (vault)" tr52="+500"
-                    tr61="Each optional bag secured" tr62="+500"
-                    status={['rCB', 'rCB', 'rCB', 'rCB', 'rS', 'rS']}
-                    limitStart={['', '', '', '', '4', '0']}
-                    limitEnd={['', '', '', '', '16', '7']}
-                    values={['31000', '-1500', '-4000', '-4000', '500', '500']}
+                    src="/images/maps/both/blackcat.jpg" imgName="Black Cat" jc="30"
+                    requirements={[
+                        ["Default (completion)", "31000", "rCB"], ["Not default entrance", "-1500", "rCB"],
+                        ["Enter the CASINO before SPA (bug?)", "-4000", "rCB"], ["Skipped planting bug", "-4000", "rCB"],
+                        ["Each money bag secured (vault)", "500", "rS", "4", "16"], ["Each optional bag secured", "500", "rS", "0", "7"]
+                    ]}
                 />
             </>
         );

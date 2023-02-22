@@ -10,13 +10,10 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={Fire} imgName="Firestarter (day 1)" jc="50"
-                    tr11="Default (completion)" tr12="8000"
-                    tr21="No weapons were destroyed" tr22="+2000"
-                    tr31="Secured all bags (van)" tr32="+6000"
-                    status={['rCB', 'rCB', 'rCB']}
-                    limitStart={['', '', '']}
-                    limitEnd={['', '', '']}
-                    values={['8000', '2000', '6000']}
+                    requirements={[
+                        ["Default (completion)", "8000", "rCB"], ["No weapons were destroyed", "2000", "rCB"],
+                        ["Secured all bags (van)", "6000", "rCB"]
+                    ]}
                 />
             </>
         );

@@ -10,12 +10,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={HoxRev} imgName="Hoxton Revenge" jc="40"
-                    tr11="Default (completion)" tr12="16000"
-                    tr21="Each evidence secured" tr22="+1000"
-                    status={['rCB', 'rS']}
-                    limitStart={['', '4']}
-                    limitEnd={['', '8']}
-                    values={['16000', '1000']}
+                    requirements={[
+                        ["Default (completion)", "16000", "rCB"], ["Each evidence secured", "1000", "rS", "4", "8"]
+                    ]}
                 />
             </>
         );

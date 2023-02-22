@@ -10,11 +10,9 @@ class Heist extends Component {
             <>
                 <HomeHeist 
                     src={GGC} imgName="Golden Grin Casino" jc="70"
-                    tr11="Default (completion)" tr12="39250"
-                    status={['rCB']}
-                    limitStart={['']}
-                    limitEnd={['']}
-                    values={['39250']}
+                    requirements={[
+                        ["Default (completion)", "39250", "rCB"]
+                    ]}
                 />
             </>
         );

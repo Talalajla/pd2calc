@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Aftershock from "../../images/maps/loud/aftershock.jpg";
 
 class Heist extends Component {
 
@@ -9,13 +8,10 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Aftershock} imgName="Aftershock" jc="30"
-                    tr11="Default (completion)" tr12="28000"
-                    tr21="Each safe secured" tr22="+500"
-                    status={['rCB', 'rS']}
-                    limitStart={['', '4']}
-                    limitEnd={['', '12']}
-                    values={['28000', '500']}
+                    src="/images/maps/loud/aftershock.jpg" imgName="Aftershock" jc="30"
+                    requirements={[
+                        ["Default (completion)", "28000", 'rCB'], ["Each safe secured", "500", 'rS', "4", "12"]
+                    ]}
                 />
             </>
         );

@@ -1932,8 +1932,7 @@ export const ReqCheckStyle = styled.div`
     left: -2px;
     font-weight: bold;
 `;
-export const ReqNumber = styled.div``;
-export const ReqNumberStyle = styled.div``;
+
 export const ReqSelect = styled.select`
     position: relative;
     left: -2px;
