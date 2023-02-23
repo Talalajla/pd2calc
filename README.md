@@ -14,11 +14,11 @@ In addition, the application includes a subpage (you can find it on the navbar) 
 ## 🖼️ Screenshots
 * Homescreen
 
-![readme-screenshot](https://user-images.githubusercontent.com/68278690/220776556-8c9eaa92-2694-4455-b685-a4a3d08f7210.jpg)
+![readme-screenshot2](https://user-images.githubusercontent.com/68278690/220776560-dbbcc280-c9de-481c-9bb6-6568369f8c7b.jpg)
 
 * Example data form of heist
 
-![readme-screenshot2](https://user-images.githubusercontent.com/68278690/220776560-dbbcc280-c9de-481c-9bb6-6568369f8c7b.jpg)
+![readme-screenshot](https://user-images.githubusercontent.com/68278690/220776556-8c9eaa92-2694-4455-b685-a4a3d08f7210.jpg)
 
 ## 📌 Sources 
 * Images: [FBI Files](https://fbi.paydaythegame.com/)
