@@ -8,7 +8,7 @@
 This application will allow you to choose any of the available maps in the game Payday 2 and check detailed information about the allocation of experience points after successfully completing a heist, and will show you the increase in your experience level!
 
 ## ⭐ How can I use this app?
-You can download source code and run with node or check [live demo](https://github.com/talalajla/talalajla.github.io).
+You can download source code and run with node or check [live demo](https://talalajla.github.io/pd2calc/).
 In addition, the application includes a subpage (you can find it on the navbar) with a tutorial that describes how to use it properly.
 
 ## 🖼️ Screenshots
