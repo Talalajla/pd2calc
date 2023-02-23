@@ -708,5 +708,11 @@ Rats (1)
 nie mogą się endingi nakładać
 
 
-HOSTILE TAKEOVER:
-14826 | Find 3 dirts
+HOSTILE TAKEOVER [STEALTH]:
+JC 30
+
+21 BASE + 6 bags;
+
+
+{12 paintings, 1 coke, 1 neo, 6 papers [4 min]}
+bag = 500

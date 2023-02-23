@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import ThePrisoner from "../../images/maps/stealth/theukrainianprisoner.jpg";
 
 class Heist extends Component {
 
@@ -9,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={ThePrisoner} imgName="The Ukrainian Prisoner" jc="30"
+                    src="/images/maps/both/theukrainianprisoner.jpg" imgName="The Ukrainian Prisoner" jc="30"
                     requirements={[
                         ["Default (completion)", "39000", "rCB"], ["Keycard scenario instead of code", "-1000", "rCB"],
                         ["Used pad to pick up container", "2000", "rCB"], ["Each bag secured", "500", "rS", "0", "11"]

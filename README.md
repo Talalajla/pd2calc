@@ -1,31 +1,25 @@
 # Payday 2 Experience Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![readme-title](https://user-images.githubusercontent.com/68278690/220768532-5c1bd509-0ffa-4b92-8db3-b744505eb678.png)
 
 ## This app was made with HTML, CSS3, JS (ReactJS, styled-components) 
 
-# Sources 📌
+## ❓ What can I find in this app?
+This application will allow you to choose any of the available maps in the game Payday 2 and check detailed information about the allocation of experience points after successfully completing a heist, and will show you the increase in your experience level!
+
+## ⭐ How can I use this app?
+You can download source code and run with node or check [live demo](https://github.com/talalajla/talalajla.github.io).
+In addition, the application includes a subpage (you can find it on the navbar) with a tutorial that describes how to use it properly.
+
+## 🖼️ Screenshots
+* Homescreen
+
+![readme-screenshot](https://user-images.githubusercontent.com/68278690/220776556-8c9eaa92-2694-4455-b685-a4a3d08f7210.jpg)
+
+* Example data form of heist
+
+![readme-screenshot2](https://user-images.githubusercontent.com/68278690/220776560-dbbcc280-c9de-481c-9bb6-6568369f8c7b.jpg)
+
+## 📌 Sources 
 * Images: [FBI Files](https://fbi.paydaythegame.com/)
 * Fonts: Google Fonts (Open Sans, Exo 2, Source Code Pro, Calligraffitti, Permanent Marker), sans-serif
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

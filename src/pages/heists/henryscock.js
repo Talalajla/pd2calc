@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Henrys from "../../images/maps/loud/henryscock.jpg";
 
 class Heist extends Component {
 
@@ -9,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Henrys} imgName="Henry's Rock" jc="30"
+                    src="/images/maps/loud/henryscock.jpg" imgName="Henry's Rock" jc="30"
                     requirements={[
                         ["Default (completion)", "16000", "rCB"], ["Archeology room path", "8000", "rCB"],
                         ["Biolab room path", "6000", "rCB"], ["Each laser shot (weapon room path)", "4000" , "rS", "0", "2"],

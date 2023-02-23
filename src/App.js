@@ -11,6 +11,8 @@ import Tutorial from "./pages/tutorial";
 
 import Nav from "./components/nav";
 
+const NoPage = lazy(() => import("./pages/nopage"));
+
 const Aftershock = lazy(() => import("./pages/heists/aftershock"));
 const Alaskan = lazy(() => import("./pages/heists/alaskandeal"));
 const Art = lazy(() => import("./pages/heists/artgallery"));
@@ -73,6 +75,7 @@ const Green = lazy(() => import("./pages/heists/green"));
 const Heat = lazy(() => import("./pages/heists/heat"));
 const Hells = lazy(() => import("./pages/heists/hells"));
 const Henrys = lazy(() => import("./pages/heists/henryscock"));
+const Hostile = lazy(() => import("./pages/heists/hostile"));
 const Hotline1 = lazy(() => import("./pages/heists/hotline_day1"));
 const Hotline2 = lazy(() => import("./pages/heists/hotline_day2"));
 const Hoxton1 = lazy(() => import("./pages/heists/hoxtonbreakout_day1"));
@@ -125,6 +128,7 @@ const TheUkrainian_Loud = lazy(() => import("./pages/heists/theukrainianprisoner
 const TheWhiteHouse = lazy(() => import("./pages/heists/thewhitehouse"));
 const TheWhiteHouse_Loud = lazy(() => import("./pages/heists/thewhitehouse_loud"));
 const Train = lazy(() => import("./pages/heists/train"));
+const Transport = lazy(() => import("./pages/heists/transport"));
 const Ukrainian = lazy(() => import("./pages/heists/ukrainian"));
 const Undercover = lazy(() => import("./pages/heists/undercover"));
 const Watchdogs1 = lazy(() => import("./pages/heists/watchdogs_day1"));
@@ -211,6 +215,7 @@ class App extends Component {
 							<Route exact path="/heatstreet" component={Heat} />
 							<Route exact path="/hellsisland" component={Hells} />
 							<Route exact path="/henrysrock" component={Henrys} />
+							<Route exact path="/hostiletakeover" component={Hostile} />
 							<Route exact path="/hotlinemiami_day1" component={Hotline1} />
 							<Route exact path="/hotlinemiami_day2" component={Hotline2} />
 							<Route exact path="/hoxtonbreakout_day1" component={Hoxton1} />
@@ -264,11 +269,13 @@ class App extends Component {
 							<Route exact path="/thewhitehouse_loud" component={TheWhiteHouse_Loud} />
 							<Route exact path="/theyachtheist" component={Yacht} />
 							<Route exact path="/tth" component={Train} />
+							<Route exact path="/transport" component={Transport} />
 							<Route exact path="/ukrainianjob" component={Ukrainian} />
 							<Route exact path="/undercover" component={Undercover} />
 							<Route exact path="/watchdogs_day1" component={Watchdogs1} />
 							<Route exact path="/watchdogs_day2" component={Watchdogs2} />
 							<Route exact path="/whitexmas" component={White} />
+							<Route component={NoPage} />
 						</Switch>
 					</BrowserRouter>
 					</Suspense>

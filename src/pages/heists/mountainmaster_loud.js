@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Mountain from "../../images/maps/loud/default.jpg";
 
 class Heist extends Component {
 
@@ -9,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Mountain} imgName="Mountain master" jc="30"
+                    src="/images/maps/both/mountainmaster.jpg" imgName="Mountain master" jc="30"
                     requirements={[
 						["Default (completion)", "40000", "rCB"], ["Tea Set Secured", "500", "rCB"],
 						["Reached back room before alarm", "1000", "rCB"], ["Thermite was used instead of car", "-2000", "rCB"],
@@ -20,7 +19,5 @@ class Heist extends Component {
         );
     }
 }
-
-
 
 export default Heist;

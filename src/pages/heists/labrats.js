@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Lab from "../../images/maps/loud/default.jpg";
 
 class Heist extends Component {
 
@@ -9,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Lab} imgName="Lab Rats" jc="30"
+                    src="/images/maps/loud/default.jpg" imgName="Lab Rats" jc="30"
                     requirements={[
                         ["Default (completion)", "5000", "rCB"], ["Full meth cycles done (and secured)", "15000", "rS", "1", "252"],
                         ["Money & Jewelry safe event done", "30000", "rCB"], ["Paintings & Coke safe event done", "22500", "rCB"], 

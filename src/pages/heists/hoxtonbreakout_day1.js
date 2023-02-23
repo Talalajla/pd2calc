@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import Hox from "../../images/maps/loud/hoxtonbreakout.jpg";
 
 class Heist extends Component {
 
@@ -9,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={Hox} imgName="Hoxton Breakout (day 1)" jc="60"
+                    src="/images/maps/loud/hoxtonbreakout.jpg" imgName="Hoxton Breakout (day 1)" jc="60"
                     requirements={[
                         ["Default (completion)", "18400", "rCB"]
                     ]}

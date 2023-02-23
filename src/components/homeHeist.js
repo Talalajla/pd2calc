@@ -5,7 +5,17 @@ import { Content, Main, Main2, Main3, Players, PhotoBox, DiffBox, ReqBox, Rest, 
 } from "../styles/heist-main";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign, faFileWord, faFileCode, faFileUpload, faFileAlt, faDesktop, faKey, faInfoCircle, faCalculator, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
-import { Requirements, Paper, Custody, Gage, ClipBoard, Polaroid, Bonus, Tablet, Infinite } from "./objects";
+
+import Requirements from "./heistObjects/Requirements";
+import Paper from "./heistObjects/Paper";
+import Custody from "./heistObjects/Custody";
+import Gage from "./heistObjects/Gage";
+import ClipBoard from "./heistObjects/Clipboard";
+import Polaroid from "./heistObjects/Polaroid";
+import Bonus from "./heistObjects/Bonus";
+import Tablet from "./heistObjects/Tablet";
+import Infinite from "./heistObjects/Infinite";
+
 import cpu from "../images/cpu.svg";
 import gpu from "../images/gpu.svg";
 import mb from "../images/mb.svg";
@@ -76,7 +86,6 @@ class HomeHeist extends Component {
     // ! NIE DZIAŁA
     checkValues = (e) => {
         this.goBack();
-        console.log("zmiana")
 
         if(this.props.imgName.includes("Black Cat") && this.props.isLoud) {
             const trContainer = e.target.parentElement.parentElement.parentElement.parentElement;
@@ -128,8 +137,6 @@ class HomeHeist extends Component {
             }
         }
 
-
-
         if (this.props.fLootBonus) {
             const form = e.currentTarget;
             const bagsSecured = form.querySelectorAll('table label select')[0].value;
@@ -141,7 +148,6 @@ class HomeHeist extends Component {
                 this.setState({fLootBonus: false});
                 if (this.props.requirements.length === 3) this.props.requirements.pop();
             }
-
         } 
     }
 
@@ -259,7 +265,7 @@ class HomeHeist extends Component {
             current = 0,
             elem = this.POST.current;
         setInterval(() => {
-            if (current < contentArray.length) {  elem.textContent += contentArray[current++]; }
+            if (current < contentArray.length) { elem.textContent += contentArray[current++]; }
         }, 30);
     };
 
@@ -637,7 +643,7 @@ class HomeHeist extends Component {
                     </DiffBox>
 
                     <ReqBox>
-                        <Requirements 
+                        <Requirements
                             requirements={this.props.requirements}
                             status={this.props.status}
                             limitStart={this.props.limitStart}

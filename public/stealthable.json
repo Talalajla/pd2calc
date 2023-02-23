@@ -1,8 +1,9 @@
-[   
+[
     {
         "id": 1,
         "name": "Bank Heist",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/bank.jpg",
         "link": "bank",
         "category": "both"
@@ -11,6 +12,7 @@
         "id": 2,
         "name": "Black Cat",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/blackcat.jpg",
         "link": "blackcat",
         "category": "both"
@@ -19,6 +21,7 @@
         "id": 3,
         "name": "Border Crossing",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/border.jpg",
         "link": "bordercrossing",
         "category": "both"
@@ -27,6 +30,7 @@
         "id": 4,
         "name": "Breakfast in Tijuana",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/breakfast.jpg",
         "link": "breakfastintijuana",
         "category": "both"
@@ -35,6 +39,7 @@
         "id": 5,
         "name": "Breakin' Feds",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/stealth/breakinfeds.jpg",
         "link": "breakin'feds",
         "category": "stealth"
@@ -43,6 +48,7 @@
         "id": 6,
         "name": "Buluc's Mansion",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/bulucs.jpg",
         "link": "bulucsmansion",
         "category": "both"
@@ -51,6 +57,7 @@
         "id": 7,
         "name": "Carshop",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/stealth/carshop.jpg",
         "link": "carshop",
         "category": "stealth"
@@ -59,6 +66,7 @@
         "id": 8,
         "name": "Counterfeit",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/counterfeit.jpg",
         "link": "counterfeit",
         "category": "both"
@@ -67,6 +75,7 @@
         "id": 9,
         "name": "Diamond Heist",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/diamondheist.jpg",
         "link": "diamondheist",
         "category": "both"
@@ -75,6 +84,7 @@
         "id": 10,
         "name": "Diamond Store",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/diamondstore.jpg",
         "link": "diamondstore",
         "category": "both"
@@ -83,6 +93,7 @@
         "id": 11,
         "name": "Dragon Heist",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/dragon.jpg",
         "link": "dragonheist",
         "category": "both"
@@ -91,6 +102,7 @@
         "id": 12,
         "name": "Election day",
         "subname": "(day 1: Right Track)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/electionday.jpg",
         "link": "electionday_day1",
         "category": "both"
@@ -99,6 +111,7 @@
         "id": 13,
         "name": "Election day",
         "subname": "(day 2: Swing Vote)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/electionday.jpg",
         "link": "electionday_day2",
         "category": "both"
@@ -107,6 +120,7 @@
         "id": 14,
         "name": "Firestarter",
         "subname": "(day 1: Airport)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/firestarter.jpg",
         "link": "firestarter_day1",
         "category": "both"
@@ -115,6 +129,7 @@
         "id": 15,
         "name": "Firestarter",
         "subname": "(day 2: FBI Server)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/firestarter.jpg",
         "link": "firestarter_day2",
         "category": "both"
@@ -123,6 +138,7 @@
         "id": 16,
         "name": "Firestarter",
         "subname": "(day 3: Trustee Bank)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/firestarter.jpg",
         "link": "firestarter_day3",
         "category": "both"
@@ -131,6 +147,7 @@
         "id": 17,
         "name": "First World Bank",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/fwb.jpg",
         "link": "fwb",
         "category": "both"
@@ -139,6 +156,7 @@
         "id": 18,
         "name": "Four Stores",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/fourstores.jpg",
         "link": "fourstores",
         "category": "both"
@@ -147,6 +165,7 @@
         "id": 19,
         "name": "Framing Frame",
         "subname": "(day 1: Art Gallery)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/framingframe.jpg",
         "link": "framingframe_day1",
         "category": "both"
@@ -155,6 +174,7 @@
         "id": 20,
         "name": "Framing Frame",
         "subname": "(day 2: Train Trade)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/framingframe.jpg",
         "link": "framingframe_day2",
         "category": "both"
@@ -163,6 +183,7 @@
         "id": 21,
         "name": "Framing Frame",
         "subname": "(day 3: Framing)",
+        "isLoud": "undefined",
         "img": "/images/maps/both/framingframe.jpg",
         "link": "framingframe_day3",
         "category": "both"
@@ -171,6 +192,7 @@
         "id": 22,
         "name": "Go Bank",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/gobank.jpg",
         "link": "gobank",
         "category": "both"
@@ -179,174 +201,205 @@
         "id": 23,
         "name": "Golden Grin Casino",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/ggc.jpg",
         "link": "ggc",
         "category": "both"
     },
     {
         "id": 24,
+        "name": "Hostile Takeover",
+        "subname": "",
+        "isLoud": "undefined",
+        "img": "/images/maps/both/hostile.jpg",
+        "link": "hostiletakeover",
+        "category": "both"
+    },
+    {
+        "id": 25,
         "name": "Hoxton Revenge",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/hoxrev.jpg",
         "link": "hoxtonrevenge",
         "category": "both"
     },
     {
-        "id": 25,
+        "id": 26,
         "name": "Jewelry Store",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/jewelry.jpg",
         "link": "jewelrystore",
         "category": "both"
     },
     {
-        "id": 26,
+        "id": 27,
         "name": "Lost in Transit",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/transit.jpg",
         "link": "lostintransit",
         "category": "both"
     },
     {
-        "id": 27,
+        "id": 28,
         "name": "Mallcrasher",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/mallcrasher.jpg",
         "link": "mallcrasher",
         "category": "both"
     },
     {
-        "id": 28,
+        "id": 29,
         "name": "Midland Ranch",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/midland.jpg",
         "link": "midland_ranch",
         "category": "both"
     },
     {
-        "id": 29,
+        "id": 30,
         "name": "Mountain Master",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/mountainmaster.jpg",
         "link": "mountainmaster",
         "category": "both"
     },
     {
-        "id": 30,
+        "id": 31,
         "name": "Murky Station",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/stealth/murky.jpg",
         "link": "murky",
         "category": "stealth"
     },
     {
-        "id": 31,
+        "id": 32,
         "name": "Nightclub",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/nightclub.jpg",
         "link": "nightclub",
         "category": "both"
     },
     {
-        "id": 32,
+        "id": 33,
         "name": "San Martín Bank",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/sanmartin.jpg",
         "link": "sanmartínbank",
         "category": "both"
     },
     {
-        "id": 33,
+        "id": 34,
         "name": "Scarface Mansion",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/scarface.jpg",
         "link": "scarfacemansion",
         "category": "both"
     },
     {
-        "id": 34,
+        "id": 35,
         "name": "Shacklethorne Auction",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/shacklethorne.jpg",
         "link": "shacklethorne",
         "category": "both"
     },
     {
-        "id": 35,
+        "id": 36,
         "name": "Shadow Raid",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/stealth/shadowraid.jpg",
         "link": "shadowraid",
         "category": "stealth"
     },
     {
-        "id": 36,
+        "id": 37,
         "name": "The Alesso Heist",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/thealesso.jpg",
         "link": "thealessoheist",
         "category": "both"
     },
     {
-        "id": 37,
+        "id": 38,
         "name": "The Big Bank",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/thebigbank.jpg",
         "link": "thebigbank",
         "category": "both"
     },
     {
-        "id": 38,
+        "id": 39,
         "name": "The Bomb: Dockyard",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/thebombdockyard.jpg",
         "link": "thebombdockyard",
         "category": "both"
     },
     {
-        "id": 39,
+        "id": 40,
         "name": "The Diamond",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/thediamond.jpg",
         "link": "thediamond",
         "category": "both"
     },
     {
-        "id": 40,
+        "id": 41,
         "name": "The Ukrainian Prisoner",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/theukrainianprisoner.jpg",
         "link": "tup",
         "category": "both"
     },
     {
-        "id": 41,
+        "id": 42,
         "name": "The White House",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/thewhite.jpg",
         "link": "thewhitehouse",
         "category": "both"
     },
     {
-        "id": 42,
+        "id": 43,
         "name": "The Yacht Heist",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/stealth/theyacht.jpg",
         "link": "theyachtheist",
         "category": "stealth"
     },
     {
-        "id": 43,
+        "id": 44,
         "name": "Transport: Train Heist",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/train.jpg",
         "link": "tth",
         "category": "both"
     },
     {
-        "id": 44,
+        "id": 45,
         "name": "Ukrainian Job",
         "subname": "",
+        "isLoud": "undefined",
         "img": "/images/maps/both/ukrainian.jpg",
         "link": "ukrainianjob",
         "category": "both"

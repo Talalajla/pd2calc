@@ -42,7 +42,7 @@ export const HeistItem = styled.div`
 	overflow: hidden;
 
 	${({ theme }) => theme.resolutions.pc} {
-		filter: grayscale(100%);
+		filter: grayscale(75%);
 
 		:hover {
 			filter: grayscale(0%);
@@ -166,3 +166,31 @@ export const RadioLabel = styled.label`
 `;
 
 export const RadioBtn = styled.input.attrs({ type: "radio", name: "type" })``;
+
+export const Error404 = styled.div`
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+	font-family: 'Exo 2';
+
+	div {
+		max-width: 50%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		span {
+			font-size: 40px;
+			padding-bottom: 20px;
+		}
+		@media (max-width: 500px) {
+			max-width: 75%;
+			font-size: 16px;
+		}
+	}
+`;

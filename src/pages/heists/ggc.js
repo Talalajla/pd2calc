@@ -1,6 +1,5 @@
 import { Component } from "react";
 import HomeHeist from "../../components/homeHeist";
-import GGC from "../../images/maps/stealth/ggc.jpg";
 
 class Heist extends Component {
 
@@ -9,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src={GGC} imgName="Golden Grin Casino" jc="70"
+                    src="/images/maps/both/ggc.jpg" imgName="Golden Grin Casino" jc="70"
                     requirements={[
                         ["Default (completion)", "39250", "rCB"]
                     ]}
