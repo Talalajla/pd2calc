@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/loud/nomercy.jpg" imgName="No Mercy" jc="30"
+                    src="/pd2calc/images/maps/loud/nomercy.jpg" imgName="No Mercy" jc="30"
                     requirements={[
 						["Default (completion)", "20000", "rCB"], ["Each patient's room drilled", "7000", "rS", "1", "3"],
                         ["Stealth beginning (without playing doctor & cutting wires)", "12000", "rCB"]

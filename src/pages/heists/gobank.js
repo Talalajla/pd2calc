@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/both/gobank.jpg" imgName="Go Bank" jc="40"
+                    src="/pd2calc/images/maps/both/gobank.jpg" imgName="Go Bank" jc="40"
                     requirements={[
                         ["Default (completion)", "10000", "rCB"], ["Each bag secured", "1000", "rS", "1", "12"],
                         ["Blackmailer appears", "-1000", "rCB"], ["Vault already opened", "-6000", "rCB"]

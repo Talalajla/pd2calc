@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/both/blackcat.jpg" imgName="Black Cat" jc="30"
+                    src="/pd2calc/images/maps/both/blackcat.jpg" imgName="Black Cat" jc="30"
                     requirements={[
                         ["Default (completion)", "34000", "rCB"], ["Not default entrance", "-1500", 'rCB'],
                         ["Enter the CASINO before SPA (bug?)", "-500", 'rCB'], ["Vault opened with C4 (just before code and hand were used)", '14000', 'rCB'],

@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/loud/whitexmas.jpg" imgName="White Xmas" jc="40"
+                    src="/pd2calc/images/maps/loud/whitexmas.jpg" imgName="White Xmas" jc="40"
                     requirements={[
                         ["Default (completion)", "8000", "rCB"], ["Each bag secured", "2000", "rS", "0", "500"]
                     ]}

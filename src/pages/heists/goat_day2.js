@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/loud/goat.jpg" imgName="Goat simulator (day 2)" jc="30"
+                    src="/pd2calc/images/maps/loud/goat.jpg" imgName="Goat simulator (day 2)" jc="30"
                     requirements={[
                         ["Default (completion)", "21000", "rCB"], ["Each goat secured", "500", "rS", "5", "15"],
                         ["Each cage built", "500", "rS", "1", "15"], ["Each cage picked up by plane", "500", "rS", "1", "15"]

@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/stealth/breakinfeds.jpg" imgName="Breakin' Feds" jc="30"
+                    src="/pd2calc/images/maps/stealth/breakinfeds.jpg" imgName="Breakin' Feds" jc="30"
                     requirements={[
                         ["Default (completion)", "6000", "rCB"], ["Each lure of Garett", "4000", "rS", "1", "4"],
                         ["Each bag secured (with loot)", "1000", "rS", "1", "8"]

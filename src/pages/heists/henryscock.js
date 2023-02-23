@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/loud/henryscock.jpg" imgName="Henry's Rock" jc="30"
+                    src="/pd2calc/images/maps/loud/henryscock.jpg" imgName="Henry's Rock" jc="30"
                     requirements={[
                         ["Default (completion)", "16000", "rCB"], ["Archeology room path", "8000", "rCB"],
                         ["Biolab room path", "6000", "rCB"], ["Each laser shot (weapon room path)", "4000" , "rS", "0", "2"],

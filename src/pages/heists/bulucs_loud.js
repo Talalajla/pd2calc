@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/both/bulucs.jpg" imgName="Buluc's Mansion" jc="30"
+                    src="/pd2calc/images/maps/both/bulucs.jpg" imgName="Buluc's Mansion" jc="30"
                     requirements={[
                         ["Default (completion)", "25000", "rCB"], ["Bomb instead of hack", "2000", "rCB"],
                         ["Helicopter escape", "-2000", "rCB"]

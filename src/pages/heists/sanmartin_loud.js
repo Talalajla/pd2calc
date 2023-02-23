@@ -6,7 +6,7 @@ class Heist extends Component {
 		return (
 			<>
 				<HomeHeist
-					src="/images/maps/both/sanmartin.jpg" imgName="San Martín Bank" jc="30"
+					src="/pd2calc/images/maps/both/sanmartin.jpg" imgName="San Martín Bank" jc="30"
 					requirements={[
 						["Default (completion)", "32000", "rCB"], ["Stealth beginning (loud after picking up keychain and drilling instead of using it)", "8000", "rCB"],
 						["Each bag secured", "1000", "rS", "1", "11"]

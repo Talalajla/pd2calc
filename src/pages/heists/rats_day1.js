@@ -8,7 +8,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/loud/rats.jpg" imgName="Rats (day 1)" jc="40"
+                    src="/pd2calc/images/maps/loud/rats.jpg" imgName="Rats (day 1)" jc="40"
                     requirements={[
 						["Default (completion)", "30000", "rCB"], ["Escape with less than 3 bags cooked", "-18000", "rCB"],
                         ["Escape with 7 bags cooked", "40000", "rCB"]

@@ -7,7 +7,7 @@ class Heist extends Component {
         return(
             <>
                 <HomeHeist 
-                    src="/images/maps/loud/bikers.jpg" imgName="The Biker Heist (day 1)" jc="30"
+                    src="/pd2calc/images/maps/loud/bikers.jpg" imgName="The Biker Heist (day 1)" jc="30"
                     requirements={[
                         ["Default (completion)", "14500", "rCB"], ["Collecting soda for Mike", "1000", "rCB"], 
                         ["Finding tools", "2000", "rCB"], ["Finding gas & pipes", "2000", "rCB"], 
