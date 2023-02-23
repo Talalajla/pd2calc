@@ -630,7 +630,7 @@ class HomeHeist extends Component {
                     </PhotoBox>
 
                     <DiffBox>
-                        <ClipBoard limit={this.countGage} />
+                        <ClipBoard limit={this.countGage} isStealth={this.props.isStealth} />
                     </DiffBox>
 
                     <ReqBox>

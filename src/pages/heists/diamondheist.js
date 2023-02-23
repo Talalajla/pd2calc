@@ -13,6 +13,7 @@ class Heist extends Component {
                         ["Default (completion)", "9000", "rCB"], ["Each bag of diamonds secured", "400", "rS", "4", "8"]
                     ]}
                     redDiamond
+                    isStealth
                 />
             </>
         );

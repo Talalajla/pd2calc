@@ -12,6 +12,7 @@ class Heist extends Component {
                     requirements={[
                         ["Default (completion)", "39250", "rCB"]
                     ]}
+                    isStealth
                 />
             </>
         );

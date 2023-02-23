@@ -16,7 +16,18 @@ class ClipBoard extends React.Component {
         this.props.limit(e.target.dataset.diff);
     }
 
+    componentDidMount() {
+        if (this.props.isStealth) {
+            this.setState({ name: 'Death Sentence' });
+            this.props.limit("Death Sentence");
+        } else {
+            this.setState({ name: 'Overkill' });
+            this.props.limit('Overkill');
+        }
+    }
+    
     render() {
+        console.log(this.props.isStealth);
         return (
             <Clip>
                 <ClipMetal />
@@ -41,7 +52,7 @@ class ClipBoard extends React.Component {
                                 <Skull />
                             </DiffLabel>
                             <DiffLabel>
-                                <DiffRadio data-diff="Overkill" value="10" />
+                                <DiffRadio defaultChecked={!this.props.isStealth} data-diff="Overkill" value="10" />
                                 <CirclePick />
                                 <Skull />
                             </DiffLabel>
@@ -56,7 +67,7 @@ class ClipBoard extends React.Component {
                                 <Skull3 />
                             </DiffLabel>
                             <DiffLabel>
-                                <DiffRadio data-diff="Death Sentence" value="14" />
+                                <DiffRadio defaultChecked={this.props.isStealth} data-diff="Death Sentence" value="14" />
                                 <CirclePick />
                                 <Skull4 />
                             </DiffLabel>

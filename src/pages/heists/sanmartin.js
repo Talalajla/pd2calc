@@ -11,6 +11,7 @@ class Heist extends Component {
 						["Default (completion)", "20000", "rCB"], ['Drill "shortcut" path', "-8000", "rCB"],
 						["Each bg secured", "1000", "rS", "1", "11"]
 					]}
+					isStealth
 				/>
 			</>
 		);

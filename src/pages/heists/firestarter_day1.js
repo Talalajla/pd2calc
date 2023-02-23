@@ -13,6 +13,7 @@ class Heist extends Component {
                         ["Default (completion)", "8000", "rCB"], ["No weapons were destroyed", "2000", "rCB"],
                         ["Secured all bags (van)", "6000", "rCB"]
                     ]}
+                    isStealth
                 />
             </>
         );

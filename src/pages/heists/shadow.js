@@ -13,6 +13,7 @@ class Heist extends Component {
 						["Default (completion)", "4000", "rCB"], ["Each bag secured (up to 16)", "500", "rS", "3", "16"],
                         ["Whole armor secured", "6000", "rCB"], ["Stealth escape", "4000", "rCB"]
 					]}
+                    isStealth
                 />
             </>
         );

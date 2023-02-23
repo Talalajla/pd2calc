@@ -13,6 +13,7 @@ class Heist extends Component {
                         ["Default (completion)", "20000", "rCB"], ["Find keycard holder", "1000", "rCB"],
                         ["Boat escape", "-1000", "rCB"]
                     ]}
+                    isStealth
                 />
             </>
         );

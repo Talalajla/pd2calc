@@ -12,11 +12,11 @@ const Bonus = () => {
             <BoostTitle><span>TB(s) &amp;</span><span>Perkdeck</span></BoostTitle>
             <BoostLabels>
                 <BoostLabel>
-                    TeamBoosts: <BoostSelect> {setArray(0, 8).map((item) => <option key={item}>{item}</option>)}</BoostSelect>
+                    TeamBoosts: <BoostSelect defaultValue="2"> {setArray(0, 8).map((item) => <option key={item} value={item}>{item}</option>)}</BoostSelect>
                 </BoostLabel>
                 <BoostLabel>
                     Perk bonus:
-                    <BoostCheckbox />
+                    <BoostCheckbox defaultChecked />
                     <BoostCheckboxStyle />
                 </BoostLabel>
             </BoostLabels>

@@ -13,6 +13,7 @@ class Heist extends Component {
                         ["Default (completion)", "9000", "rCB"], ["Each 2 x C4 charges picked", "2000", "rS", "2", "5"], 
                         ["Each 3 x C4 charges set", "2000", "rS", "1", "3"], ["Each money bag secured", "1500", "rS", "3", "18"] 
                     ]}
+                    isStealth
                 />
             </>
         );

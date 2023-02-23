@@ -13,6 +13,7 @@ class Heist extends Component {
 						["Default (completion)", "8000", "rCB"], ["Each train wagon opened with loot", "2000", "rS", "2", "4"],
                         ["Each type of equipment picked up", "1000", "rS", "2", "4"], ["Each weapon bag secured", "1000", "rS", "0", "14"]
 					]}
+                    isStealth
                 />
             </>
         );

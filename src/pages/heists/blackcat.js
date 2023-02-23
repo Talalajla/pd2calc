@@ -14,6 +14,7 @@ class Heist extends Component {
                         ["Enter the CASINO before SPA (bug?)", "-4000", "rCB"], ["Skipped planting bug", "-4000", "rCB"],
                         ["Each money bag secured (vault)", "500", "rS", "4", "16"], ["Each optional bag secured", "500", "rS", "0", "7"]
                     ]}
+                    isStealth
                 />
             </>
         );
