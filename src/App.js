@@ -2,7 +2,7 @@ import { Component, lazy, Suspense } from "react";
 import GlobalStyles from "./GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./components/theme/theme";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 // Paths
 import Home from "./pages/home";
 import Stealth from "./pages/stealth";
@@ -145,7 +145,7 @@ class App extends Component {
 					<GlobalStyles />
 					
 					<Suspense fallback={<div>Loading...</div>}>
-					<BrowserRouter>
+					<HashRouter>
 						<Nav />
 						<Switch>
 							<Route exact path="/" component={Home} />
@@ -276,7 +276,7 @@ class App extends Component {
 							<Route exact path="/whitexmas" component={White} />
 							<Route component={NoPage} />
 						</Switch>
-					</BrowserRouter>
+					</HashRouter>
 					</Suspense>
 				</>
 			</ThemeProvider>
