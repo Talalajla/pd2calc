@@ -47,7 +47,6 @@ export const Content = styled.form`
 export const Main = styled.div`
     min-height: 70vh;
     width: 100%;
-    /* background-color: rgba(0,0,0,0.3); */
     position: relative;
     display: flex;
 
@@ -138,7 +137,6 @@ export const RequireNotes = styled.div`
         padding: 15px;
         width: 100%;
         border-collapse: collapse;
-        /* transform: rotate(2deg); */
         font-family: 'Calligraffitti', cursive;
 
         th {
@@ -272,10 +270,6 @@ export const ReqBox = styled.div`
 `;
 
 export const Players = styled.div`
-    /* position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%); */
     height: 55vmin;
     width: 30vmin;
     display: flex;
@@ -294,10 +288,6 @@ export const Players = styled.div`
 `;
 
 export const Rest = styled.div`
-    /* position: absolute;
-    top: 50%;
-    right: 25%;
-    transform: translate(-50%, -50%); */
     height: 55vmin;
     width: 30vmin;
     display: flex;
@@ -411,9 +401,6 @@ export const CrewBox = styled.div`
 
 export const GageNote = styled(StickyPaper)`
     position: relative;
-    /* left: auto;
-    right: 25%;
-    top: 50%; */
     z-index: 2;
     height: 30vmin;
     width: 28vmin;
@@ -649,11 +636,6 @@ export const DiffUnderScore = styled.img`
 
 export const PolaroidFrame = styled.div`
     position: relative;
-/* position: absolute;
-    left: auto;
-    right: 25%;
-    top: 35%;
-    transform: translate(-50%, -50%) scale(1.2) rotate(5deg); */
     transform: scale(1.2) rotate(5deg);
     width: 19vmin;
     height: 25vmin;
@@ -853,9 +835,7 @@ export const BonusNote = styled.div`
     height: 350px;
     width: 550px;
     position: relative;
-    /* left: 50%; */
     top: -50px;
-    /* transform: translateX(-50%) rotate(-20deg); */
     transform: rotate(-20deg);
     filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));
 
@@ -920,7 +900,6 @@ export const BoostTitle = styled.div`
     position: absolute;
     left: 12.5%;
     top: 30%;
-    /* transform: rotate(-20deg); */
     font-weight: bold;
 
     ${({theme}) => theme.resolutions.tablet} {
@@ -1014,7 +993,6 @@ export const StealthTitle = styled.div`
     position: absolute;
     right: 11.5%;
     top: 35%;
-    /* transform: rotate(15deg); */
     font-size: 25px;
     color: ${({theme}) => theme.colors.stealth};
     font-weight: bold;
@@ -1145,11 +1123,8 @@ export const DisplayTitle = styled.div`
 `;
 
 export const DisplayInfo = styled.div`
-    /* height: calc(100% - 41px); */
     display: flex;
     padding: 5px 10px;
-    /* justify-content: center; */
-    /* align-items: center; */
     gap: 20px;
 `;
 export const DisplayLVL = styled.div`
@@ -1428,7 +1403,6 @@ export const InfiniteBox = styled.div`
     div {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* justify-content: center; */
         align-items: center;
         padding: 0 10px;
 

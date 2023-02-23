@@ -139,7 +139,6 @@ const Yacht = lazy(() => import("./pages/heists/yacht"));
 
 class App extends Component {
 	render() {
-		console.log('test');
 		return (
 			<ThemeProvider theme={theme}>
 				<>

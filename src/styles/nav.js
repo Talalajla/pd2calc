@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const Navbar = styled.nav`
-    /* width: calc(100% - 30px); */
     width: 1000px;
     position: relative;
     background: #231F20;
     border: 3px solid #171415;
-    /* margin: 0 15px; */
     margin: auto;
     font-family: "Dis";
 

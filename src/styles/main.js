@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Main = styled.main`
 	width: 100%;
-	/* background-color: rgba(0,0,0,0.3); */
 	display: grid;
 	grid-template-rows: auto auto auto 1fr;
 `;

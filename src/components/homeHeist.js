@@ -88,52 +88,51 @@ class HomeHeist extends Component {
         this.goBack();
 
         if(this.props.imgName.includes("Black Cat") && this.props.isLoud) {
-            const trContainer = e.target.parentElement.parentElement.parentElement.parentElement;
-            if (e.target.name === "req4" && e.target.checked) {
-                console.log(trContainer.children[5].querySelector("input[name=req5]"));
-                trContainer.children[5].querySelector("input[name=req5]").disabled = true;
-                trContainer.children[6].querySelector("input[name=req6]").disabled = true;
-                trContainer.children[7].querySelector("select[name=req7]").disabled = true;
-                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-                // e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelectorAll("td").forEach(td => td.style.textDecoration = "line-through");
-            } else if (e.target.name === "req4" && !e.target.checked) {
-                trContainer.children[5].querySelector("input[name=req5]").disabled = false;
-                trContainer.children[6].querySelector("input[name=req6]").disabled = false;
-                trContainer.children[7].querySelector("select[name=req7]").disabled = false;
-                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-                // e.target.parentElement.parentElement.parentElement.nextElementSibling.querySelectorAll("td").forEach(td => td.style.textDecoration = "none");
-            }  else if (e.target.name === "req5" && e.target.checked) {
-                trContainer.children[4].querySelector("input[name=req4]").disabled = true;
-                trContainer.children[6].querySelector("input[name=req6]").disabled = true;
-                trContainer.children[7].querySelector("select[name=req7]").disabled = true;
-                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-            } else if (e.target.name === "req5" && !e.target.checked) {
-                trContainer.children[4].querySelector("input[name=req4]").disabled = false;
-                trContainer.children[6].querySelector("input[name=req6]").disabled = false;
-                trContainer.children[7].querySelector("select[name=req7]").disabled = false;
-                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-                trContainer.children[6].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-            } else if (e.target.name === "req6" && e.target.checked) {
-                trContainer.children[4].querySelector("input[name=req4]").disabled = true;
-                trContainer.children[5].querySelector("input[name=req5]").disabled = true;
-                trContainer.children[7].querySelector("select[name=req7]").disabled = true;
-                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
-            } else if (e.target.name === "req6" && !e.target.checked) {
-                trContainer.children[4].querySelector("input[name=req4]").disabled = false;
-                trContainer.children[5].querySelector("input[name=req5]").disabled = false;
-                trContainer.children[7].querySelector("select[name=req7]").disabled = false;
-                trContainer.children[4].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-                trContainer.children[5].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
-                trContainer.children[7].querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+            const elements = document.querySelectorAll('form table label');
+            
+            if (e.target === elements[3].children[0] && elements[3].children[0].checked) {
+                elements[4].children[0].disabled = true;
+                elements[5].children[0].disabled = true;
+                elements[6].children[0].disabled = true;
+                elements[4].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                elements[5].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                elements[6].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+            } else if (e.target === elements[3].children[0] && !elements[3].children[0].checked) {
+                elements[4].children[0].disabled = false;
+                elements[5].children[0].disabled = false;
+                elements[6].children[0].disabled = false;
+                elements[4].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                elements[5].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                elements[6].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+            }  
+            if (e.target === elements[4].children[0] && elements[4].children[0].checked) {
+                elements[3].children[0].disabled = true;
+                elements[5].children[0].disabled = true;
+                elements[6].children[0].disabled = true;
+                elements[3].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                elements[5].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                elements[6].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+            } else if (e.target === elements[4].children[0] && !elements[4].children[0].checked) {
+                elements[3].children[0].disabled = false;
+                elements[5].children[0].disabled = false;
+                elements[6].children[0].disabled = false;
+                elements[3].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                elements[5].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                elements[6].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+            } if (e.target === elements[5].children[0] && elements[5].children[0].checked) {
+                elements[3].children[0].disabled = true;
+                elements[4].children[0].disabled = true;
+                elements[6].children[0].disabled = true;
+                elements[3].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                elements[4].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+                elements[6].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "line-through");
+            } else if (e.target === elements[5].children[0] && !elements[5].children[0].checked) {
+                elements[3].children[0].disabled = false;
+                elements[4].children[0].disabled = false;
+                elements[6].children[0].disabled = false;
+                elements[3].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                elements[4].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
+                elements[6].parentElement.parentElement.querySelectorAll('td').forEach(td => td.style.textDecoration = "none");
             }
         }
 
@@ -342,19 +341,18 @@ class HomeHeist extends Component {
 
         // Default values 
         const baseValues = this.props.requirements.map((row) => +row[1] );
-        console.log(baseValues);
         const elements = form.querySelectorAll('table label');
         const inputValues = Array.from(elements).map((item) => this.swapOn(item.children[0]));
         const expValues = inputValues.map((el, index) => el * baseValues[index]);
+
+        // Reset XP from bags when C4 was used
+        if(this.props.imgName.includes("Black Cat") && this.props.isLoud && (expValues[3] !== 0 || expValues[4] !== -0 || expValues[5] !== 0))
+            expValues[6] = 0;
 
         const expValuesSum = expValues.reduce((ac, val) => ac + val, 0);
         
         if(this.props.imgName.includes("Slaughterhouse") && this.state.ovkPlus)
             expValues[1] *= 0.8;
-
-        // Reset XP from bags when C4 was used
-        if(this.props.imgName.includes("Black Cat") && this.props.isLoud && (expValues[3] !== 0 || expValues[4] !== -0 || expValues[5] !== 0))
-            expValues[6] = 0;
 
         let classic = parseInt(addBags) * parseInt(scale) + expValuesSum;
 
@@ -543,9 +541,6 @@ class HomeHeist extends Component {
             314527, 330021, 346022, 362540, 379582, 397156, 415271, 433936, 453157, 472943, 
             493303, 514245, 535776, 557906, 580642, 603992, 627965, 652569, 677811, 703701, 
             730247, 757456, 785336, 813897, 843146, 873091, 903741, 935104, 967187, 1000000];
-        console.log('lvl: ', +LVL, '; lvl %: ', this.state.lvlProg, '; exp: ', exp);
-        // ! 10 → 11: 4611xp ; got: 32'940xp + 0% so:
-
 
         if (LVL < 100) {
             let i = +LVL,
@@ -553,7 +548,6 @@ class HomeHeist extends Component {
             let currentExp = +expArray[i]*this.state.lvlProg/100;
             let toNextLvl = Math.round((+expArray[i]-currentExp)*100)/100;
             let percLeft;
-            console.log("current xp: ", currentExp, " to next: ", toNextLvl, " full: ", +expArray[i]);
 
             while (exp > 0 && i < 100) {
                 let expToNext = +expArray[i];
@@ -578,8 +572,6 @@ class HomeHeist extends Component {
 
             this.setState({newLvl: i, newExp: percLeft});
 
-            if (i === 100) console.log(`Now you have 100lv with ${xpLeft}xp added to your infamy pool!`);
-            else console.log(`Now you have ${i}lvl with ${xpLeft} xp left.`);
         } else {
             this.setState({newLvl: 100, newExp: 100});
         }
@@ -620,7 +612,6 @@ class HomeHeist extends Component {
     });
 
     render() {
-        // console.log("progress", this.state.lvlProg);
 
         return(
             <Content onSubmit={this.countEXP} onChange={this.checkValues}>
