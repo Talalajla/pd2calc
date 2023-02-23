@@ -4,7 +4,7 @@
         "name": "Aftershock",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/aftershock.jpg",
+        "img": "/pd2calc/images/maps/loud/aftershock.jpg",
         "link": "aftershock",
         "category": "loud"
     },
@@ -13,7 +13,7 @@
         "name": "Alaskan Deal",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/alaskan.jpg",
+        "img": "/pd2calc/images/maps/loud/alaskan.jpg",
         "link": "alaskandeal",
         "category": "loud"
     },
@@ -22,7 +22,7 @@
         "name": "Art Gallery",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/artgallery.jpg",
+        "img": "/pd2calc/images/maps/both/artgallery.jpg",
         "link": "artgallery_loud",
         "category": "both"
     },
@@ -31,7 +31,7 @@
         "name": "Bank Heist",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/bank.jpg",
+        "img": "/pd2calc/images/maps/both/bank.jpg",
         "link": "bank",
         "category": "both"
     },
@@ -40,7 +40,7 @@
         "name": "Beneath the Mountain",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/beneathmountain.jpg",
+        "img": "/pd2calc/images/maps/loud/beneathmountain.jpg",
         "link": "btm",
         "category": "loud"
     },
@@ -49,7 +49,7 @@
         "name": "Big Oil",
         "subname": "(day 1: Club House)",
         "isLoud": "",
-        "img": "/images/maps/both/bigoil.jpg",
+        "img": "/pd2calc/images/maps/both/bigoil.jpg",
         "link": "bigoil_day1",
         "category": "loud"
     },
@@ -58,7 +58,7 @@
         "name": "Big Oil",
         "subname": "(day 2: Engine Problems)",
         "isLoud": "",
-        "img": "/images/maps/both/bigoil.jpg",
+        "img": "/pd2calc/images/maps/both/bigoil.jpg",
         "link": "bigoil_day2",
         "category": "loud"
     },
@@ -67,7 +67,7 @@
         "name": "Birth of Sky",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/birthsky.jpg",
+        "img": "/pd2calc/images/maps/loud/birthsky.jpg",
         "link": "birthofsky",
         "category": "loud"
     },
@@ -76,7 +76,7 @@
         "name": "Black Cat",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/blackcat.jpg",
+        "img": "/pd2calc/images/maps/both/blackcat.jpg",
         "link": "blackcat_loud",
         "category": "both"
     },
@@ -85,7 +85,7 @@
         "name": "Boiling Point",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/boiling.jpg",
+        "img": "/pd2calc/images/maps/loud/boiling.jpg",
         "link": "boilingpoint",
         "category": "loud"
     },
@@ -94,7 +94,7 @@
         "name": "Border Crossing",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/border.jpg",
+        "img": "/pd2calc/images/maps/both/border.jpg",
         "link": "bordercrossing_loud",
         "category": "both"
     },
@@ -103,7 +103,7 @@
         "name": "Border Crystals",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/bordercrystals.jpg",
+        "img": "/pd2calc/images/maps/loud/bordercrystals.jpg",
         "link": "bordercrystals",
         "category": "loud"
     },
@@ -112,7 +112,7 @@
         "name": "Breakfast in Tijuana",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/breakfast.jpg",
+        "img": "/pd2calc/images/maps/both/breakfast.jpg",
         "link": "breakfastintijuana_loud",
         "category": "both"
     },
@@ -121,7 +121,7 @@
         "name": "Brooklyn 10-10",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/brooklyn10.jpg",
+        "img": "/pd2calc/images/maps/loud/brooklyn10.jpg",
         "link": "brooklyn10-10",
         "category": "loud"
     },
@@ -130,7 +130,7 @@
         "name": "Brooklyn Bank",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/brooklyn.jpg",
+        "img": "/pd2calc/images/maps/loud/brooklyn.jpg",
         "link": "brooklynbank",
         "category": "loud"
     },
@@ -139,7 +139,7 @@
         "name": "Buluc's Mansion",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/bulucs.jpg",
+        "img": "/pd2calc/images/maps/both/bulucs.jpg",
         "link": "bulucsmansion_loud",
         "category": "both"
     },
@@ -148,7 +148,7 @@
         "name": "Cook Off",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/cookoff.jpg",
+        "img": "/pd2calc/images/maps/loud/cookoff.jpg",
         "link": "cookoff",
         "category": "loud"
     },
@@ -157,7 +157,7 @@
         "name": "Counterfeit",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/counterfeit.jpg",
+        "img": "/pd2calc/images/maps/both/counterfeit.jpg",
         "link": "counterfeit_loud",
         "category": "both"
     },
@@ -166,7 +166,7 @@
         "name": "Cursed Kill Room",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/default.jpg",
+        "img": "/pd2calc/images/maps/loud/default.jpg",
         "link": "ckr",
         "category": "loud"
     },
@@ -175,7 +175,7 @@
         "name": "Diamond Heist",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/diamondheist.jpg",
+        "img": "/pd2calc/images/maps/both/diamondheist.jpg",
         "link": "diamondheist_loud",
         "category": "both"
     },
@@ -184,7 +184,7 @@
         "name": "Diamond Store",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/diamondstore.jpg",
+        "img": "/pd2calc/images/maps/both/diamondstore.jpg",
         "link": "diamondstore_loud",
         "category": "both"
     },
@@ -193,7 +193,7 @@
         "name": "Dragon Heist",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/dragon.jpg",
+        "img": "/pd2calc/images/maps/both/dragon.jpg",
         "link": "dragonheist_loud",
         "category": "both"
     },
@@ -202,7 +202,7 @@
         "name": "Election day",
         "subname": "(day 1: Right Track)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/electionday.jpg",
+        "img": "/pd2calc/images/maps/both/electionday.jpg",
         "link": "electionday_day1_loud",
         "category": "both"
     },
@@ -211,7 +211,7 @@
         "name": "Election day",
         "subname": "(day 2: Swing Vote)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/electionday.jpg",
+        "img": "/pd2calc/images/maps/both/electionday.jpg",
         "link": "electionday_day2_loud",
         "category": "both"
     },
@@ -220,7 +220,7 @@
         "name": "Election day",
         "subname": "(day 2: Breaking Ballot)",
         "isLoud": "",
-        "img": "/images/maps/both/electionday.jpg",
+        "img": "/pd2calc/images/maps/both/electionday.jpg",
         "link": "electionday_day2C_loud",
         "category": "both"
     },
@@ -229,7 +229,7 @@
         "name": "Firestarter",
         "subname": "(day 1: Airport)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/firestarter.jpg",
+        "img": "/pd2calc/images/maps/both/firestarter.jpg",
         "link": "firestarter_day1_loud",
         "category": "both"
     },
@@ -238,7 +238,7 @@
         "name": "Firestarter",
         "subname": "(day 2: FBI Server)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/firestarter.jpg",
+        "img": "/pd2calc/images/maps/both/firestarter.jpg",
         "link": "firestarter_day2_loud",
         "category": "both"
     },
@@ -247,7 +247,7 @@
         "name": "Firestarter",
         "subname": "(day 3: Trustee Bank)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/firestarter.jpg",
+        "img": "/pd2calc/images/maps/both/firestarter.jpg",
         "link": "firestarter_day3_loud",
         "category": "both"
     },
@@ -256,7 +256,7 @@
         "name": "First World Bank",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/fwb.jpg",
+        "img": "/pd2calc/images/maps/both/fwb.jpg",
         "link": "fwb_loud",
         "category": "both"
     },
@@ -265,7 +265,7 @@
         "name": "Four Stores",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/fourstores.jpg",
+        "img": "/pd2calc/images/maps/both/fourstores.jpg",
         "link": "fourstores",
         "category": "both"
     },
@@ -274,7 +274,7 @@
         "name": "Framing Frame",
         "subname": "(day 1: Art Gallery)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/framingframe.jpg",
+        "img": "/pd2calc/images/maps/both/framingframe.jpg",
         "link": "framingframe_day1_loud",
         "category": "both"
     },
@@ -283,7 +283,7 @@
         "name": "Framing Frame",
         "subname": "(day 2: Train Trade)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/framingframe.jpg",
+        "img": "/pd2calc/images/maps/both/framingframe.jpg",
         "link": "framingframe_day2_loud",
         "category": "both"
     },
@@ -292,7 +292,7 @@
         "name": "Framing Frame",
         "subname": "(day 3: Framing)",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/framingframe.jpg",
+        "img": "/pd2calc/images/maps/both/framingframe.jpg",
         "link": "framingframe_day3_loud",
         "category": "both"
     },
@@ -301,7 +301,7 @@
         "name": "Go Bank",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/gobank.jpg",
+        "img": "/pd2calc/images/maps/both/gobank.jpg",
         "link": "gobank_loud",
         "category": "both"
     },
@@ -310,7 +310,7 @@
         "name": "Goat Simulator",
         "subname": "(day 1: This was not the deal)",
         "isLoud": "",
-        "img": "/images/maps/loud/goat.jpg",
+        "img": "/pd2calc/images/maps/loud/goat.jpg",
         "link": "goatsimulator_day1",
         "category": "loud"
     },
@@ -319,7 +319,7 @@
         "name": "Goat Simulator",
         "subname": "(day 2: Dirty Work)",
         "isLoud": "",
-        "img": "/images/maps/loud/goat.jpg",
+        "img": "/pd2calc/images/maps/loud/goat.jpg",
         "link": "goatsimulator_day2",
         "category": "loud"
     },
@@ -328,7 +328,7 @@
         "name": "Golden Grin Casino",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/ggc.jpg",
+        "img": "/pd2calc/images/maps/both/ggc.jpg",
         "link": "ggc_loud",
         "category": "both"
     },
@@ -337,7 +337,7 @@
         "name": "Green Bridge",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/green.jpg",
+        "img": "/pd2calc/images/maps/loud/green.jpg",
         "link": "greenbridge",
         "category": "loud"
     },
@@ -346,7 +346,7 @@
         "name": "Heat Street",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/heatstreet.jpg",
+        "img": "/pd2calc/images/maps/loud/heatstreet.jpg",
         "link": "heatstreet",
         "category": "loud"
     },
@@ -355,7 +355,7 @@
         "name": "Hell's Island",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/hells.jpg",
+        "img": "/pd2calc/images/maps/loud/hells.jpg",
         "link": "hellsisland",
         "category": "loud"
     },
@@ -364,7 +364,7 @@
         "name": "Henry's Rock",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/henryscock.jpg",
+        "img": "/pd2calc/images/maps/loud/henryscock.jpg",
         "link": "henrysrock",
         "category": "loud"
     },
@@ -373,7 +373,7 @@
         "name": "Hostile Takeover",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/hostile.jpg",
+        "img": "/pd2calc/images/maps/both/hostile.jpg",
         "link": "hostiletakeover",
         "category": "both"
     },
@@ -382,7 +382,7 @@
         "name": "Hotline Miami",
         "subname": "(day 1: Hotline Miami)",
         "isLoud": "",
-        "img": "/images/maps/loud/hotlinemiami.jpg",
+        "img": "/pd2calc/images/maps/loud/hotlinemiami.jpg",
         "link": "hotlinemiami_day1",
         "category": "loud"
     },
@@ -391,7 +391,7 @@
         "name": "Hotline Miami",
         "subname": "(day 2: Four Floors)",
         "isLoud": "",
-        "img": "/images/maps/loud/hotlinemiami.jpg",
+        "img": "/pd2calc/images/maps/loud/hotlinemiami.jpg",
         "link": "hotlinemiami_day2",
         "category": "loud"
     },
@@ -400,7 +400,7 @@
         "name": "Hoxton Breakout",
         "subname": "(day 1: The Breakout)",
         "isLoud": "",
-        "img": "/images/maps/loud/hoxtonbreakout.jpg",
+        "img": "/pd2calc/images/maps/loud/hoxtonbreakout.jpg",
         "link": "hoxtonbreakout_day1",
         "category": "loud"
     },
@@ -409,7 +409,7 @@
         "name": "Hoxton Breakout",
         "subname": "(day 2: The Search)",
         "isLoud": "",
-        "img": "/images/maps/loud/hoxtonbreakout.jpg",
+        "img": "/pd2calc/images/maps/loud/hoxtonbreakout.jpg",
         "link": "hoxtonbreakout_day2",
         "category": "loud"
     },
@@ -418,7 +418,7 @@
         "name": "Hoxton Revenge",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/hoxrev.jpg",
+        "img": "/pd2calc/images/maps/both/hoxrev.jpg",
         "link": "hoxtonrevenge_loud",
         "category": "both"
     },
@@ -427,7 +427,7 @@
         "name": "Jewelry Store",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/jewelry.jpg",
+        "img": "/pd2calc/images/maps/both/jewelry.jpg",
         "link": "jewelrystore_loud",
         "category": "both"
     },
@@ -436,7 +436,7 @@
         "name": "Lab Rats",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/default.jpg",
+        "img": "/pd2calc/images/maps/loud/default.jpg",
         "link": "labrats",
         "category": "loud"
     },
@@ -445,7 +445,7 @@
         "name": "Lost in Transit",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/transit.jpg",
+        "img": "/pd2calc/images/maps/both/transit.jpg",
         "link": "lostintransit",
         "category": "both"
     },
@@ -454,7 +454,7 @@
         "name": "Mallcrasher",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/mallcrasher.jpg",
+        "img": "/pd2calc/images/maps/both/mallcrasher.jpg",
         "link": "mallcrasher",
         "category": "both"
     },
@@ -463,7 +463,7 @@
         "name": "Meltdown",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/meltdown.jpg",
+        "img": "/pd2calc/images/maps/loud/meltdown.jpg",
         "link": "meltdown",
         "category": "loud"
     },
@@ -472,7 +472,7 @@
         "name": "Midland Ranch",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/midland.jpg",
+        "img": "/pd2calc/images/maps/both/midland.jpg",
         "link": "midland_ranch_loud",
         "category": "both"
     },
@@ -481,7 +481,7 @@
         "name": "Mountain Master",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/mountainmaster.jpg",
+        "img": "/pd2calc/images/maps/both/mountainmaster.jpg",
         "link": "mountainmaster_loud",
         "category": "both"
     },
@@ -490,7 +490,7 @@
         "name": "Nightclub",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/nightclub.jpg",
+        "img": "/pd2calc/images/maps/both/nightclub.jpg",
         "link": "nightclub_loud",
         "category": "both"
     },
@@ -499,7 +499,7 @@
         "name": "No Mercy",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/nomercy.jpg",
+        "img": "/pd2calc/images/maps/loud/nomercy.jpg",
         "link": "nomercy",
         "category": "loud"
     },
@@ -508,7 +508,7 @@
         "name": "Panic Room",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/panicroom.jpg",
+        "img": "/pd2calc/images/maps/loud/panicroom.jpg",
         "link": "panicroom",
         "category": "loud"
     },
@@ -517,7 +517,7 @@
         "name": "Prison Nightmare",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/default.jpg",
+        "img": "/pd2calc/images/maps/loud/default.jpg",
         "link": "prisonnightmare",
         "category": "loud"
     },
@@ -526,7 +526,7 @@
         "name": "Rats",
         "subname": "(day 1: Cook Off)",
         "isLoud": "",
-        "img": "/images/maps/loud/rats.jpg",
+        "img": "/pd2calc/images/maps/loud/rats.jpg",
         "link": "rats_day1",
         "category": "loud"
     },
@@ -535,7 +535,7 @@
         "name": "Rats",
         "subname": "(day 2: Code for Meth)",
         "isLoud": "",
-        "img": "/images/maps/loud/rats.jpg",
+        "img": "/pd2calc/images/maps/loud/rats.jpg",
         "link": "rats_day2",
         "category": "loud"
     },
@@ -544,7 +544,7 @@
         "name": "Rats",
         "subname": "(day 3: Bus Stop)",
         "isLoud": "",
-        "img": "/images/maps/loud/rats.jpg",
+        "img": "/pd2calc/images/maps/loud/rats.jpg",
         "link": "rats_day3",
         "category": "loud"
     },
@@ -553,7 +553,7 @@
         "name": "Reservoir Dogs",
         "subname": "(day 2: Highland Mortuary)",
         "isLoud": "",
-        "img": "/images/maps/loud/reservoirdogs.jpg",
+        "img": "/pd2calc/images/maps/loud/reservoirdogs.jpg",
         "link": "rdh_day2",
         "category": "loud"
     },
@@ -562,7 +562,7 @@
         "name": "Reservoir Dogs",
         "subname": "(day 1: Garnet Group Boutique)",
         "isLoud": "",
-        "img": "/images/maps/loud/reservoirdogs.jpg",
+        "img": "/pd2calc/images/maps/loud/reservoirdogs.jpg",
         "link": "rdh_day1",
         "category": "loud"
     },
@@ -571,7 +571,7 @@
         "name": "Safe House Nightmare",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/default.jpg",
+        "img": "/pd2calc/images/maps/loud/default.jpg",
         "link": "shn",
         "category": "loud"
     },
@@ -580,7 +580,7 @@
         "name": "Safe House Raid",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/safehouse.jpg",
+        "img": "/pd2calc/images/maps/loud/safehouse.jpg",
         "link": "shr",
         "category": "loud"
     },
@@ -589,7 +589,7 @@
         "name": "San Martín Bank",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/sanmartin.jpg",
+        "img": "/pd2calc/images/maps/both/sanmartin.jpg",
         "link": "sanmartínbank_loud",
         "category": "both"
     },
@@ -598,7 +598,7 @@
         "name": "Santa's Workshop",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/santasworkshop.jpg",
+        "img": "/pd2calc/images/maps/loud/santasworkshop.jpg",
         "link": "santasworkshop",
         "category": "loud"
     },
@@ -607,7 +607,7 @@
         "name": "Scarface Mansion",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/scarface.jpg",
+        "img": "/pd2calc/images/maps/both/scarface.jpg",
         "link": "scarfacemansion_loud",
         "category": "both"
     },
@@ -616,7 +616,7 @@
         "name": "Shacklethorne Auction",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/shacklethorne.jpg",
+        "img": "/pd2calc/images/maps/both/shacklethorne.jpg",
         "link": "shacklethorne_loud",
         "category": "both"
     },
@@ -625,7 +625,7 @@
         "name": "Slaughterhouse",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/slaughterhouse.jpg",
+        "img": "/pd2calc/images/maps/loud/slaughterhouse.jpg",
         "link": "slaughterhouse",
         "category": "loud"
     },
@@ -634,7 +634,7 @@
         "name": "Stealing Xmas",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/stealingxmas.jpg",
+        "img": "/pd2calc/images/maps/loud/stealingxmas.jpg",
         "link": "stealingxmas",
         "category": "loud"
     },
@@ -643,7 +643,7 @@
         "name": "The Alesso Heist",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/thealesso.jpg",
+        "img": "/pd2calc/images/maps/both/thealesso.jpg",
         "link": "thealessoheist_loud",
         "category": "both"
     },
@@ -652,7 +652,7 @@
         "name": "The Big Bank",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/thebigbank.jpg",
+        "img": "/pd2calc/images/maps/both/thebigbank.jpg",
         "link": "thebigbank_loud",
         "category": "both"
     },
@@ -661,7 +661,7 @@
         "name": "The Biker Heist",
         "subname": "(day 1: Lion's Den)",
         "isLoud": "",
-        "img": "/images/maps/loud/bikers.jpg",
+        "img": "/pd2calc/images/maps/loud/bikers.jpg",
         "link": "tbh_day1",
         "category": "loud"
     },
@@ -670,7 +670,7 @@
         "name": "The Biker Heist",
         "subname": "(day 2: Interception)",
         "isLoud": "",
-        "img": "/images/maps/loud/bikers2.jpg",
+        "img": "/pd2calc/images/maps/loud/bikers2.jpg",
         "link": "tbh_day2",
         "category": "loud"
     },
@@ -679,7 +679,7 @@
         "name": "The Bomb: Dockyard",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/thebombdockyard.jpg",
+        "img": "/pd2calc/images/maps/both/thebombdockyard.jpg",
         "link": "thebombdockyard_loud",
         "category": "both"
     },
@@ -688,7 +688,7 @@
         "name": "The Bomb: Forest",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/transportforest.jpg",
+        "img": "/pd2calc/images/maps/loud/transportforest.jpg",
         "link": "thebombforest",
         "category": "loud"
     },
@@ -697,7 +697,7 @@
         "name": "The Diamond",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/thediamond.jpg",
+        "img": "/pd2calc/images/maps/both/thediamond.jpg",
         "link": "thediamond_loud",
         "category": "both"
     },
@@ -706,7 +706,7 @@
         "name": "The Ukrainian Prisoner",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/theukrainianprisoner.jpg",
+        "img": "/pd2calc/images/maps/both/theukrainianprisoner.jpg",
         "link": "tup_loud",
         "category": "both"
     },
@@ -715,7 +715,7 @@
         "name": "The White House",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/thewhite.jpg",
+        "img": "/pd2calc/images/maps/both/thewhite.jpg",
         "link": "thewhitehouse_loud",
         "category": "both"
     },
@@ -724,7 +724,7 @@
         "name": "Transport: Train Heist",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/train.jpg",
+        "img": "/pd2calc/images/maps/both/train.jpg",
         "link": "tth",
         "category": "both"
     },
@@ -733,7 +733,7 @@
         "name": "Transports",
         "subname": "(all others)",
         "isLoud": "",
-        "img": "/images/maps/loud/transport.jpg",
+        "img": "/pd2calc/images/maps/loud/transport.jpg",
         "link": "transport",
         "category": "loud"
     },
@@ -742,7 +742,7 @@
         "name": "Ukrainian Job",
         "subname": "",
         "isLoud": "(loud)",
-        "img": "/images/maps/both/ukrainian.jpg",
+        "img": "/pd2calc/images/maps/both/ukrainian.jpg",
         "link": "ukrainianjob",
         "category": "both"
     },
@@ -751,7 +751,7 @@
         "name": "Undercover",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/undercover.jpg",
+        "img": "/pd2calc/images/maps/loud/undercover.jpg",
         "link": "undercover",
         "category": "loud"
     },
@@ -760,7 +760,7 @@
         "name": "Watchdogs",
         "subname": "(day 1: Truck Load)",
         "isLoud": "",
-        "img": "/images/maps/loud/watchdogs.jpg",
+        "img": "/pd2calc/images/maps/loud/watchdogs.jpg",
         "link": "watchdogs_day1",
         "category": "loud"
     },
@@ -769,7 +769,7 @@
         "name": "Watchdogs",
         "subname": "(day 2: Boat Load)",
         "isLoud": "",
-        "img": "/images/maps/loud/watchdogs.jpg",
+        "img": "/pd2calc/images/maps/loud/watchdogs.jpg",
         "link": "watchdogs_day2",
         "category": "loud"
     },
@@ -778,7 +778,7 @@
         "name": "White Xmas",
         "subname": "",
         "isLoud": "",
-        "img": "/images/maps/loud/whitexmas.jpg",
+        "img": "/pd2calc/images/maps/loud/whitexmas.jpg",
         "link": "whitexmas",
         "category": "loud"
     }
