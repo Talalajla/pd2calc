@@ -1905,6 +1905,7 @@ export const ReqCheckStyle = styled.div`
     position: relative;
     left: -2px;
     font-weight: bold;
+    user-select: none;
 `;
 
 export const ReqSelect = styled.select`
@@ -1918,4 +1919,3 @@ export const ReqSelect = styled.select`
     width: 100%;
     cursor: pointer;
 `;
-
