@@ -1,12 +1,12 @@
 {
   "files": {
-    "static/js/0.859ed84f.chunk.js": "/pd2calc/static/js/0.859ed84f.chunk.js",
-    "static/js/0.859ed84f.chunk.js.map": "/pd2calc/static/js/0.859ed84f.chunk.js.map",
+    "static/js/0.45170f46.chunk.js": "/pd2calc/static/js/0.45170f46.chunk.js",
+    "static/js/0.45170f46.chunk.js.map": "/pd2calc/static/js/0.45170f46.chunk.js.map",
     "main.css": "/pd2calc/static/css/main.c52bb677.chunk.css",
     "main.js": "/pd2calc/static/js/main.c94b7be0.chunk.js",
     "main.js.map": "/pd2calc/static/js/main.c94b7be0.chunk.js.map",
-    "runtime-main.js": "/pd2calc/static/js/runtime-main.66dbf6eb.js",
-    "runtime-main.js.map": "/pd2calc/static/js/runtime-main.66dbf6eb.js.map",
+    "runtime-main.js": "/pd2calc/static/js/runtime-main.7264f5c0.js",
+    "runtime-main.js.map": "/pd2calc/static/js/runtime-main.7264f5c0.js.map",
     "static/js/3.057de9af.chunk.js": "/pd2calc/static/js/3.057de9af.chunk.js",
     "static/js/3.057de9af.chunk.js.map": "/pd2calc/static/js/3.057de9af.chunk.js.map",
     "static/js/4.3fcb2832.chunk.js": "/pd2calc/static/js/4.3fcb2832.chunk.js",
@@ -77,8 +77,8 @@
     "static/js/36.6b198b2a.chunk.js.map": "/pd2calc/static/js/36.6b198b2a.chunk.js.map",
     "static/js/37.55f76081.chunk.js": "/pd2calc/static/js/37.55f76081.chunk.js",
     "static/js/37.55f76081.chunk.js.map": "/pd2calc/static/js/37.55f76081.chunk.js.map",
-    "static/js/38.7a179fe5.chunk.js": "/pd2calc/static/js/38.7a179fe5.chunk.js",
-    "static/js/38.7a179fe5.chunk.js.map": "/pd2calc/static/js/38.7a179fe5.chunk.js.map",
+    "static/js/38.ee0e5b6b.chunk.js": "/pd2calc/static/js/38.ee0e5b6b.chunk.js",
+    "static/js/38.ee0e5b6b.chunk.js.map": "/pd2calc/static/js/38.ee0e5b6b.chunk.js.map",
     "static/js/39.e90da955.chunk.js": "/pd2calc/static/js/39.e90da955.chunk.js",
     "static/js/39.e90da955.chunk.js.map": "/pd2calc/static/js/39.e90da955.chunk.js.map",
     "static/js/40.6ccfb96d.chunk.js": "/pd2calc/static/js/40.6ccfb96d.chunk.js",
@@ -215,8 +215,8 @@
     "static/js/105.9a7e7322.chunk.js.map": "/pd2calc/static/js/105.9a7e7322.chunk.js.map",
     "static/js/106.76eb971c.chunk.js": "/pd2calc/static/js/106.76eb971c.chunk.js",
     "static/js/106.76eb971c.chunk.js.map": "/pd2calc/static/js/106.76eb971c.chunk.js.map",
-    "static/js/107.2f6cbe49.chunk.js": "/pd2calc/static/js/107.2f6cbe49.chunk.js",
-    "static/js/107.2f6cbe49.chunk.js.map": "/pd2calc/static/js/107.2f6cbe49.chunk.js.map",
+    "static/js/107.5320d8d5.chunk.js": "/pd2calc/static/js/107.5320d8d5.chunk.js",
+    "static/js/107.5320d8d5.chunk.js.map": "/pd2calc/static/js/107.5320d8d5.chunk.js.map",
     "static/js/108.f9b5819e.chunk.js": "/pd2calc/static/js/108.f9b5819e.chunk.js",
     "static/js/108.f9b5819e.chunk.js.map": "/pd2calc/static/js/108.f9b5819e.chunk.js.map",
     "static/js/109.33e13005.chunk.js": "/pd2calc/static/js/109.33e13005.chunk.js",
@@ -317,7 +317,7 @@
     "static/media/wooden.e47aa90c.jpg": "/pd2calc/static/media/wooden.e47aa90c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.66dbf6eb.js",
+    "static/js/runtime-main.7264f5c0.js",
     "static/js/3.057de9af.chunk.js",
     "static/css/main.c52bb677.chunk.css",
     "static/js/main.c94b7be0.chunk.js"
